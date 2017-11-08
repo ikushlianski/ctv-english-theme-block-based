@@ -100,19 +100,20 @@
       <div class="nodeMeta">
         <div class="postDate">
           <?php print date( "F j, Y", $node->created); ?>
+        </div>
+        <div class="socialButtons">
+          <div class="socialButton">Social</div>
+          <div class="socialButton">buttons</div>
+          <div class="socialButton">here</div>
+        </div>
+      </div>
+      <div class="mainImageContainer" style="background-image: url(<?php echo file_create_url($node->field_image[$language][0]['uri']); ?>)">
+        <div class="nodeCategory_largeScreens">
           <?php
           $cat = field_view_field('node', $node, 'field_category');
           echo render($cat);
           ?>
         </div>
-        <div class="socialButtons">
-          <div class="socialButton">Social</div>
-          <div class="socialButton">Social</div>
-          <div class="socialButton">Social</div>
-          <div class="socialButton">Social</div>
-        </div>
-      </div>
-      <div class="mainImageContainer" style="background-image: url(<?php echo file_create_url($node->field_image[$language][0]['uri']); ?>)">
         <h1 class="title_largeScreens"><span><?php print $title ?></span></h1>
       </div>
     </div>

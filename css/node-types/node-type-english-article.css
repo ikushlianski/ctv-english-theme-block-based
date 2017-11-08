@@ -2,8 +2,10 @@
   display: none;
 }
 
-.node-type-english-article .field-name-field-category .field-items {
-  margin: 0em 0em 1em;
+@media (min-width: 768px) {
+  .node-type-english-article .field-name-field-category .field-label {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=node-type-english-article.css.map */

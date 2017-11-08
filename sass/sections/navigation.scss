@@ -71,12 +71,80 @@
     }
   }
 }
+a.logo_largeScreens {
+  display: none;
+}
 #name-and-slogan {
   display: none;
 }
 
 @media (min-width: 768px) {
 
+  .links {
+    padding: 0;
+    margin: 0.5em;
+    & a {
+      &:hover {
+        background-color: transparent;
+        // border-bottom: 3px solid $ctvorange;
+      }
+    }
+  }
+
+  a.logo_largeScreens {
+    display: initial;
+    position: absolute;
+    top: 0;
+    left: 1em;
+    & img {
+      width: 80px;
+      background-color: white;
+    }
+  }
+  div#navigation {
+    display: flex;
+    justify-content: center;
+  }
+  .nav-group {
+    display: flex;
+    align-items: flex-start;
+    // background-color: transparent;
+    background-color: $ctvblue;
+    & .logo-div {
+
+    }
+    & .nav-menu-div {
+      max-width: 1024px;
+      margin: 0 auto;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $ctvblue;
+      & .main-menu {
+        padding-left: 7em;
+      }
+      & .main-menu, & .login-menu {
+        display: flex;
+        & li {
+
+          & a {
+            color: white;
+            font-weight: 400;
+            &:hover {
+              color: lighten($ctvblue, 40%);
+            }
+          }
+        }
+      }
+    }
+    & .toggle {
+      display: none;
+    }
+    & .brandAndToggleDiv {
+      display: none;
+    }
+  }
 }
 
 
@@ -88,53 +156,3 @@
 // span.element-invisible, .visually-hidden {
 //   display: none;
 // }
-.visually-hidden, .element-invisible {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-
-#toolbar, #toolbar * {
-    border: 0;
-    font-size: 100%;
-    line-height: inherit;
-    list-style: none;
-    margin: 0;
-    outline: 0;
-    padding: 0;
-    text-align: left;
-    vertical-align: baseline;
-}
-#toolbar {
-    background: #666;
-    color: #ccc;
-    font: normal small "Lucida Grande", Verdana, sans-serif;
-    left: 0;
-    margin: 0 -20px;
-    padding: 0 20px;
-    position: fixed;
-    right: 0;
-    top: 0;
-    -moz-box-shadow: 0 3px 20px #000;
-    -webkit-box-shadow: 0 3px 20px #000;
-    box-shadow: 0 3px 20px #000;
-    filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000, direction='180', strength='10');
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(color=#000000, direction='180', strength='10')";
-    z-index: 600;
-}
-#toolbar div.toolbar-menu {
-    background: #000;
-    line-height: 20px;
-    padding: 5px 50px 5px 10px;
-    position: relative;
-}
-#toolbar div.toolbar-drawer {
-    position: relative;
-    padding: 0 10px;
-}

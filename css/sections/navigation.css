@@ -79,59 +79,77 @@
   display: flex;
 }
 
+a.logo_largeScreens {
+  display: none;
+}
+
 #name-and-slogan {
   display: none;
 }
 
-.visually-hidden, .element-invisible {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-#toolbar, #toolbar * {
-  border: 0;
-  font-size: 100%;
-  line-height: inherit;
-  list-style: none;
-  margin: 0;
-  outline: 0;
-  padding: 0;
-  text-align: left;
-  vertical-align: baseline;
-}
-
-#toolbar {
-  background: #666;
-  color: #ccc;
-  font: normal small "Lucida Grande", Verdana, sans-serif;
-  left: 0;
-  margin: 0 -20px;
-  padding: 0 20px;
-  position: fixed;
-  right: 0;
-  top: 0;
-  box-shadow: 0 3px 20px #000;
-  filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000, direction='180', strength='10');
-  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(color=#000000, direction='180', strength='10')";
-  z-index: 600;
-}
-
-#toolbar div.toolbar-menu {
-  background: #000;
-  line-height: 20px;
-  padding: 5px 50px 5px 10px;
-  position: relative;
-}
-
-#toolbar div.toolbar-drawer {
-  position: relative;
-  padding: 0 10px;
+@media (min-width: 768px) {
+  .links {
+    padding: 0;
+    margin: 0.5em;
+  }
+  .links a:hover {
+    background-color: transparent;
+  }
+  a.logo_largeScreens {
+    display: initial;
+    position: absolute;
+    top: 0;
+    left: 1em;
+  }
+  a.logo_largeScreens img {
+    width: 80px;
+    background-color: white;
+  }
+  div#navigation {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+  }
+  .nav-group {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: start;
+            align-items: flex-start;
+    background-color: #4e729a;
+  }
+  .nav-group .nav-menu-div {
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+    background-color: #4e729a;
+  }
+  .nav-group .nav-menu-div .main-menu {
+    padding-left: 7em;
+  }
+  .nav-group .nav-menu-div .main-menu, .nav-group .nav-menu-div .login-menu {
+    display: -webkit-box;
+    display: flex;
+  }
+  .nav-group .nav-menu-div .main-menu li a, .nav-group .nav-menu-div .login-menu li a {
+    color: white;
+    font-weight: 400;
+  }
+  .nav-group .nav-menu-div .main-menu li a:hover, .nav-group .nav-menu-div .login-menu li a:hover {
+    color: #ced9e6;
+  }
+  .nav-group .toggle {
+    display: none;
+  }
+  .nav-group .brandAndToggleDiv {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=navigation.css.map */

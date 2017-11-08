@@ -111,6 +111,11 @@
               <i class="fa fa-2x fa-bars toggle" aria-hidden="true"></i>
             </div>
             <div class="nav-menu-div">
+              <?php if ($logo): ?>
+                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"  id="logo_largeScreens" class="logo_largeScreens">
+                  <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+                </a>
+              <?php endif; ?>
               <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('main-menu links', 'clearfix'))/*, 'heading' => t('Main menu')*/)); ?>
               <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('login-menu links', 'clearfix')), /*'heading' => t('Secondary menu')*/)); ?>
             </div>
