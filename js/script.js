@@ -36,7 +36,7 @@
     var lastScrollTop = 0;
     $(window).scroll(function(event){
       var st = $(this).scrollTop();
-      if (st > lastScrollTop ){
+      if (st > lastScrollTop && st > 100){
         // downscroll code
         if (!$('.nav-group').hasClass('toggled-on')) {$('.nav-group').fadeOut(100);}
       } else {
