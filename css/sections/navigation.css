@@ -1,0 +1,137 @@
+.links {
+  padding: 0.5em;
+  margin: 0;
+}
+
+.links a {
+  padding: 0.5em;
+}
+
+.links a:hover {
+  background-color: #e8e8e8;
+  color: color(link-hover);
+}
+
+.nav-group {
+  background-color: whitesmoke;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.nav-group .nav-menu-div {
+  position: absolute;
+  z-index: 1;
+  background: rgba(245, 245, 245, 0.95);
+  width: 100%;
+  display: none;
+}
+
+.nav-group .nav-menu-div.toggled-on {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  max-height: calc(100vh - 4em);
+  overflow-y: auto;
+  position: fixed;
+  z-index: 99;
+}
+
+.nav-group .brandAndToggleDiv {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+  background: linear-gradient(gainsboro, whitesmoke);
+}
+
+.nav-group .toggle {
+  display: block;
+  margin: 0.5em;
+  color: grey;
+  cursor: pointer;
+  text-shadow: 1px 0.5px white;
+}
+
+.nav-group .main-menu li, .nav-group .login-menu li {
+  list-style-type: none;
+}
+
+.nav-group a {
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  color: #4e729a;
+}
+
+.nav-group a.logo {
+  margin-left: 1em;
+}
+
+.nav-group a.logo img {
+  width: 40px;
+  display: -webkit-box;
+  display: flex;
+}
+
+#name-and-slogan {
+  display: none;
+}
+
+.visually-hidden, .element-invisible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+#toolbar, #toolbar * {
+  border: 0;
+  font-size: 100%;
+  line-height: inherit;
+  list-style: none;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  text-align: left;
+  vertical-align: baseline;
+}
+
+#toolbar {
+  background: #666;
+  color: #ccc;
+  font: normal small "Lucida Grande", Verdana, sans-serif;
+  left: 0;
+  margin: 0 -20px;
+  padding: 0 20px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  box-shadow: 0 3px 20px #000;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000, direction='180', strength='10');
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(color=#000000, direction='180', strength='10')";
+  z-index: 600;
+}
+
+#toolbar div.toolbar-menu {
+  background: #000;
+  line-height: 20px;
+  padding: 5px 50px 5px 10px;
+  position: relative;
+}
+
+#toolbar div.toolbar-drawer {
+  position: relative;
+  padding: 0 10px;
+}
+
+/*# sourceMappingURL=navigation.css.map */

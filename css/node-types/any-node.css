@@ -1,0 +1,140 @@
+#content {
+  flex-basis: 75%;
+}
+
+.mainImageContainer {
+  width: 100%;
+  max-width: 768px;
+  position: relative;
+  margin-left: calc(0em);
+  margin-right: calc(-1em);
+  background-size: cover;
+  background-position: center;
+}
+
+.metaAndImage {
+  margin-left: calc(-1em);
+  margin-right: calc(-1em);
+}
+
+.nodeMeta {
+  padding: 1em;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+  flex-wrap: wrap;
+}
+
+.nodeMeta .socialButtons {
+  display: -webkit-box;
+  display: flex;
+}
+
+.nodeMeta .socialButtons .socialButton {
+  padding: 0.2em;
+}
+
+.nodeMeta .socialButtons .socialButton:first-child {
+  padding-left: 0;
+}
+
+.nodeMeta .socialButtons .socialButton:last-child {
+  padding-right: 0;
+}
+
+#page-title {
+  line-height: initial;
+  text-shadow: 1px 0.5px white;
+  color: #333;
+}
+
+.postDate {
+  color: grey;
+}
+
+#sidebar-first {
+  display: none;
+}
+
+.summary {
+  font-weight: bold;
+  font-size: large;
+  line-height: initial;
+  color: #676767;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title_largeScreens {
+  display: none;
+  position: absolute;
+}
+
+@media (min-width: 768px) {
+  .mainImageContainer {
+    margin: 0 auto;
+    margin-right: 1em;
+    flex-basis: 75%;
+  }
+  #main-wrapper {
+    margin: 0 auto;
+    max-width: 85%;
+    background-color: white;
+    padding: 1em;
+  }
+  .metaAndImage {
+    display: -webkit-box;
+    display: flex;
+  }
+  .nodeMeta {
+    flex-basis: 25%;
+    padding: 1em;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+  }
+  .nodeMeta .socialButtons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+  .nodeMeta .socialButtons .socialButton:last-child, .nodeMeta .socialButtons .socialButton:first-child {
+    padding: 0.2em;
+  }
+  #page-title.title {
+    display: none;
+  }
+  .title_largeScreens {
+    display: initial;
+    bottom: 0em;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 0em 0.5em;
+    color: white;
+    /* line-height: initial; */
+    padding: 1.5rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7) 30%);
+  }
+}
+
+@media (min-width: 1200px) {
+  #main {
+    display: -webkit-box;
+    display: flex;
+  }
+  #sidebar-first {
+    display: initial;
+    width: 30%;
+    padding: 0 1em;
+    flex-basis: 25%;
+    margin-left: 1em;
+  }
+}
+
+/*# sourceMappingURL=any-node.css.map */

@@ -1,0 +1,1 @@
+{"version":3,"sources":["blocks.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;EACtB,aAAa;CACd","file":"blocks.css","sourcesContent":[".view-content ul {\n  list-style-type: none;\n  padding: 0em;\n}\n"]}

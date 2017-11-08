@@ -1,0 +1,140 @@
+@import 'init/customcolors';
+
+// reset ul and li paddings and margins
+.links {
+  padding: 0.5em;
+  margin: 0;
+  & a {
+    padding: 0.5em;
+    &:hover {
+      background-color: darken($ctvwhite, 5%);
+      color: color(link-hover);
+    }
+  }
+}
+
+.nav-group {
+  background-color: $ctvwhite;
+  //overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  &.toggled-on {
+  }
+  & .nav-menu-div {
+    position: absolute;
+    z-index: 1;
+    background: transparentize($ctvwhite, 0.05);
+    width: 100%;
+    // overflow: auto;
+    display: none;
+    &.toggled-on {
+      display: flex;
+      flex-direction: column;
+      max-height: calc(100vh - 4em);
+      overflow-y: auto;
+      position: fixed;
+      z-index: 99;
+    }
+  }
+  & .brandAndToggleDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(darken($ctvwhite, 10%), $ctvwhite);
+  }
+  & .toggle {
+    display: block;
+    margin: 0.5em;
+    color: grey;
+    cursor: pointer;
+    text-shadow: 1px 0.5px white;
+  }
+  & .main-menu, & .login-menu {
+
+    & li {
+      list-style-type: none;
+    }
+  }
+  & a {
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    color: $ctvblue;
+    &.logo {
+      margin-left: 1em;
+      & img {
+        width: 40px;
+        display: flex;
+      }
+    }
+  }
+}
+#name-and-slogan {
+  display: none;
+}
+
+@media (min-width: 768px) {
+
+}
+
+
+
+
+
+
+// global hide visually hidden items
+// span.element-invisible, .visually-hidden {
+//   display: none;
+// }
+.visually-hidden, .element-invisible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+
+#toolbar, #toolbar * {
+    border: 0;
+    font-size: 100%;
+    line-height: inherit;
+    list-style: none;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    text-align: left;
+    vertical-align: baseline;
+}
+#toolbar {
+    background: #666;
+    color: #ccc;
+    font: normal small "Lucida Grande", Verdana, sans-serif;
+    left: 0;
+    margin: 0 -20px;
+    padding: 0 20px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    -moz-box-shadow: 0 3px 20px #000;
+    -webkit-box-shadow: 0 3px 20px #000;
+    box-shadow: 0 3px 20px #000;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000, direction='180', strength='10');
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(color=#000000, direction='180', strength='10')";
+    z-index: 600;
+}
+#toolbar div.toolbar-menu {
+    background: #000;
+    line-height: 20px;
+    padding: 5px 50px 5px 10px;
+    position: relative;
+}
+#toolbar div.toolbar-drawer {
+    position: relative;
+    padding: 0 10px;
+}
