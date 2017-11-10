@@ -12,10 +12,15 @@
     }
   }
 }
-
+.login-menu-hider {
+  display: none;
+}
+.nav-group2 {
+  display: none;
+}
 .nav-group {
   background-color: $ctvwhite;
-  //overflow: hidden;
+  // overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
@@ -77,6 +82,15 @@ a.logo_largeScreens {
 #name-and-slogan {
   display: none;
 }
+.region-sitemap-nav {
+    display: none;
+}
+.secondary_menu_wrapper {
+  & .toggle_largeScreens {
+    display: none;
+  }
+}
+
 
 @media (min-width: 768px) {
 
@@ -99,13 +113,17 @@ a.logo_largeScreens {
     & img {
       width: 80px;
       background-color: white;
+      padding: 0.5em;
+      box-shadow: 0px 3px 15px 3px rgba(0, 0, 0, 0.3);
     }
   }
   div#navigation {
     display: flex;
     justify-content: center;
+    flex-direction: column;
   }
   .nav-group {
+    position: relative;
     display: flex;
     align-items: flex-start;
     // background-color: transparent;
@@ -114,7 +132,7 @@ a.logo_largeScreens {
 
     }
     & .nav-menu-div {
-      max-width: 1024px;
+      // max-width: 1024px;
       margin: 0 auto;
       position: relative;
       display: flex;
@@ -124,25 +142,148 @@ a.logo_largeScreens {
       & .main-menu {
         padding-left: 7em;
       }
-      & .main-menu, & .login-menu {
+      & .main-menu, & .main-menu-2, & .login-menu {
         display: flex;
+        list-style-type: none;
         & li {
-
           & a {
             color: white;
-            font-weight: 400;
+            // font-weight: 400;
+            text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.5);
             &:hover {
               color: lighten($ctvblue, 40%);
             }
           }
         }
       }
+      .login-menu-hider {
+        display: initial;
+        cursor: pointer;
+        color: white;
+        position: relative;
+        & .login-menu {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          right: -1em;
+          top: 0;
+          margin-top: 2em;
+          font-family: Roboto;
+          font-size: 0.5em;
+          width: max-content;
+          background-color: $ctvblue;
+          padding: 0.5em;
+          &.toggled-on {
+            display: initial;
+          }
+        }
+      }
     }
+
     & .toggle {
       display: none;
     }
     & .brandAndToggleDiv {
       display: none;
+    }
+  }
+  .nav-group2 {
+    background-color: darken($ctvblue, 5%);
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    & .nav-menu-div {
+      max-width: 1024px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: darken($ctvblue, 5%);
+      & .main-menu-2 {
+        list-style-type: none;
+        display: flex;
+        & li {
+
+          & a {
+            color: $ctvwhite;
+            // font-weight: 400;
+            text-decoration: none;
+            text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.5);
+            &:hover {
+              color: lighten($ctvblue, 50%);
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      & .hot-topics-heading {
+        margin: 0;
+        padding: 0 0.5em;
+        color: white;
+        background-color: lighten($ctvorange, 7%);
+        // text-shadow: 0.5px 0.5px #43413e;
+      }
+    }
+  }
+  .region-sitemap-nav.toggled-on {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-self: stretch;
+    background-color: transparentize(black, 0.05);
+    overflow: scroll;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    align-items: center;
+    flex-wrap: wrap;
+    & .block-menu-block {
+      flex-basis: 33.333333%;
+      flex-shrink: 0;
+    }
+    & ul, li {
+      list-style-type: none;
+      list-style-image: none;
+    }
+    & .block__title {
+      display: none;
+    }
+    .menu__item.is-expanded {
+      > a {
+        font-size: 1.4em;
+        font-weight: bold;
+        border-bottom: 1px solid $ctvorange;
+        color: $ctvwhite;
+        text-decoration: none;
+      }
+      .menu {
+        padding: 0em;
+        margin-top: 1em;
+        & a {
+          color: $ctvwhite;
+          text-decoration: none;
+          &:hover {
+            color: $ctvorange;
+          }
+        }
+      }
+    }
+    & .toggle_largeScreens {
+      position: absolute;
+      top: 0.5em;
+      color: white;
+      right: 0.5em;
+      cursor: pointer;
+    }
+  }
+  .secondary_menu_wrapper {
+    display: flex;
+    align-items: center;
+    & .toggle_largeScreens {
+      color: white;
+      margin: 0.25em 0.5em;
+      cursor: pointer;
+      display: initial;
     }
   }
 }

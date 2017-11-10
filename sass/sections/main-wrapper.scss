@@ -5,3 +5,9 @@
 #main-wrapper {
   margin: 0 1em;
 }
+
+@media (min-width: 768px) {
+  #page-wrapper {
+    margin:inherit;
+  }
+}
