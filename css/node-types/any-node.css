@@ -2,6 +2,25 @@
   flex-basis: 65%;
 }
 
+figure {
+  margin: 0 0;
+}
+
+figcaption {
+  color: grey;
+  font-size: 0.9em;
+  padding: 0 1em 0;
+  text-align: right;
+}
+
+figcaption a {
+  text-decoration: none;
+}
+
+figcaption a:visited {
+  color: grey;
+}
+
 .mainImageContainer {
   width: 100%;
   position: relative;
@@ -34,6 +53,8 @@
   -webkit-box-align: center;
           align-items: center;
   flex-wrap: wrap;
+  margin-top: 0em;
+  margin-bottom: -1em;
 }
 
 .nodeMeta .socialButtons {
@@ -51,6 +72,22 @@
 
 .nodeMeta .socialButtons .socialButton:last-child {
   padding-right: 0;
+}
+
+.nodeVideo {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.nodeVideo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 #page-title {

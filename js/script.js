@@ -25,6 +25,9 @@
 
   $(document).ready(function(){
 
+    // Initialize elements' behavior
+    $('.region-sitemap-nav').removeAttr('style'); 
+
     // mobile menu toggle behavior
     $('.toggle').on('click', function () {
       $('.nav-menu-div, .nav-group, #main-wrapper').toggleClass('toggled-on');
@@ -51,14 +54,15 @@
     });
 
     if ( $(window).width() > 768 ) {
-      console.log('appended');
       // $('.login-menu').detach();
       $('.login-menu').appendTo('.login-menu-hider');
+      if ($('.login-menu-hider').children().length > 0) {
+        $('.login-menu-hider').show();
+      }
     }
 
     $(window).on("click", function(event){
       if ($('.login-menu').hasClass('toggled-on') && event.target.className != "login-menu-hider") {
-        console.log(event);
         $('.login-menu').removeClass('toggled-on');
         event.stopPropagation();
       }

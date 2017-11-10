@@ -10,6 +10,7 @@ figure {
 figcaption {
   color: grey;
   font-size: 0.9em;
+  padding: 0 1em 0;
   & a {
     text-decoration: none;
     &:visited {
@@ -52,6 +53,8 @@ figcaption {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 0em;
+  margin-bottom: -1em;
   & .socialButtons {
     display: flex;
     & .socialButton {

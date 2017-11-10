@@ -82,9 +82,7 @@ a.logo_largeScreens {
 #name-and-slogan {
   display: none;
 }
-.region-sitemap-nav {
-    display: none;
-}
+
 .secondary_menu_wrapper {
   & .toggle_largeScreens {
     display: none;
@@ -104,17 +102,22 @@ a.logo_largeScreens {
       }
     }
   }
-
+  a:active:not(.button) {
+    background-color: white;
+  }
   a.logo_largeScreens {
-    display: initial;
-    position: absolute;
-    top: 0;
-    left: 1em;
+    display: flex;
+    position: relative;
+    /* top: 0; */
+    background-color: white;
+    /* left: 1em; */
+    margin: 0 auto;
     & img {
-      width: 80px;
-      background-color: white;
-      padding: 0.5em;
-      box-shadow: 0px 3px 15px 3px rgba(0, 0, 0, 0.3);
+    /* width: 80px; */
+    background-color: white;
+    padding: 0.5em;
+    margin: 0 auto;
+    /* box-shadow: 0px 3px 15px 3px rgba(0, 0, 0, 0.3);*/
     }
   }
   div#navigation {
@@ -122,10 +125,12 @@ a.logo_largeScreens {
     justify-content: center;
     flex-direction: column;
   }
+
   .nav-group {
     position: relative;
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     // background-color: transparent;
     background-color: $ctvblue;
     & .logo-div {
@@ -136,11 +141,13 @@ a.logo_largeScreens {
       margin: 0 auto;
       position: relative;
       display: flex;
+      max-width: 1024px;
       justify-content: space-between;
       align-items: center;
       background-color: $ctvblue;
+      //padding-left: 7em;
       & .main-menu {
-        padding-left: 7em;
+        // padding-left: 7em;
       }
       & .main-menu, & .main-menu-2, & .login-menu {
         display: flex;
@@ -157,7 +164,7 @@ a.logo_largeScreens {
         }
       }
       .login-menu-hider {
-        display: initial;
+        // display: initial;
         cursor: pointer;
         color: white;
         position: relative;
@@ -173,6 +180,8 @@ a.logo_largeScreens {
           width: max-content;
           background-color: $ctvblue;
           padding: 0.5em;
+          margin-top: calc(28px + 1em);
+          box-shadow: 0 5px 3px 2px rgba(0, 0, 0, 0.11);
           &.toggled-on {
             display: initial;
           }
@@ -187,14 +196,17 @@ a.logo_largeScreens {
       display: none;
     }
   }
+
   .nav-group2 {
     background-color: darken($ctvblue, 5%);
     font-size: 0.9em;
     display: flex;
     justify-content: center;
     & .nav-menu-div {
+      width: 1024px;
       max-width: 1024px;
-      margin: 0 auto;
+      //margin: 0 auto;
+      //margin: 0 0.5em;
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -217,73 +229,44 @@ a.logo_largeScreens {
         }
       }
       & .hot-topics-heading {
-        margin: 0;
+        display: flex;
+        margin: 0 1em;
         padding: 0 0.5em;
         color: white;
         background-color: lighten($ctvorange, 7%);
         // text-shadow: 0.5px 0.5px #43413e;
+        align-self: stretch;
+        align-items: center;
       }
     }
   }
-  .region-sitemap-nav.toggled-on {
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-self: stretch;
-    background-color: transparentize(black, 0.05);
-    overflow: scroll;
-    width: 100%;
-    height: 100vh;
-    z-index: 10;
-    align-items: center;
-    flex-wrap: wrap;
-    & .block-menu-block {
-      flex-basis: 33.333333%;
-      flex-shrink: 0;
-    }
-    & ul, li {
-      list-style-type: none;
-      list-style-image: none;
-    }
-    & .block__title {
-      display: none;
-    }
-    .menu__item.is-expanded {
-      > a {
-        font-size: 1.4em;
-        font-weight: bold;
-        border-bottom: 1px solid $ctvorange;
-        color: $ctvwhite;
-        text-decoration: none;
-      }
-      .menu {
-        padding: 0em;
-        margin-top: 1em;
-        & a {
-          color: $ctvwhite;
-          text-decoration: none;
-          &:hover {
-            color: $ctvorange;
-          }
-        }
-      }
-    }
-    & .toggle_largeScreens {
-      position: absolute;
-      top: 0.5em;
-      color: white;
-      right: 0.5em;
-      cursor: pointer;
+  .nav-group, .nav-group2 {
+    & .nav-menu-div {
+      // padding-left: 7em;
     }
   }
-  .secondary_menu_wrapper {
+
+  & .secondary_menu_wrapper {
+    & > * {
+      margin: 0 0.3em;
+    }
     display: flex;
     align-items: center;
     & .toggle_largeScreens {
       color: white;
-      margin: 0.25em 0.5em;
+      // margin: 0.25em 0.5em;
       cursor: pointer;
       display: initial;
+    }
+    & .logo_lang {
+      background-color: transparent;
+      &:active {
+        background-color: transparent;
+      }
+      & img {
+        width: 2.5em;
+        display: flex;
+      }
     }
   }
 }

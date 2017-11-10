@@ -8,8 +8,9 @@
  */
 ?>
 <?php if ($content): ?>
-    <div class="region-sitemap-nav">
+    <div class="region-sitemap-nav" style="display: none">
         <i class="fa fa-2x fa-times toggle_largeScreens" aria-hidden="true"></i>
-        <?php print $content; ?>
+        <div class="searchBox"><?php print $search_box; ?></div>
+        <div class="menu-blocks"><?php print $content; ?></div>
     </div>
 <?php endif; ?>

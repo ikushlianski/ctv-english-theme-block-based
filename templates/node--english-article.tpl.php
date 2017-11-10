@@ -97,16 +97,6 @@
 
   <div class="content"<?php print $content_attributes; ?>>
     <div class="metaAndImage">
-      <div class="nodeMeta">
-        <div class="postDate">
-          <?php print date( "F j, Y", $node->created); ?>
-        </div>
-        <div class="socialButtons">
-          <div class="socialButton">Social</div>
-          <div class="socialButton">buttons</div>
-          <div class="socialButton">here</div>
-        </div>
-      </div>
       <figure>
         <div class="mainImageContainer" style="background-image: url(<?php echo file_create_url($node->field_image[$language][0]['uri']); ?>)">
           <div class="nodeCategory_largeScreens">
@@ -121,6 +111,16 @@
         <figcaption>Photo: <a target="_blank" href="<?php print render($field_image_source_link[0]['value']); ?>"><?php print render($field_image_source_text[0]['value']); ?></a> </figcaption>
        <?php endif; ?>
       </figure>
+      <div class="nodeMeta">
+        <div class="postDate">
+          <?php print date( "F j, Y", $node->created); ?>
+        </div>
+        <div class="socialButtons">
+          <div class="socialButton">Social</div>
+          <div class="socialButton">buttons</div>
+          <div class="socialButton">here</div>
+        </div>
+      </div>
     </div>
     <?php if ($body[0]['summary']): ?>
     <div class="summary">

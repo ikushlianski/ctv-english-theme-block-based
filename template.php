@@ -59,6 +59,8 @@ function ctvenglishtheme2_preprocess_html(&$variables, $hook) {
 
 function ctvenglishtheme2_preprocess_page(&$variables, $hook) {
   $variables['main_menu_2'] = menu_navigation_links('menu-main-menu-2');
+
+
 }
 // */
 
@@ -70,16 +72,20 @@ function ctvenglishtheme2_preprocess_page(&$variables, $hook) {
  * @param string $hook
  *   The name of the template being rendered ("region" in this case.)
  */
-/* -- Delete this line if you want to use this function
+
 function ctvenglishtheme2_preprocess_region(&$variables, $hook) {
   // Don't use Zen's region--no-wrapper.tpl.php template for sidebars.
-  if (strpos($variables['region'], 'sidebar_') === 0) {
-    $variables['theme_hook_suggestions'] = array_diff(
-      $variables['theme_hook_suggestions'], array('region__no_wrapper')
-    );
+  $function = 'ctvenglishtheme2_preprocess_region__sitemap_nav';
+  if (function_exists($function)) {
+    $function($variables);
   }
 }
 // */
+function ctvenglishtheme2_preprocess_region__sitemap_nav(&$variables) {
+  $search_form = drupal_get_form('search_form');
+  $variables['search_box'] = drupal_render($search_form);
+}
+
 
 /**
  * Override or insert variables into the block templates.
