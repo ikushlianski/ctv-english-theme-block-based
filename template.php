@@ -56,9 +56,9 @@ function ctvenglishtheme2_preprocess_html(&$variables, $hook) {
  * @param string $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
+
 function ctvenglishtheme2_preprocess_page(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
+  $variables['main_menu_2'] = menu_navigation_links('menu-main-menu-2');
 }
 // */
 

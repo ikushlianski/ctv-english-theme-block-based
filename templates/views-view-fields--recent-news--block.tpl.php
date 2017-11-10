@@ -26,3 +26,4 @@
 ?>
 
 <h4 class="title"><?php print $fields['title']->content; ?></h4>
+<?php // echo '<pre>'; print_r($fields->content); echo '</pre>'; ?>

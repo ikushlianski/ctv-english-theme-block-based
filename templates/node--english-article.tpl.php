@@ -107,25 +107,35 @@
           <div class="socialButton">here</div>
         </div>
       </div>
-      <div class="mainImageContainer" style="background-image: url(<?php echo file_create_url($node->field_image[$language][0]['uri']); ?>)">
-        <div class="nodeCategory_largeScreens">
-          <?php
-          $cat = field_view_field('node', $node, 'field_category');
-          echo render($cat);
-          ?>
+      <figure>
+        <div class="mainImageContainer" style="background-image: url(<?php echo file_create_url($node->field_image[$language][0]['uri']); ?>)">
+          <div class="nodeCategory_largeScreens">
+            <?php
+            $cat = field_view_field('node', $node, 'field_category');
+            echo render($cat);
+            ?>
+          </div>
+          <h1 class="title_largeScreens"><span><?php print $title ?></span></h1>
         </div>
-        <h1 class="title_largeScreens"><span><?php print $title ?></span></h1>
-      </div>
+        <?php if (count($field_image_source_text) > 0) : ?>
+        <figcaption>Photo: <a target="_blank" href="<?php print render($field_image_source_link[0]['value']); ?>"><?php print render($field_image_source_text[0]['value']); ?></a> </figcaption>
+       <?php endif; ?>
+      </figure>
     </div>
+    <?php if ($body[0]['summary']): ?>
     <div class="summary">
     <?php
-      print render($node->body[$language][0]['summary']);
+      // print render($node->body[$language][0]['summary']);
+      // print render($field_youtube_id[0]['value']);
+      print render($body[0]['summary']);
     ?>
     </div>
-    <?php echo "<pre>";
-          // print_r ($content);
-          echo "</pre>";  ?>
-
+    <?php endif; ?>
+    <?php if(count($field_youtube_id) > 0): ?>
+    <div class="nodeVideo">
+      <iframe width="100%" src="http://www.youtube.com/embed/<?php print render($field_youtube_id[0]['value']); ?>" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <?php endif; ?>
   </div>
 
   <?php print render($content['links']); ?>

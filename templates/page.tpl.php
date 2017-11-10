@@ -72,13 +72,10 @@
  * @ingroup themeable
  */
 ?>
-
+  <?php print render($page['sitemap_nav']); ?>
   <div id="page-wrapper"><div id="page">
 
     <div id="header"><div class="section clearfix">
-
-
-
       <?php if ($site_name || $site_slogan): ?>
         <div id="name-and-slogan">
           <?php if ($site_name): ?>
@@ -117,7 +114,34 @@
                 </a>
               <?php endif; ?>
               <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('main-menu links', 'clearfix'))/*, 'heading' => t('Main menu')*/)); ?>
-              <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('login-menu links', 'clearfix')), /*'heading' => t('Secondary menu')*/)); ?>
+              <div class="secondary_menu_wrapper">
+                <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('login-menu links', 'clearfix'))/*, 'heading' => t('Secondary menu')*/)); ?>
+                <i class="fa fa-2x fa-user login-menu-hider" aria-hidden="true"></i>
+                <i class="fa fa-2x fa-bars toggle_largeScreens" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="section nav-group2">
+            <div class="nav-menu-div">
+              <?php print theme(
+              'links__system_main_menu_2',
+              array(
+                'links' => $main_menu_2,
+                'attributes' => array(
+                  'id' => 'main-menu-2',
+                  'class' => array(
+                    'main-menu-2 links',
+                    'clearfix'
+                  )
+                ),
+                  'heading' => array(
+              	    'text' => t('Trending topics:'),
+              	    'level' => 'h4',
+                    'class' => 'hot-topics-heading'
+                  )
+               )
+             ); ?>
             </div>
           </div>
         </div> <!-- /.section, /#navigation -->
