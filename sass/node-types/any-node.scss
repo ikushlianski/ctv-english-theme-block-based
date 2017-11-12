@@ -120,6 +120,10 @@ figcaption {
     margin-left: 0em;
     // flex-basis: 75%;
   }
+  .mainImage {
+    width: 100%;
+    height: auto;
+  }
   #main-wrapper {
     margin: 0 auto;
     background-color: white;
@@ -133,8 +137,8 @@ figcaption {
     &_largeScreens {
       display: initial;
       position: absolute;
-      top: 2em;
-      left: 0;
+      top: 2.5em;
+      right: 0;
       box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.3);
       background-color: $ctvorange;
       & a {
@@ -165,7 +169,7 @@ figcaption {
   #main {
     display: flex;
   }
-  #sidebar-first {
+  #sidebar-first, #sidebar-second {
     display: initial;
     padding: 0 1em;
     flex-basis: 35%;
@@ -185,7 +189,8 @@ figcaption {
     & span {
       // background-color: rgba(0, 0, 0, 0.7);
       padding: 0 0.1em;
-      background-color: rgba(29, 100, 162, 0.7)
+      // background-color: rgba(29, 100, 162, 0.7);
+      background-color: rgba(239, 82, 35, 0.85);
     }
   }
 }

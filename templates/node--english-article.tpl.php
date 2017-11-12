@@ -98,7 +98,9 @@
   <div class="content"<?php print $content_attributes; ?>>
     <div class="metaAndImage">
       <figure>
-        <div class="mainImageContainer" style="background-image: url(<?php echo file_create_url($node->field_image[$language][0]['uri']); ?>)">
+        <!-- style="background-image: url(<?php // echo file_create_url($node->field_image[$language][0]['uri']); ?>)" -->
+        <div class="mainImageContainer" >
+          <img src="<?php echo file_create_url($node->field_image[$language][0]['uri']); ?>" alt="" class="mainImage">
           <div class="nodeCategory_largeScreens">
             <?php
             $cat = field_view_field('node', $node, 'field_category');

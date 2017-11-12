@@ -123,6 +123,10 @@ figcaption a:visited {
     margin: 0 auto;
     margin-left: 0em;
   }
+  .mainImage {
+    width: 100%;
+    height: auto;
+  }
   #main-wrapper {
     margin: 0 auto;
     background-color: white;
@@ -136,8 +140,8 @@ figcaption a:visited {
   .nodeCategory_largeScreens {
     display: initial;
     position: absolute;
-    top: 2em;
-    left: 0;
+    top: 2.5em;
+    right: 0;
     box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.3);
     background-color: #ef5223;
   }
@@ -153,7 +157,7 @@ figcaption a:visited {
     display: -webkit-box;
     display: flex;
   }
-  #sidebar-first {
+  #sidebar-first, #sidebar-second {
     display: initial;
     padding: 0 1em;
     flex-basis: 35%;
@@ -172,7 +176,7 @@ figcaption a:visited {
   }
   .title_largeScreens span {
     padding: 0 0.1em;
-    background-color: rgba(29, 100, 162, 0.7);
+    background-color: rgba(239, 82, 35, 0.85);
   }
 }
 

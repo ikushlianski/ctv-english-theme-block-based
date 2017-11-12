@@ -1,0 +1,44 @@
+@import 'init/customcolors';
+
+.view-related-by-topic {
+  & .views-row {
+    display: flex;
+    align-items: flex-start;
+    & .views-field-title {
+      flex-basis: 65%;
+      margin: 0;
+    }
+    & .views-field-field-image {
+      position: relative;
+      display: flex;
+      flex-basis: 35%;
+      margin-right: 0.5em;
+      margin: 0.3em 0.5em 0.3em 0em;
+      & img {
+        height: 70px;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+  & a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.95em;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.block__title {
+  margin: 0.5em 0;
+  padding: 0 0.2em;
+  background-color: $ctvorange;
+  color: white;
+  text-align: center
+
+}
+#block-views-same-theme-block-block {
+  padding: 0.5em;
+  // box-shadow: 1px 1px 1px transparentize(black, 0.8);
+}

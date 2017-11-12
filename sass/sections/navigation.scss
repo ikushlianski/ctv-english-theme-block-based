@@ -6,6 +6,7 @@
   margin: 0;
   & a {
     padding: 0.5em;
+    transition: color 0.2s;
     &:hover {
       background-color: darken($ctvwhite, 5%);
       color: color(link-hover);
@@ -26,6 +27,13 @@
   width: 100%;
   z-index: 5;
   &.toggled-on {
+    & .logo_lang {
+      position: relative;
+      margin: 0 auto;
+      display: block;
+      text-align: center;
+      width: 3em;
+    }
   }
   & .nav-menu-div {
     position: absolute;
@@ -96,15 +104,14 @@ a.logo_largeScreens {
     padding: 0;
     margin: 0.5em;
     & a {
+      transition: color 0.2s;
       &:hover {
         background-color: transparent;
         // border-bottom: 3px solid $ctvorange;
       }
     }
   }
-  a:active:not(.button) {
-    background-color: white;
-  }
+
   a.logo_largeScreens {
     display: flex;
     position: relative;
@@ -112,6 +119,9 @@ a.logo_largeScreens {
     background-color: white;
     /* left: 1em; */
     margin: 0 auto;
+    &:active:not(.button) {
+      background-color: white;
+    }
     & img {
     /* width: 80px; */
     background-color: white;
@@ -157,6 +167,7 @@ a.logo_largeScreens {
             color: white;
             // font-weight: 400;
             text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.5);
+            transition: color 0.2s;
             &:hover {
               color: lighten($ctvblue, 40%);
             }
@@ -221,6 +232,7 @@ a.logo_largeScreens {
             // font-weight: 400;
             text-decoration: none;
             text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.5);
+            transition: color 0.2s;
             &:hover {
               color: lighten($ctvblue, 50%);
               text-decoration: underline;
@@ -230,7 +242,7 @@ a.logo_largeScreens {
       }
       & .hot-topics-heading {
         display: flex;
-        margin: 0 1em;
+        margin: 0 0em 0 1em;
         padding: 0 0.5em;
         color: white;
         background-color: lighten($ctvorange, 7%);
@@ -247,11 +259,13 @@ a.logo_largeScreens {
   }
 
   & .secondary_menu_wrapper {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    background-color: darken($ctvblue, 5%);
     & > * {
       margin: 0 0.3em;
     }
-    display: flex;
-    align-items: center;
     & .toggle_largeScreens {
       color: white;
       // margin: 0.25em 0.5em;
@@ -260,6 +274,7 @@ a.logo_largeScreens {
     }
     & .logo_lang {
       background-color: transparent;
+      margin: 0 0.2em;
       &:active {
         background-color: transparent;
       }

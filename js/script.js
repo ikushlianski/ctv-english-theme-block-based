@@ -26,7 +26,7 @@
   $(document).ready(function(){
 
     // Initialize elements' behavior
-    $('.region-sitemap-nav').removeAttr('style'); 
+    $('.region-sitemap-nav').removeAttr('style');
 
     // mobile menu toggle behavior
     $('.toggle').on('click', function () {
@@ -102,8 +102,22 @@
     }
 
     // make main image 16:9
-    var mainImgWidth = $(".mainImageContainer").width();
-    $(".mainImageContainer").height(mainImgWidth/16*9);
+    // var mainImgWidth = $(".mainImageContainer").width();
+    // $(".mainImageContainer").height(mainImgWidth/16*9);
+
+    // make main image of its natural height inside the Main Image Container
+    var mainImgHeight = $(".mainImage").height();
+    $(".mainImageContainer").height(mainImgHeight);
+
+    // make related news' images 16:9
+    $('.block').each(function(){
+      let thisBlockImgWidth = $(this).find('img').first().width();
+      $(this).find('img').each(function(item){
+        $(this).height(thisBlockImgWidth/16*9);
+      });
+    });
+
+
   });
 
 })(jQuery, Drupal, this, this.document);

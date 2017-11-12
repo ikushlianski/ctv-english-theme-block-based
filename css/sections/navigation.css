@@ -5,6 +5,7 @@
 
 .links a {
   padding: 0.5em;
+  transition: color 0.2s;
 }
 
 .links a:hover {
@@ -26,6 +27,14 @@
   top: 0;
   width: 100%;
   z-index: 5;
+}
+
+.nav-group.toggled-on .logo_lang {
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  width: 3em;
 }
 
 .nav-group .nav-menu-div {
@@ -104,11 +113,11 @@ a.logo_largeScreens {
     padding: 0;
     margin: 0.5em;
   }
+  .links a {
+    transition: color 0.2s;
+  }
   .links a:hover {
     background-color: transparent;
-  }
-  a:active:not(.button) {
-    background-color: white;
   }
   a.logo_largeScreens {
     display: -webkit-box;
@@ -118,6 +127,9 @@ a.logo_largeScreens {
     background-color: white;
     /* left: 1em; */
     margin: 0 auto;
+  }
+  a.logo_largeScreens:active:not(.button) {
+    background-color: white;
   }
   a.logo_largeScreens img {
     /* width: 80px; */
@@ -165,6 +177,7 @@ a.logo_largeScreens {
   .nav-group .nav-menu-div .main-menu li a, .nav-group .nav-menu-div .main-menu-2 li a, .nav-group .nav-menu-div .login-menu li a {
     color: white;
     text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.5);
+    transition: color 0.2s;
   }
   .nav-group .nav-menu-div .main-menu li a:hover, .nav-group .nav-menu-div .main-menu-2 li a:hover, .nav-group .nav-menu-div .login-menu li a:hover {
     color: #ced9e6;
@@ -230,6 +243,7 @@ a.logo_largeScreens {
     color: whitesmoke;
     text-decoration: none;
     text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.5);
+    transition: color 0.2s;
   }
   .nav-group2 .nav-menu-div .main-menu-2 li a:hover {
     color: #f0f3f7;
@@ -238,7 +252,7 @@ a.logo_largeScreens {
   .nav-group2 .nav-menu-div .hot-topics-heading {
     display: -webkit-box;
     display: flex;
-    margin: 0 1em;
+    margin: 0 0em 0 1em;
     padding: 0 0.5em;
     color: white;
     background-color: #f16c44;
@@ -247,10 +261,12 @@ a.logo_largeScreens {
             align-items: center;
   }
   .secondary_menu_wrapper {
+    align-self: stretch;
     display: -webkit-box;
     display: flex;
     -webkit-box-align: center;
             align-items: center;
+    background-color: #456589;
   }
   .secondary_menu_wrapper > * {
     margin: 0 0.3em;
@@ -262,6 +278,7 @@ a.logo_largeScreens {
   }
   .secondary_menu_wrapper .logo_lang {
     background-color: transparent;
+    margin: 0 0.2em;
   }
   .secondary_menu_wrapper .logo_lang:active {
     background-color: transparent;
