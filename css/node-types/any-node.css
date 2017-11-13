@@ -10,7 +10,7 @@ blockquote p {
   margin: 0.5em;
 }
 
-#content {
+#content, #content-recommended {
   flex-basis: 65%;
 }
 
@@ -169,7 +169,7 @@ figcaption a:visited {
     display: -webkit-box;
     display: flex;
   }
-  #sidebar-first, #sidebar-second {
+  #sidebar-first, #sidebar-recommended {
     display: initial;
     padding: 0 1em;
     flex-basis: 35%;

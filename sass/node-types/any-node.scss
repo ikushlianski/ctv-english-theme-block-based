@@ -12,7 +12,7 @@ blockquote {
     margin: 0.5em;
   }
 }
-#content {
+#content, #content-recommended {
   flex-basis: 65%;
 }
 
@@ -181,7 +181,7 @@ figcaption {
   #main {
     display: flex;
   }
-  #sidebar-first, #sidebar-second {
+  #sidebar-first, #sidebar-recommended {
     display: initial;
     padding: 0 1em;
     flex-basis: 35%;

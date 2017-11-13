@@ -163,9 +163,11 @@
 
     <?php print $messages; ?>
 
-    <div id="main-wrapper"><div id="main" class="clearfix">
+    <div id="main-wrapper">
+      <div id="main" class="clearfix">
 
-      <div id="content" class="column"><div class="section">
+      <div id="content" class="column">
+        <div class="section">
         <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
         <a id="main-content"></a>
         <?php print render($title_prefix); ?>
@@ -180,21 +182,47 @@
         <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
         <?php print render($page['content']); ?>
         <?php print $feed_icons; ?>
-      </div></div> <!-- /.section, /#content -->
+        </div>
+      </div> <!-- /.section, /#content -->
+
+
 
       <?php if ($page['sidebar_first']): ?>
-        <div id="sidebar-first" class="column sidebar"><div class="section">
+        <div id="sidebar-first" class="column sidebar">
+          <div class="section">
           <?php print render($page['sidebar_first']); ?>
-        </div></div> <!-- /.section, /#sidebar-first -->
+          </div>
+        </div> <!-- /.section, /#sidebar-first -->
       <?php endif; ?>
 
-      <?php if ($page['sidebar_second']): ?>
-        <div id="sidebar-second" class="column sidebar"><div class="section">
-          <?php print render($page['sidebar_second']); ?>
-        </div></div> <!-- /.section, /#sidebar-second -->
-      <?php endif; ?>
+      </div>
 
-    </div></div> <!-- /#main, /#main-wrapper -->
+      <?php if ($page['related_content']): ?>
+        <div id="related-content-region" class="related-content">
+          <div class="section">
+          <?php print render($page['related_content']); ?>
+          </div>
+        </div> <!-- /.section, /#sidebar-first -->
+      <?php endif; ?>
+    </div> <!-- /#main, /#main-wrapper -->
+
+    <div id="recommended-content-wrapper">
+      <div id="content-recommended" class="clearfix">
+        <?php if ($page['content_recommended']): ?>
+          <div class="section">
+          <?php print render($page['content_recommended']); ?>
+          </div>
+        <?php endif; ?>
+      </div>
+
+      <?php if ($page['sidebar_recommended']): ?>
+        <div id="sidebar-recommended" class="column sidebar">
+          <div class="section">
+          <?php print render($page['sidebar_recommended']); ?>
+          </div>
+        </div> <!-- /.section, /#sidebar-recommended -->
+      <?php endif; ?>
+    </div>
 
     <div id="footer"><div class="section">
       <?php print render($page['footer']); ?>

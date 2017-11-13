@@ -2158,7 +2158,7 @@ blockquote p {
   margin: 0.5em;
 }
 
-#content {
+#content, #content-recommended {
   flex-basis: 65%;
 }
 
@@ -2317,7 +2317,7 @@ figcaption a:visited {
     display: -webkit-box;
     display: flex;
   }
-  #sidebar-first, #sidebar-second {
+  #sidebar-first, #sidebar-recommended {
     display: initial;
     padding: 0 1em;
     flex-basis: 35%;
@@ -2517,6 +2517,26 @@ figcaption a:visited {
   #block-views-same-theme-block-block {
     padding: 0.5em;
   }
+}
+
+.view-more-from-same-story .view-content {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.view-more-from-same-story .view-content .views-row {
+  flex-basis: 20%;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  margin: 0 0.1em;
+}
+
+.view-more-from-same-story .view-content .views-row img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
