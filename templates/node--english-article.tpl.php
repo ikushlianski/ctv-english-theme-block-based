@@ -138,6 +138,11 @@
       <iframe width="100%" src="http://www.youtube.com/embed/<?php print render($field_youtube_id[0]['value']); ?>" frameborder="0" allowfullscreen></iframe>
     </div>
     <?php endif; ?>
+    <?php if($node->body[$language][0]['value']): ?>
+    <div class="nodeBody">
+      <?php print render($node->body[$language][0]['value']); ?>
+    </div>
+    <?php endif; ?>
   </div>
 
   <?php print render($content['links']); ?>

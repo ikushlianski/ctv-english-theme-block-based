@@ -1,0 +1,11 @@
+#sidebar-second {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #sidebar-second {
+    display: initial;
+  }
+}
+
+/*# sourceMappingURL=regions.css.map */

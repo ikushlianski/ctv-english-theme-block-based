@@ -1,52 +1,52 @@
-.view-related-by-topic .views-row {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: start;
-          align-items: flex-start;
-}
-
-.view-related-by-topic .views-row .views-field-title {
-  flex-basis: 65%;
-  margin: 0;
-}
-
-.view-related-by-topic .views-row .views-field-field-image {
-  position: relative;
-  display: -webkit-box;
-  display: flex;
-  flex-basis: 35%;
-  margin-right: 0.5em;
-  margin: 0.3em 0.5em 0.3em 0em;
-}
-
-.view-related-by-topic .views-row .views-field-field-image img {
-  height: 70px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-
-.view-related-by-topic a {
-  text-decoration: none;
-  color: black;
-  font-size: 0.95em;
-}
-
-.view-related-by-topic a:hover {
-  text-decoration: underline;
-}
-
-.block__title {
-  margin: 0.5em 0;
-  padding: 0 0.2em;
-  background-color: #ef5223;
-  color: white;
-  text-align: center;
-}
-
-#block-views-same-theme-block-block {
-  padding: 0.5em;
+@media (min-width: 768px) {
+  .view-related-by-topic .views-row {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: start;
+            align-items: flex-start;
+    margin-bottom: 0.5em;
+  }
+  .view-related-by-topic .views-row-last {
+    margin-bottom: 0;
+  }
+  .view-related-by-topic .views-row .views-field-title {
+    flex-basis: 65%;
+    margin: 0;
+    line-height: normal;
+  }
+  .view-related-by-topic .views-row .views-field-field-image {
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    flex-basis: 35%;
+    margin-right: 0.5em;
+    margin: 0.3em 0.5em 0.3em 0em;
+  }
+  .view-related-by-topic .views-row .views-field-field-image img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    height: 70px;
+  }
+  .view-related-by-topic a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.95em;
+  }
+  .view-related-by-topic a:hover {
+    text-decoration: underline;
+  }
+  .block__title {
+    margin: 0.5em 0;
+    padding: 0 0.2em;
+    background-color: #ef5223;
+    color: white;
+    text-align: center;
+  }
+  #block-views-same-theme-block-block {
+    padding: 0.5em;
+  }
 }
 
 /*# sourceMappingURL=views-view-fields--same-theme-block--block.css.map */
