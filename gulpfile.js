@@ -101,7 +101,11 @@ var gulp      = require('gulp'),
   del         = require('del'),
   // gulp-load-plugins will report "undefined" error unless you load gulp-sass manually.
   sass        = require('gulp-sass'),
-  kss         = require('kss');
+  kss         = require('kss'),
+  concat       = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
+	uglify       = require('gulp-uglifyjs'); // Подключаем gulp-uglifyjs (для сжатия JS)
+  const gulpbabel = require('gulp-babel');
+	var babel = require("babel-core");
 
 // The default task.
 gulp.task('default', ['build']);
@@ -201,9 +205,9 @@ gulp.task('styleguide:debug', ['clean:styleguide', 'styleguide:kss-example-chrom
 // ##############################
 // Watch for changes and rebuild.
 // ##############################
-gulp.task('watch', ['browser-sync', /*'watch:lint-and-styleguide',*/ 'watch:js']);
+gulp.task('watch', ['browser-sync' /*, 'watch:lint-and-styleguide'*/ ]);
 
-gulp.task('browser-sync', ['watch:css'], function() {
+gulp.task('browser-sync', ['watch:css', 'watch:scripts'], function() {
   if (!options.drupalURL) {
     return Promise.resolve();
   }
@@ -217,6 +221,10 @@ gulp.task('watch:css', ['styles'], function() {
   return gulp.watch(options.theme.sass + '**/*.scss', options.gulpWatchOptions, ['styles']);
 });
 
+gulp.task('watch:scripts', function() {
+  gulp.watch('./js/**/*.js', ['scripts']);
+});
+
 gulp.task('watch:lint-and-styleguide', ['styleguide' /*,'lint:sass'*/], function() {
   return gulp.watch([
       options.theme.sass + '**/*.scss',
@@ -224,9 +232,20 @@ gulp.task('watch:lint-and-styleguide', ['styleguide' /*,'lint:sass'*/], function
     ], options.gulpWatchOptions, ['styleguide' /*,'lint:sass'*/]);
 });
 
-gulp.task('watch:js'/*, ['lint:js']*/, function() {
-  return gulp.watch(options.eslint.files, options.gulpWatchOptions/*, ['lint:js']*/);
+gulp.task('scripts', function() {
+	return gulp.src('./js/js_dev/**/*')
+		.pipe(concat('script.js'))
+		.pipe(gulpbabel({
+            presets: ['env']
+        }))
+		// .pipe(uglify())
+		.pipe(gulp.dest('./js'))
+		//.pipe(browserSync.reload({stream: true})) // Обновляем на странице при изменении
 });
+
+// gulp.task('watch:js', ['scripts'], function() {
+//   return gulp.watch(options.eslint.files, options.gulpWatchOptions/*, ['lint:js']*/);
+// });
 
 // ######################
 // Clean all directories.

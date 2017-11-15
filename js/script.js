@@ -1,3 +1,65 @@
+'use strict';
+
+(function ($, Drupal) {
+
+  // To understand behaviors, see https://drupal.org/node/756722#behaviors
+  Drupal.behaviors.my_custom_behavior = {
+    attach: function attach(context, settings) {
+
+      // Place your code here.
+
+    }
+  };
+
+  $(document).ready(function () {
+    console.log('sth normal');
+    // make related news' images 16:9
+    $('.block').each(function () {
+      var thisBlockImgWidth = $(this).find('img').first().width();
+      $(this).find('img').each(function (item) {
+        $(this).height(thisBlockImgWidth / 16 * 9);
+      });
+    });
+
+    // Hide block if one resulting item is present
+    function hideBlocksWithOneResult(blockclass) {
+      if ($('.block .' + blockclass + ' .views-row').length < 2) {
+        $('.' + blockclass).parents('.block').hide();
+        console.log('the block has less than 2 children');
+      } else {
+        console.log('the block has 2 or more children');
+      }
+    }
+    hideBlocksWithOneResult('view-more-from-same-story');
+
+    // standard fix to remove dangling last flex items
+    function fixLastFlexItemBug(itemClass, parentClass) {
+      if (!parentClass) {
+        var lastFlexItems = $('.' + itemClass + ':last-of-type');
+        lastFlexItems.each(function (index) {
+          // let lastFlexItem = lastFlexItems.eq(index);
+          var lastFlexItemWidth = $(this).width();
+          if ($(this).siblings().length > 0 && $(this).prev().width() + 30 < lastFlexItemWidth) {
+            $(this).hide();
+          }
+        });
+      } else {
+        var _lastFlexItems = $('.' + parentClass + ' .' + itemClass + ':last-of-type');
+        _lastFlexItems.each(function (index) {
+          // let lastFlexItem = lastFlexItems.eq(index);
+          var lastFlexItemWidth = $(this).width();
+          if ($(this).siblings().length > 0 && $(this).prev().width() + 30 < lastFlexItemWidth) {
+            $(this).hide();
+          }
+        });
+      }
+    }
+    fixLastFlexItemBug('views-row', 'view-more-from-same-theme');
+    fixLastFlexItemBug('views-row', 'view-more-from-same-story');
+    fixLastFlexItemBug('views-row', 'view-more-from-same-person');
+  });
+})(jQuery, Drupal);
+
 /**
  * @file
  * A JavaScript file for the theme.
@@ -10,20 +72,16 @@
 // wrapping it with an "anonymous closure". See:
 // - https://drupal.org/node/1446420
 // - http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
-(function ($, Drupal, window, document) {
-
-
+(function ($, Drupal) {
 
   // To understand behaviors, see https://drupal.org/node/756722#behaviors
   Drupal.behaviors.my_custom_behavior = {
-    attach: function (context, settings) {
-
+    attach: function attach(context, settings) {
       // Place your code here.
-
     }
   };
 
-  $(document).ready(function(){
+  $(document).ready(function () {
 
     // Initialize elements' behavior
     $('.region-sitemap-nav').removeAttr('style');
@@ -37,23 +95,23 @@
     $('.nav-group .toggle_largeScreens').on('click', function () {
       $('.region-sitemap-nav').toggleClass('toggled-on');
       // $('.region-sitemap-nav .toggle_largeScreens').toggleClass('fa-bars').toggleClass('fa-times');
-      if ( $('.region-sitemap-nav').hasClass('toggled-on') ) {
-        $('body').css({'overflow':'hidden'});
+      if ($('.region-sitemap-nav').hasClass('toggled-on')) {
+        $('body').css({ 'overflow': 'hidden' });
       } else {
-        $('body').css({'overflow':'auto'});
+        $('body').css({ 'overflow': 'auto' });
       }
     });
     $('.region-sitemap-nav .toggle_largeScreens').on('click', function () {
       $('.region-sitemap-nav').toggleClass('toggled-on');
       // $('.nav-group .toggle_largeScreens').toggleClass('fa-bars').toggleClass('fa-times');
-      if ( $('.region-sitemap-nav').hasClass('toggled-on') ) {
-        $('body').css({'overflow':'hidden'});
+      if ($('.region-sitemap-nav').hasClass('toggled-on')) {
+        $('body').css({ 'overflow': 'hidden' });
       } else {
-        $('body').css({'overflow':'auto'});
+        $('body').css({ 'overflow': 'auto' });
       }
     });
 
-    if ( $(window).width() > 768 ) {
+    if ($(window).width() > 768) {
       // $('.login-menu').detach();
       $('.login-menu').appendTo('.login-menu-hider');
       if ($('.login-menu-hider').children().length > 0) {
@@ -61,15 +119,15 @@
       }
     }
 
-    $(window).on("click", function(event){
+    $(window).on("click", function (event) {
       if ($('.login-menu').hasClass('toggled-on') && event.target.className != "login-menu-hider") {
         $('.login-menu').removeClass('toggled-on');
         event.stopPropagation();
       }
     });
 
-    $('.login-menu-hider').on('click', function(event){
-      if ( !$('.login-menu').hasClass('toggled-on') ) {
+    $('.login-menu-hider').on('click', function (event) {
+      if (!$('.login-menu').hasClass('toggled-on')) {
         $('.login-menu').addClass('toggled-on');
         event.stopPropagation();
       }
@@ -77,26 +135,29 @@
 
     // hide menu on scroll down and show on scroll up
     var lastScrollTop = 0;
-    $(window).scroll(function(event){
-      if ( $('.nav-group').css('position') == "fixed" ) {
+    $(window).scroll(function (event) {
+      if ($('.nav-group').css('position') == "fixed") {
         var st = $(this).scrollTop();
-        if (st > lastScrollTop && st > 100){
+        if (st > lastScrollTop && st > 100) {
           // downscroll code
-          if (!$('.nav-group').hasClass('toggled-on')) {$('.nav-group').fadeOut(100);}
+          if (!$('.nav-group').hasClass('toggled-on')) {
+            $('.nav-group').fadeOut(100);
+          }
         } else {
           // upscroll code
-          if (!$('.nav-group').hasClass('toggled-on')) {$('.nav-group').fadeIn(100);}
+          if (!$('.nav-group').hasClass('toggled-on')) {
+            $('.nav-group').fadeIn(100);
+          }
         }
         lastScrollTop = st;
       }
     });
 
-
     // move top-fixed menu under toolbar if user logged in
     if ($('body').hasClass('logged-in')) {
       var toolbarHeight = $('div.toolbar').height();
       if ($(".nav-group").css('position') == 'fixed') {
-        $(".nav-group").css({"top":toolbarHeight});
+        $(".nav-group").css({ "top": toolbarHeight });
       }
       // $(".messages").css({"marginTop":toolbarHeight});
     }
@@ -108,28 +169,5 @@
     // make main image of its natural height inside the Main Image Container
     var mainImgHeight = $(".mainImage").height();
     $(".mainImageContainer").height(mainImgHeight);
-
-    // make related news' images 16:9
-    $('.block').each(function(){
-      let thisBlockImgWidth = $(this).find('img').first().width();
-      $(this).find('img').each(function(item){
-        $(this).height(thisBlockImgWidth/16*9);
-      });
-    });
-
-    // Hide block if one resulting item is present
-    function hideBlocksWithOneResult(blockclass) {
-      if( $(`.block .${blockclass} .views-row`).length < 2 ) {
-        $(`.${blockclass}`).parents('.block').hide();
-        console.log('the block has less than 2 children');
-      } else {
-        console.log('the block has 2 or more children');
-      }
-    }
-    hideBlocksWithOneResult('view-more-from-same-story');
-
-
-
   });
-
-})(jQuery, Drupal, this, this.document);
+})(jQuery, Drupal);
