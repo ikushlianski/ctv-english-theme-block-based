@@ -1,8 +1,50 @@
 @import 'init/customcolors';
 
+.block__title {
+  margin: 0.5em 0 0;
+  padding: 0 0.2em;
+  background-color: $ctvorange;
+  color: white;
+  text-align: center;
+  font-size: 120%;
+  display: inline;
+  line-height: normal;
+}
+
+.view-more-from-same-story, .view-more-from-same-theme, .view-more-from-same-person {
+  & .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    & .views-row {
+      flex-basis: 20%;
+      flex-grow: 1;
+      margin: 0.5em 0.1em;
+      flex-basis: 150px;
+      & img {
+        object-fit: cover;
+        object-position: center;
+      }
+      & .views-field-title {
+        line-height: normal;
+        padding: 0 1em 0 0;
+        & a {
+          text-decoration: none;
+          transition: color 0.3s;
+          &:hover {
+            color: $ctvorange;
+          }
+        }
+      }
+    }
+  }
+}
 
 @media (min-width: 768px) {
-  
+
+  .block__title {
+    font-size: 150%;
+  }
+
   .view-related-by-topic {
     & .views-row {
       display: flex;
@@ -38,14 +80,7 @@
       }
     }
   }
-  .block__title {
-    margin: 0.5em 0;
-    padding: 0 0.2em;
-    background-color: $ctvorange;
-    color: white;
-    text-align: center
 
-  }
   #block-views-same-theme-block-block {
     padding: 0.5em;
     // box-shadow: 1px 1px 1px transparentize(black, 0.8);

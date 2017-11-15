@@ -1,9 +1,14 @@
+.block-views {
+    margin: 1em 0;
+}
 
+.relatedLinks {
+  margin: 1em 0em;
+}
 
 .view-content {
   & ul {
     list-style-type: none;
     padding: 0em;
-
   }
 }
