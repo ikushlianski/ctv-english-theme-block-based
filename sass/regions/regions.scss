@@ -4,8 +4,9 @@
 
 .region-related-content {
   // background-color: hsla(212, 33%, 40%, 0.1);
-  background: linear-gradient(transparent, rgba(68, 100, 136, 0.15));
+  // background: linear-gradient(transparent, rgba(68, 100, 136, 0.15));
   padding: 0.5em;
+  border-top: 1px solid lightgrey;
 }
 
 @media (min-width: 768px) {

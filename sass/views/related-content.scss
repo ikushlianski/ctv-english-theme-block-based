@@ -1,35 +1,54 @@
 @import 'init/customcolors';
 
+
 .block__title {
-  margin: 0.5em 0 0;
+  margin: 0.5em 0;
+  margin-left: 0.2em;
   padding: 0 0.2em;
-  background-color: $ctvorange;
+  background-color: $ctvblue;
   color: white;
   text-align: center;
   font-size: 120%;
-  display: inline;
+  display: inline-block;
   line-height: normal;
+  .sidebar & {
+    margin-left: 0;
+    background-color: $ctvorange;
+    margin-bottom: 0.5em;
+  }
 }
 
-.view-more-from-same-story, .view-more-from-same-theme, .view-more-from-same-person {
+// common appearance of views (blocks)
+.view {
   & .view-content {
     display: flex;
     flex-wrap: wrap;
     & .views-row {
       flex-basis: 20%;
       flex-grow: 1;
-      margin: 0.5em 0.1em;
+      margin: 0.3em;
       flex-basis: 150px;
+      background-color: white;
+      box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.21);
+      // &:first-child {
+      //   margin-left: 0;
+      // }
+      // &:last-child {
+      //   margin-right: 0;
+      // }
       & img {
         object-fit: cover;
         object-position: center;
+        display: block;
       }
       & .views-field-title {
         line-height: normal;
-        padding: 0 1em 0 0;
+        padding: 0.3em 0;
+        font-weight: bold;
         & a {
           text-decoration: none;
           transition: color 0.3s;
+          color: #333;
           &:hover {
             color: $ctvorange;
           }
@@ -37,19 +56,14 @@
       }
     }
   }
-}
-
-@media (min-width: 768px) {
-
-  .block__title {
-    font-size: 150%;
-  }
-
-  .view-related-by-topic {
+  // individual appearance of views (blocks)
+  &.view-related-by-topic {
     & .views-row {
       display: flex;
       align-items: flex-start;
-      margin-bottom: 0.5em;
+      background-color: transparent;
+      box-shadow: none;
+      margin: 0.2em 0em;
       &-last {
         margin-bottom: 0;
       }
@@ -57,17 +71,20 @@
         flex-basis: 65%;
         margin: 0;
         line-height: normal;
+        padding-top: 0;
+        padding-left: 0.5em;
       }
       & .views-field-field-image {
         position: relative;
         display: flex;
         flex-basis: 35%;
         margin-right: 0.5em;
-        margin: 0.3em 0.5em 0.3em 0em;
+        margin: 0.3em 0em;
         & img {
           object-fit: cover;
           object-position: center;
           height: 70px;
+          display: block;
         }
       }
     }
@@ -80,6 +97,41 @@
       }
     }
   }
+  &.view-editor-s-picks {
+
+
+  }
+}
+
+// indidivual appearande of BLOCKS by their ID
+#block-views-editor-s-picks-block {
+  background-color: $ctvblue;
+  padding: 0.5em;
+  & .block__title {
+    background-color: $ctvblue;
+
+  }
+  & .views-field-title {
+    background-color: $ctvblue;
+    & a {
+      color: $ctvwhite;
+    }
+  }
+  & .views-row {
+
+  }
+}
+
+
+
+@media (min-width: 768px) {
+
+  .block__title {
+    font-size: 150%;
+
+  }
+
+
 
   #block-views-same-theme-block-block {
     padding: 0.5em;
