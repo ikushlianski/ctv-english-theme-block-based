@@ -97,17 +97,7 @@
         $(".nav-group").css({"top":toolbarHeight});
       }
       // $(".messages").css({"marginTop":toolbarHeight});
-    }
-
-    // make main image 16:9
-    // var mainImgWidth = $(".mainImageContainer").width();
-    // $(".mainImageContainer").height(mainImgWidth/16*9);
-
-    // make main image of its natural height inside the Main Image Container
-    var mainImgHeight = $(".mainImage").height();
-    $(".mainImageContainer").height(mainImgHeight);
-
-    
+    }   
 
 
   });

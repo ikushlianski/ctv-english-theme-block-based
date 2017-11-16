@@ -23,10 +23,7 @@
     function hideBlocksWithOneResult(blockclass) {
       if( $(`.block .${blockclass} .views-row`).length < 2 ) {
         $(`.${blockclass}`).parents('.block').hide();
-        console.log('the block has less than 2 children');
-      } else {
-        console.log('the block has 2 or more children');
-      }
+      } 
     }
     hideBlocksWithOneResult('view-more-from-same-story');
 
