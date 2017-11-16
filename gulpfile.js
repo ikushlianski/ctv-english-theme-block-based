@@ -222,7 +222,7 @@ gulp.task('watch:css', ['styles'], function() {
 });
 
 gulp.task('watch:scripts', function() {
-  gulp.watch('./js/**/*.js', ['scripts']);
+  gulp.watch('./js/js_dev/**/*.js', ['scripts']);
 });
 
 gulp.task('watch:lint-and-styleguide', ['styleguide' /*,'lint:sass'*/], function() {
@@ -238,7 +238,7 @@ gulp.task('scripts', function() {
 		.pipe(gulpbabel({
             presets: ['env']
         }))
-		// .pipe(uglify())
+		.pipe(uglify())
 		.pipe(gulp.dest('./js'))
 		//.pipe(browserSync.reload({stream: true})) // Обновляем на странице при изменении
 });
