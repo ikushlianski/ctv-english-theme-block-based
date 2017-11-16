@@ -65,7 +65,7 @@
 
   //$term_id = $node->field_themes[$language][0]['tid'];
   $str = '';
-  foreach ($node->field_themes[$language] as $delta => $value) {
+  foreach ($node->field_related_story[$language] as $delta => $value) {
     $term = taxonomy_term_load($value['tid']);
     // $term = taxonomy_term_load($term_id); // load term object
     $term_uri = taxonomy_term_uri($term); // get array with path
@@ -77,7 +77,7 @@
   ?>
   <?php if ($str != "") : ?>
   <div class="relatedLinks">
-      <?php echo 'Explore related topic: ' . rtrim($str, ', '); ?>
+      <?php echo 'Full story: ' . rtrim($str, ', '); ?>
   </div>
   <?php endif; ?>
 </div>
