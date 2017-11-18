@@ -10,7 +10,6 @@
   };
 
   $(document).ready(function(){
-    console.log('sth normal');
     // make related news' images 16:9
     $('.block').each(function(){
       let thisBlockImgWidth = $(this).find('img').first().width();
@@ -23,7 +22,7 @@
     function hideBlocksWithOneResult(blockclass) {
       if( $(`.block .${blockclass} .views-row`).length < 2 ) {
         $(`.${blockclass}`).parents('.block').hide();
-      } 
+      }
     }
     hideBlocksWithOneResult('view-more-from-same-story');
 
