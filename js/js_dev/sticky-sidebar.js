@@ -50,7 +50,7 @@
       }
 
       $(window).on("scroll", function(){
-        if (mainContentHeight > sidebarContentInitHeight) {
+        if ( mainContentHeight > (sidebarContentInitHeight * 1.5) ) {
           // we scroll below last sidebar elem
           if ( $(window).scrollTop() >= sidebarContentEndY ) {
             // are we inside the main content height minus the height of the last sidebar elem?
