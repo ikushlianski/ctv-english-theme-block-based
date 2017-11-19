@@ -1,0 +1,15 @@
+@import 'init/customcolors';
+
+.page-taxonomy-term {
+  & #content {
+    flex-basis: 100%;
+  }
+}
+
+.view {
+  &.view-taxonomy-term {
+    & .views-row {
+      flex-basis: 250px;
+    }
+  }
+}

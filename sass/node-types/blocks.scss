@@ -1,3 +1,12 @@
+.block {
+  &.sticky {
+    position: fixed;
+    top: 0;
+  }
+  &.at-bottom {
+    position: absolute;
+  }
+}
 .block-views {
   margin: 1.5em 0;
   .sidebar & {

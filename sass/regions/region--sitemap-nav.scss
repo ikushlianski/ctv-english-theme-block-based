@@ -13,7 +13,7 @@
     align-self: stretch;
     background-color: transparentize(black, 0.05);
     overflow: scroll; // for all browsers
-    overflow: overlay; // for Chrome, Opera and Safari (better appearance)
+    //overflow: overlay; // for Chrome, Opera and Safari (better appearance)
     padding: 1em;
     width: 100%;
     height: 100vh;

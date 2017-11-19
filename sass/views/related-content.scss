@@ -43,7 +43,7 @@
       }
       & .views-field-title {
         line-height: normal;
-        padding: 0.3em 0;
+        padding: 0.3em;
         font-weight: bold;
         & a {
           text-decoration: none;
@@ -97,10 +97,6 @@
       }
     }
   }
-  &.view-editor-s-picks {
-
-
-  }
 }
 
 // indidivual appearande of BLOCKS by their ID
@@ -113,12 +109,10 @@
   }
   & .views-field-title {
     background-color: $ctvblue;
+    padding: 0.3em 0;
     & a {
       color: $ctvwhite;
     }
-  }
-  & .views-row {
-
   }
 }
 
