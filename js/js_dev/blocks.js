@@ -10,14 +10,7 @@
   };
 
   $(document).ready(function(){
-    // make related news' images 16:9
-    $('.block').each(function(){
-      let thisBlockImgWidth = $(this).find('img').first().width();
-      $(this).find('img').each(function(item){
-        $(this).height(thisBlockImgWidth/16*9);
-      });
-    });
-
+    
     // Hide block if one resulting item is present
     function hideBlocksWithOneResult(blockclass) {
       if( $(`.block .${blockclass} .views-row`).length < 2 ) {
