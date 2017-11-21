@@ -77,7 +77,7 @@
   ?>
   <?php if ($str != "") : ?>
   <div class="relatedLinks">
-      <?php echo 'Explore related topic: ' . rtrim($str, ', '); ?>
+      <?php echo 'Explore more: ' . rtrim($str, ', '); ?>
   </div>
   <?php endif; ?>
 </div>

@@ -165,48 +165,41 @@
 
     <div id="main-wrapper">
       <div id="main" class="clearfix">
-
-      <div id="content" class="column">
-        <div class="section">
-        <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
-        <a id="main-content"></a>
-        <?php print render($title_prefix); ?>
-        <?php // take away the header if this is not the home page ?>
-        <?php if ( !$is_front )
-        {
-          if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif;
-        } ?>
-        <?php print render($title_suffix); ?>
-        <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
-        <?php print render($page['help']); ?>
-        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-        <?php print render($page['content']); ?>
-        <?php print $feed_icons; ?>
-        </div>
-      </div> <!-- /.section, /#content -->
-
-
-
-      <?php if ($page['sidebar_first']): ?>
-        <div id="sidebar-first" class="column sidebar">
+        <div id="content" class="column">
           <div class="section">
-          <?php print render($page['sidebar_first']); ?>
-          </div>
-        </div> <!-- /.section, /#sidebar-first -->
-      <?php endif; ?>
+          <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
+          <a id="main-content"></a>
+          <?php print render($title_prefix); ?>
+          <?php // take away the header if this is not the home page ?>
+          <?php if ( !$is_front )
+          {
+            if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif;
+            // $term = taxonomy_term_load(arg(2));
+            // var_dump($term);
+            // print $term->field_main_image['und'][0]['uri'];
+          } ?>
+          <?php print render($title_suffix); ?>
+          <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+          <?php print render($page['help']); ?>
+          <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
 
+          <?php if ($page['taxonomy_recommended_items']): ?>
+            <div id="taxonomy-recommended-items" class="clearfix">
+              <h2 class="title title_recommended">Recommended</h2>
+              <div class="section">
+                <?php print render($page['taxonomy_recommended_items']); ?>
+              </div>
+            </div>
+          <?php endif; ?>
+
+          <?php print render($page['content']); ?>
+          <?php print $feed_icons; ?>
+          </div>
+        </div> <!-- /.section, /#content -->
       </div>
 
-      <?php if ($page['related_content']): ?>
-        <div id="related-content-region" class="related-content">
-          <div class="section">
-          <?php print render($page['related_content']); ?>
-          </div>
-        </div> <!-- /.section, /#sidebar-first -->
-      <?php endif; ?>
-
       <div id="recommended-content-wrapper">
-        <h2 class="title title_recommended">Latest from Belarus</h2>
+        <h1 class="title">Latest from Belarus</h1>
         <div id="content-recommended" class="clearfix">
           <?php if ($page['content_recommended']): ?>
             <div class="section">
@@ -223,7 +216,7 @@
           </div> <!-- /.section, /#sidebar-recommended -->
         <?php endif; ?>
       </div>
-    </div> <!-- /#main, /#main-wrapper -->
+    </div> <!-- /#main-wrapper -->
 
 
 
