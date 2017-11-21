@@ -10,14 +10,17 @@
   };
 
   $(document).ready(function(){
-    
+
     // Hide block if one resulting item is present
-    function hideBlocksWithOneResult(blockclass) {
-      if( $(`.block .${blockclass} .views-row`).length < 2 ) {
-        $(`.${blockclass}`).parents('.block').hide();
-      }
+    function hideBlocksWithOneResult(...blockclass) {
+			let args = Array.prototype.slice.apply(arguments);
+			args.forEach(function(item){
+				if( $(`.block .${item} .views-row`).length < 2 ) {
+	        $(`.${item}`).parents('.block').hide();
+	      }
+			});
     }
-    hideBlocksWithOneResult('view-more-from-same-story');
+    hideBlocksWithOneResult('view-more-from-same-story', 'view-more-from-same-theme', 'view-more-from-same-person');
 
     // standard fix to remove dangling last flex items
     function fixLastFlexItemBug(itemClass, parentClass){
