@@ -18,6 +18,13 @@
       $(this).siblings(".itemTitle").children(".itemTitleText").css({"textDecoration":"none"});
     });
 
+    $(".fp-block .views-row").hover(function(){
+      $(this).children(".views-field-title").css({"textDecoration":"underline"});
+    });
+    $(".fp-block .views-row").mouseleave(function(){
+      $(this).children(".views-field-title").css({"textDecoration":"none"});
+    });
+
   });
 
 })(jQuery, Drupal);
