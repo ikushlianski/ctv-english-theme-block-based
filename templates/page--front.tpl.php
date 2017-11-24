@@ -165,57 +165,57 @@
 
     <div id="main-wrapper">
       <div id="main" class="clearfix">
-        <div id="content" class="column">
+
+        <div id="front-page-content-promoted" class="column">
           <div class="section">
           <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
-          <a id="main-content"></a>
           <?php print render($title_prefix); ?>
           <?php // take away the header if this is not the home page ?>
           <?php if ( !$is_front )
           {
-            if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?> <?php print $feed_icons; ?></h1><?php endif;
-            // $term = taxonomy_term_load(arg(2));
-            // var_dump($term);
-            // print $term->field_main_image['und'][0]['uri'];
+            if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif;
           } ?>
           <?php print render($title_suffix); ?>
           <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
           <?php print render($page['help']); ?>
           <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+          <?php print render($page['fp_five_main_items']); ?>
+          </div>
 
-          <?php if ($page['taxonomy_recommended_items']): ?>
-            <div id="taxonomy-recommended-items" class="clearfix">
-              <h2 class="title title_recommended">Recommended</h2>
-              <div class="section">
-                <?php print render($page['taxonomy_recommended_items']); ?>
-              </div>
-            </div>
+          <?php if ($page['fp_three_submain_sections']): ?>
+          <div class="section">
+            <?php print render($page['fp_three_submain_sections']); ?>
+          </div>
           <?php endif; ?>
 
-          <?php print render($page['content']); ?>
-
-          </div>
-        </div> <!-- /.section, /#content -->
-      </div>
-
-      <?php if ($page['content_recommended']): ?>
-      <h1 class="title title_recommended title_orange" style="margin-top: 1em">Latest from Belarus</h1>
-      <div id="recommended-content-wrapper">
-        <div id="content-recommended" class="clearfix">
-            <div class="section">
-            <?php print render($page['content_recommended']); ?>
-            </div>
-        </div>
-      <?php endif; ?>
-
-      <?php if ($page['sidebar_recommended']): ?>
-        <div id="sidebar-recommended" class="column sidebar">
+          <?php if ($page['fp_media']): ?>
           <div class="section">
-          <?php print render($page['sidebar_recommended']); ?>
+            <?php print render($page['fp_media']); ?>
           </div>
-        </div> <!-- /.section, /#sidebar-recommended -->
-      <?php endif; ?>
-      </div>
+          <?php endif; ?>
+        </div> <!-- /.section, /#content -->
+
+        <div id="fp-other-content-wrapper">
+          <?php if ($page['fp_category']): ?>
+          <div id="fp-content-by-category" class="clearfix">
+            <div class="section">
+            <?php print render($page['fp_category']); ?>
+            </div>
+          </div>
+          <?php endif; ?>
+
+          <?php if ($page['fp_sidebar']): ?>
+          <div id="fp-sidebar" class="clearfix">
+            <div class="section">
+            <?php print render($page['fp_sidebar']); ?>
+            </div>
+          </div>
+          <?php endif; ?>
+        </div>
+
+      </div><!-- /#main -->
+
+
     </div> <!-- /#main-wrapper -->
 
 
