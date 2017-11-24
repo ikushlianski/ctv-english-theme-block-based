@@ -1,3 +1,17 @@
+#front-page-content-promoted {
+  width: 100%;
+}
+
+.not-logged-in {
+  & .tabs {
+    display: none;
+  }
+}
+
+#sidebar-first, #sidebar-recommended {
+  display: none;
+}
+
 #sidebar-second {
   display: none;
 }
@@ -6,10 +20,38 @@
   // background-color: hsla(212, 33%, 40%, 0.1);
   // background: linear-gradient(transparent, rgba(68, 100, 136, 0.15));
   padding: 0.5em;
-  border-top: 1px solid lightgrey;
+}
+
+.region-content-recommended {
+  display: flex;
+  flex-wrap: wrap;
+  & > * {
+    flex-grow: 1;
+    flex-basis: 300px;
+    margin-bottom: 0em;
+  }
+}
+
+#recommended-content-wrapper {
+  display: flex;
+}
+
+#sidebar-recommended {
+  & .block:first-of-type {
+    margin-top: 1.5em;
+  }
 }
 
 @media (min-width: 768px) {
+  #content, #content-recommended {
+    flex-basis: 65%;
+  }
+  #sidebar-first, #sidebar-recommended {
+    display: initial;
+    padding: 0 0 0 1em;
+    flex-basis: 35%;
+    margin-left: 2em;
+  }
   #sidebar-second {
     display: initial;
   }
