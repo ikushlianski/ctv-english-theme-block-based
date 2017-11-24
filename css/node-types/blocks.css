@@ -1,3 +1,29 @@
+.block.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.block.at-bottom {
+  position: absolute;
+}
+
+.block-views {
+  margin: 1.5em 0;
+}
+
+.sidebar .block-views {
+  margin: 1em 0;
+}
+
+.sidebar .block-views:first-child {
+  margin-top: 0.5em;
+}
+
+.relatedLinks {
+  margin: 0.5em 0em;
+  display: inline-block;
+}
+
 .view-content ul {
   list-style-type: none;
   padding: 0em;

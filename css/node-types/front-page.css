@@ -1,0 +1,101 @@
+.node-type-home-page .block:first-child {
+  margin-top: 0em;
+}
+
+.view-front-page-two-main .view-content {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.view-front-page-two-main .view-content .views-row {
+  flex-basis: 300px;
+}
+
+.view-front-page-two-main .view-content .views-row:first-child {
+  flex-basis: 350px;
+}
+
+.view-front-page-two-main .view-content .views-row .itemLink {
+  color: white;
+}
+
+.view-front-page-two-main .view-content .views-row .itemWrapper {
+  position: relative;
+  height: 20em;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.2s;
+}
+
+.view-front-page-two-main .view-content .views-row .itemWrapper:hover {
+  -webkit-filter: brightness(0.95);
+          filter: brightness(0.95);
+}
+
+.view-front-page-two-main .view-content .views-row .itemTitle {
+  position: absolute;
+  bottom: 0.5em;
+  left: 0.5em;
+  margin: 0.5em;
+  line-height: normal;
+  pointer-events: none;
+}
+
+.view-front-page-two-main .view-content .views-row .itemTitle .itemTitleText {
+  background-color: rgba(34, 34, 34, 0.9);
+  color: white;
+}
+
+.view-front-page-two-main .view-content .views-row .fp_categoryLink {
+  display: table;
+  text-decoration: none;
+  background-color: #ef5223;
+  color: white;
+  font-size: 0.7em;
+  margin: 1em 0;
+  padding: 0 0.5em;
+  pointer-events: initial;
+}
+
+.view-front-page-two-main .view-content .views-row .fp_categoryLink:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.view-front-page-three-main .views-row {
+  position: relative;
+}
+
+.view-front-page-three-main .views-row .views-field-field-category {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  background-color: #ef5223;
+}
+
+.view-front-page-three-main .views-row .views-field-field-category a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0 0.5em;
+}
+
+.view-front-page-three-main .views-row .views-field-field-category a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .view-front-page-two-main .view-content {
+    display: -webkit-box;
+    display: flex;
+  }
+  .view-front-page-two-main .view-content .views-row:first-child {
+    flex-basis: 60%;
+  }
+  .view-front-page-two-main .view-content .views-row:last-child {
+    flex-basis: 37%;
+  }
+}
+
+/*# sourceMappingURL=front-page.css.map */
