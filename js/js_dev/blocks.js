@@ -48,6 +48,20 @@
     fixLastFlexItemBug('views-row', 'view-more-from-same-story');
     fixLastFlexItemBug('views-row', 'view-more-from-same-person');
 
+
+    // hide last elements in sidebar_recommended until it's shorter than content_recommended
+    if ( $("#content-recommended .section").height() < $("#sidebar-recommended .section").height() ) {
+			do {
+				$("#sidebar-recommended .section").children().each(function(){
+					$(this).find(".views-row").last().remove();
+					if ( $("#content-recommended .section").height() >= $("#sidebar-recommended .section").height() ) {
+						return;
+					}
+				});
+			}
+			while ( $("#content-recommended .section").height() < $("#sidebar-recommended .section").height());
+    }
+
   });
 
 })(jQuery, Drupal);
