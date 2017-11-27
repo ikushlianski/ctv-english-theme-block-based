@@ -1,5 +1,15 @@
+@import 'init/customcolors';
+
+#fp-other-content-wrapper {
+  display: flex;
+}
+
 #front-page-content-promoted {
   width: 100%;
+}
+
+.node-type-home-page #main {
+  flex-direction: column;
 }
 
 .not-logged-in {
@@ -8,12 +18,87 @@
   }
 }
 
-#sidebar-first, #sidebar-recommended {
+#sidebar-first, #sidebar-recommended, #fp-sidebar {
   display: none;
 }
 
 #sidebar-second {
   display: none;
+}
+
+.region-fp-category {
+  display: flex;
+  flex-direction: column;
+  & > * {
+    flex-basis: 450px;
+    flex-grow: 1;
+    margin-right: 1em;
+  }
+  & .block {
+    & .views-row {
+      &:first-child, &:nth-child(2) {
+        flex-basis: 45%;
+        flex-direction: column;
+        display: flex;
+        justify-content: stretch;
+        flex-grow: 1;
+        @media (max-width: 500px) {
+          flex-basis: initial;
+        }
+        & .views-field-title {
+          background-color: $ctvorange;
+          padding-left: 0.3em;
+          & a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.region-fp-three-submain-sections {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #e5eaf0;
+  padding: 0 1em;
+  > * {
+    flex-basis: 200px;
+    flex-grow: 1;
+    padding-top: 1em;
+  }
+  &:first-child {
+    padding-right: 1em;
+  }
+  &:nth-child(2) {
+    padding-right: 1em;
+  }
+}
+
+.region-fp-media {
+  background-color: #222;
+  padding: 2em;
+  // display: flex;
+  // flex-wrap: wrap;
+  & .fp-media-header {
+    margin: 0 0 1em 0;
+    color: whitesmoke;
+    text-align: center;
+  }
+  & .block {
+    margin: 0;
+    flex-grow: 1;
+    &:first-child {
+      flex-basis: 300px;
+    }
+    &:last-child {
+      flex-basis: 40%;
+      flex-grow: 1;
+      @media (min-width: 768px) {
+        flex-grow: 0;
+      }
+    }
+  }
 }
 
 .region-related-content {
@@ -27,7 +112,7 @@
   flex-wrap: wrap;
   & > * {
     flex-grow: 1;
-    flex-basis: 300px;
+    flex-basis: 250px;
     margin-bottom: 0em;
   }
 }
@@ -43,10 +128,10 @@
 }
 
 @media (min-width: 768px) {
-  #content, #content-recommended {
+  #content, #content-recommended, #fp-content-by-category {
     flex-basis: 65%;
   }
-  #sidebar-first, #sidebar-recommended {
+  #sidebar-first, #sidebar-recommended, #fp-sidebar {
     display: initial;
     padding: 0 0 0 1em;
     flex-basis: 35%;

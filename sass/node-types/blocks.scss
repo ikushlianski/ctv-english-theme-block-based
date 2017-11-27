@@ -6,6 +6,9 @@
   &.at-bottom {
     position: absolute;
   }
+  &.noMarginBottom {
+    margin-bottom: 0;
+  }
 }
 .block-views {
   margin: 1.5em 0;
@@ -16,6 +19,7 @@
     }
   }
 }
+
 
 .relatedLinks {
   margin: 0.5em 0em;

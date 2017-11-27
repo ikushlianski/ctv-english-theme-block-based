@@ -59,25 +59,28 @@
       box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.21);
       transition: all 0.2s;
       position: relative;
-      &:hover {
-        filter: brightness(0.9);
-      }
+
       & img {
         object-fit: cover;
         object-position: center;
         display: block;
+        &:hover {
+          filter: brightness(0.9);
+        }
       }
       & .views-field-title {
         line-height: normal;
         padding: 0.5em 0em;
         font-weight: bold;
+        flex-grow: 1;
         & a {
           text-decoration: none;
-          transition: color 0.3s;
+          transition: color 0.2s;
           color: #333;
-          &:hover {
-            color: $ctvorange;
-          }
+          display: block;
+          // &:hover {
+          //   color: $ctvorange;
+          // }
         }
       }
     }
@@ -131,13 +134,85 @@
   }
   &.view-latest-from-tourism {
     display: flex;
-    & .views-row:nth-child(3n-2) {
-      flex-basis: 200px;
+    & .views-row:nth-child(2n) {
+      flex-basis: 150px;
       display: flex;
       flex-direction: column;
-      flex-basis: 63%;
+      //flex-basis: 25%;
     }
   }
+  &.fp-block {
+    & .views-row {
+      box-shadow: none;
+      background-color: transparent;
+    }
+  }
+  &.smallImg {
+    & .view-content {
+
+      & .views-row {
+        display: flex;
+        background-color: transparent;
+        box-shadow: none;
+        margin-bottom: 1em;
+        & .views-field-field-image {
+          position: relative;
+          display: flex;
+          flex-basis: 35%;
+        }
+        & .views-field-title {
+          flex-basis: 65%;
+          padding: 0;
+          padding-left: 0.5em;
+        }
+      }
+    }
+  }
+  &.titleOnly {
+    & .view-content {
+      & .views-row {
+        display: flex;
+        background-color: transparent;
+        box-shadow: none;
+        //font-size: 120%;
+        margin: 0.5em 0.3em;
+        & .views-field-title {
+          flex-basis: 100%;
+          padding: 0;
+        }
+      }
+    }
+  }
+  &.fp-featured {
+    & .view-content {
+      & .views-row {
+        background-color: transparent;
+        box-shadow: none;
+        & .views-field-title {
+          flex-basis: 100%;
+          padding: 0.5em 0em;
+        }
+      }
+    }
+  }
+  &.view-front-page-media, &.view-front-page-media-first {
+    & .view-content {
+      & .views-row {
+        background-color: transparent;
+        box-shadow: none;
+        & .views-field-title {
+          a {
+           color: grey;
+          }
+        }
+      }
+    }
+  }
+}
+#block-views-bc4d82ca41b3690bfc18d1f53c06d20c {
+  background-color: transparentize($ctvblue, 0.65);
+  padding: 0.5em;
+  margin-top: 1.5em;
 }
 
 
@@ -168,13 +243,15 @@
           line-height: normal;
           padding: 0.3em;
           font-weight: bold;
+          flex-grow: 1;
           & a {
             text-decoration: none;
-            transition: color 0.3s;
+            transition: color 0.2s;
             color: #333;
-            &:hover {
-              color: $ctvorange;
-            }
+            display: block;
+            // &:hover {
+            //   color: $ctvorange;
+            // }
           }
         }
       }
@@ -212,12 +289,7 @@
       }
     }
   }
-  .view.fp-block {
-    & .views-row {
-      box-shadow: none;
-    }
-  }
-  
+
   .sidebar {
     & .views-row {
       margin-left: 0em!important;

@@ -1,15 +1,18 @@
 @import 'init/customcolors';
 
 
-
+.fp-media-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .node-type-home-page {
-  & .block:first-child {
+  & .block {
     margin-top: 0em;
   }
 }
 
-.view-front-page-two-main {
+.view-front-page-two-main, .view-front-page-media-first {
   & .view-content {
     display: flex;
     flex-wrap: nowrap;
@@ -27,12 +30,12 @@
       }
       & .itemWrapper {
         position: relative;
-        height: 20em;
+        height: 22em;
         background-position: center;
         background-size: cover;
         transition: all 0.2s;
         &:hover {
-          filter: brightness(0.95);
+          //filter: brightness(0.95);
         }
 
       }
@@ -86,6 +89,8 @@
     }
   }
 }
+
+
 
 @media (min-width: 768px) {
 
