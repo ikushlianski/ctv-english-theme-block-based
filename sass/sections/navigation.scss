@@ -14,7 +14,7 @@
   }
 }
 .login-menu-hider {
-  display: none;
+  // display: none;
 }
 .nav-group2 {
   display: none;
@@ -171,7 +171,7 @@ a.logo_largeScreens {
             text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.5);
             transition: color 0.2s;
             &:hover {
-              color: lighten($ctvblue, 40%);
+              color: $ctvblue_lighter;
             }
           }
         }
@@ -211,7 +211,7 @@ a.logo_largeScreens {
   }
 
   .nav-group2 {
-    background-color: darken($ctvblue, 5%);
+    background-color: $ctvblue_darker;
     font-size: 0.9em;
     display: flex;
     justify-content: center;
@@ -223,7 +223,7 @@ a.logo_largeScreens {
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      background-color: darken($ctvblue, 5%);
+      background-color: $ctvblue_darker;
       & .main-menu-2 {
         list-style-type: none;
         display: flex;
@@ -236,7 +236,7 @@ a.logo_largeScreens {
             text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.5);
             transition: color 0.2s;
             &:hover {
-              color: lighten($ctvblue, 50%);
+              color: $ctvblue_lighter;
               text-decoration: underline;
             }
           }
@@ -264,7 +264,7 @@ a.logo_largeScreens {
     align-self: stretch;
     display: flex;
     align-items: center;
-    background-color: darken($ctvblue, 5%);
+    background-color: $ctvblue_darker;
     & > * {
       margin: 0 0.3em;
     }

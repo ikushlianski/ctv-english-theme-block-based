@@ -38,7 +38,7 @@
             <a href="http://ctv.by" title="<?php print t('CTV.by Russian version'); ?>" rel="home" id="logo_ruslang" class="logo_lang">
               <img src="<?php echo file_create_url(path_to_theme().'/images-source/rus_flag.png') ?>" alt="<?php print t('CTV.by Russian version'); ?>" />
             </a>
-            <i class="fa fa-2x fa-user login-menu-hider" aria-hidden="true"></i>
+            <a <?php if (user_is_anonymous()): ?> href="<?php $base_url ?>/user" <?php endif; ?>><i class="fa fa-2x fa-user login-menu-hider" aria-hidden="true"></i></a>
             <i class="fa fa-2x fa-bars toggle_largeScreens" aria-hidden="true"></i>
           </div>
         </div>

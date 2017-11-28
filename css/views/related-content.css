@@ -1,5 +1,5 @@
 .title_recommended {
-  color: lightgrey;
+  color: #666;
   font-weight: bold;
   margin: 0.5em auto 0em;
   display: table;
@@ -76,7 +76,6 @@
 .view .view-content .views-row .views-field-title {
   line-height: normal;
   padding: 0.5em 0em;
-  font-weight: bold;
   -webkit-box-flex: 1;
           flex-grow: 1;
 }
@@ -88,76 +87,10 @@
   display: block;
 }
 
-.view.view-related-by-topic .view-content, .view.view-famous-belarusians .view-content, .view.view-latest-from-politics .view-content, .view.view-clone-of-latest-from-economy .view-content, .view.view-latest-from-sport .view-content, .view.view-latest-from-society .view-content, .view.view-latest-from-accidents .view-content {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-}
-
-.view.view-related-by-topic .view-content .views-row, .view.view-famous-belarusians .view-content .views-row, .view.view-latest-from-politics .view-content .views-row, .view.view-clone-of-latest-from-economy .view-content .views-row, .view.view-latest-from-sport .view-content .views-row, .view.view-latest-from-society .view-content .views-row, .view.view-latest-from-accidents .view-content .views-row {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: start;
-          align-items: flex-start;
-  flex-basis: initial;
-  background-color: transparent;
-  box-shadow: none;
-  margin: 0.2em 0.3em;
-}
-
-.view.view-related-by-topic .view-content .views-row-last, .view.view-famous-belarusians .view-content .views-row-last, .view.view-latest-from-politics .view-content .views-row-last, .view.view-clone-of-latest-from-economy .view-content .views-row-last, .view.view-latest-from-sport .view-content .views-row-last, .view.view-latest-from-society .view-content .views-row-last, .view.view-latest-from-accidents .view-content .views-row-last {
-  margin-bottom: 0;
-}
-
-.view.view-related-by-topic .view-content .views-row .views-field-title, .view.view-famous-belarusians .view-content .views-row .views-field-title, .view.view-latest-from-politics .view-content .views-row .views-field-title, .view.view-clone-of-latest-from-economy .view-content .views-row .views-field-title, .view.view-latest-from-sport .view-content .views-row .views-field-title, .view.view-latest-from-society .view-content .views-row .views-field-title, .view.view-latest-from-accidents .view-content .views-row .views-field-title {
-  flex-basis: 100%;
-  margin: 0;
-  line-height: normal;
-}
-
-.view.view-related-by-topic .view-content .views-row .views-field-field-image, .view.view-famous-belarusians .view-content .views-row .views-field-field-image, .view.view-latest-from-politics .view-content .views-row .views-field-field-image, .view.view-clone-of-latest-from-economy .view-content .views-row .views-field-field-image, .view.view-latest-from-sport .view-content .views-row .views-field-field-image, .view.view-latest-from-society .view-content .views-row .views-field-field-image, .view.view-latest-from-accidents .view-content .views-row .views-field-field-image {
-  position: relative;
-  display: -webkit-box;
-  display: flex;
-  flex-basis: 0%;
-  margin-right: 0.5em;
-  margin: 0.3em 0em;
-}
-
-.view.view-related-by-topic .view-content .views-row .views-field-field-image img, .view.view-famous-belarusians .view-content .views-row .views-field-field-image img, .view.view-latest-from-politics .view-content .views-row .views-field-field-image img, .view.view-clone-of-latest-from-economy .view-content .views-row .views-field-field-image img, .view.view-latest-from-sport .view-content .views-row .views-field-field-image img, .view.view-latest-from-society .view-content .views-row .views-field-field-image img, .view.view-latest-from-accidents .view-content .views-row .views-field-field-image img {
-  display: none;
-}
-
-.view.view-related-by-topic a, .view.view-famous-belarusians a, .view.view-latest-from-politics a, .view.view-clone-of-latest-from-economy a, .view.view-latest-from-sport a, .view.view-latest-from-society a, .view.view-latest-from-accidents a {
-  text-decoration: none;
-  color: black;
-  font-size: 0.95em;
-}
-
-.view.view-related-by-topic a:hover, .view.view-famous-belarusians a:hover, .view.view-latest-from-politics a:hover, .view.view-clone-of-latest-from-economy a:hover, .view.view-latest-from-sport a:hover, .view.view-latest-from-society a:hover, .view.view-latest-from-accidents a:hover {
-  text-decoration: underline;
-}
-
 .view.view-related-by-topic .view-content {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
           flex-direction: row;
-}
-
-.view.view-latest-from-tourism {
-  display: -webkit-box;
-  display: flex;
-}
-
-.view.view-latest-from-tourism .views-row:nth-child(2n) {
-  flex-basis: 150px;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
 }
 
 .view.fp-block .views-row {
@@ -237,63 +170,6 @@
 @media (min-width: 768px) {
   .block__title {
     font-size: 150%;
-  }
-  .view .view-content {
-    display: -webkit-box;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .view .view-content .views-row {
-    flex-basis: 20%;
-    -webkit-box-flex: 1;
-            flex-grow: 1;
-    margin: 0.3em;
-    flex-basis: 200px;
-    background-color: white;
-    box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.21);
-  }
-  .view .view-content .views-row img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center;
-       object-position: center;
-    display: block;
-  }
-  .view .view-content .views-row .views-field-title {
-    line-height: normal;
-    padding: 0.3em;
-    font-weight: bold;
-    -webkit-box-flex: 1;
-            flex-grow: 1;
-  }
-  .view .view-content .views-row .views-field-title a {
-    text-decoration: none;
-    transition: color 0.2s;
-    color: #333;
-    display: block;
-  }
-  .view.view-related-by-topic .view-content .views-row .views-field-title, .view.view-famous-belarusians .view-content .views-row .views-field-title, .view.view-latest-from-politics .view-content .views-row .views-field-title, .view.view-clone-of-latest-from-economy .view-content .views-row .views-field-title, .view.view-latest-from-sport .view-content .views-row .views-field-title, .view.view-latest-from-society .view-content .views-row .views-field-title, .view.view-latest-from-accidents .view-content .views-row .views-field-title {
-    flex-basis: 65%;
-    margin: 0;
-    line-height: normal;
-    padding-top: 0;
-    padding-left: 0.5em;
-  }
-  .view.view-related-by-topic .view-content .views-row .views-field-field-image, .view.view-famous-belarusians .view-content .views-row .views-field-field-image, .view.view-latest-from-politics .view-content .views-row .views-field-field-image, .view.view-clone-of-latest-from-economy .view-content .views-row .views-field-field-image, .view.view-latest-from-sport .view-content .views-row .views-field-field-image, .view.view-latest-from-society .view-content .views-row .views-field-field-image, .view.view-latest-from-accidents .view-content .views-row .views-field-field-image {
-    position: relative;
-    display: -webkit-box;
-    display: flex;
-    flex-basis: 35%;
-    margin-right: 0.5em;
-    margin: 0.3em 0em;
-  }
-  .view.view-related-by-topic .view-content .views-row .views-field-field-image img, .view.view-famous-belarusians .view-content .views-row .views-field-field-image img, .view.view-latest-from-politics .view-content .views-row .views-field-field-image img, .view.view-clone-of-latest-from-economy .view-content .views-row .views-field-field-image img, .view.view-latest-from-sport .view-content .views-row .views-field-field-image img, .view.view-latest-from-society .view-content .views-row .views-field-field-image img, .view.view-latest-from-accidents .view-content .views-row .views-field-field-image img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center;
-       object-position: center;
-    height: 70px;
-    display: block;
   }
   .sidebar .views-row {
     margin-left: 0em !important;

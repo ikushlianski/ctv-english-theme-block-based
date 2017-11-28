@@ -13,10 +13,6 @@
   color: color(link-hover);
 }
 
-.login-menu-hider {
-  display: none;
-}
-
 .nav-group2 {
   display: none;
 }
@@ -182,7 +178,7 @@ a.logo_largeScreens {
     transition: color 0.2s;
   }
   .nav-group .nav-menu-div .main-menu li a:hover, .nav-group .nav-menu-div .main-menu-2 li a:hover, .nav-group .nav-menu-div .login-menu li a:hover {
-    color: #ced9e6;
+    color: #f0f3f7;
   }
   .nav-group .nav-menu-div .login-menu-hider {
     cursor: pointer;
@@ -218,7 +214,7 @@ a.logo_largeScreens {
     display: none;
   }
   .nav-group2 {
-    background-color: #456589;
+    background-color: #3d5978;
     font-size: 0.9em;
     display: -webkit-box;
     display: flex;
@@ -234,7 +230,7 @@ a.logo_largeScreens {
             align-items: center;
     -webkit-box-pack: start;
             justify-content: flex-start;
-    background-color: #456589;
+    background-color: #3d5978;
   }
   .nav-group2 .nav-menu-div .main-menu-2 {
     list-style-type: none;
@@ -268,7 +264,7 @@ a.logo_largeScreens {
     display: flex;
     -webkit-box-align: center;
             align-items: center;
-    background-color: #456589;
+    background-color: #3d5978;
   }
   .secondary_menu_wrapper > * {
     margin: 0 0.3em;

@@ -19,10 +19,10 @@
     });
 
     $(".fp-block .views-row").hover(function(){
-      $(this).children(".views-field-title").css({"textDecoration":"underline"});
+      $(this).children(".views-field-title").find("a").css({"color":"#ef5223"});
     });
     $(".fp-block .views-row").mouseleave(function(){
-      $(this).children(".views-field-title").css({"textDecoration":"none"});
+      $(this).children(".views-field-title").find("a").css({"color":""});
     });
 
   });

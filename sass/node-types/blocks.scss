@@ -12,17 +12,17 @@
     margin-bottom: 0;
   }
   &.fp-highlighted {
-    background-color: lighten($ctvorange, 40%);
+    background-color: $ctvblue_lighter;
     margin-top: 1.5em!important;
     padding: 0.5em;
     & .block__title {
-      background-color: lighten($ctvorange, 0%);
+      background-color: $ctvorange;
     }
     &_blue {
       @extend .fp-highlighted;
-      background-color: lighten($ctvblue, 30%);
+      background-color: $ctvblue_lighter;
       & .block__title {
-        background-color: lighten($ctvblue, 0%);
+        background-color: $ctvblue;
       }
     }
   }
@@ -59,4 +59,8 @@
     list-style-type: none;
     padding: 0em;
   }
+}
+
+#user-login {
+  margin: 1em 0;
 }

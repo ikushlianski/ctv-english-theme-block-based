@@ -2,7 +2,7 @@
 
 .title {
   &_recommended {
-    color: lightgrey;
+    color: #666;
     font-weight: bold;
     margin: 0.5em auto 0em;
     display: table;
@@ -16,6 +16,7 @@
     text-align: center;
   }
 }
+
 .block__title {
   margin: 0.5em 0;
   margin-left: 0.2em;
@@ -31,6 +32,7 @@
     background-color: $ctvorange;
     margin-bottom: 0.5em;
   }
+
   .block-views & {
     // margin-left: 0em;
     & a {
@@ -44,8 +46,7 @@
   }
 }
 
-
-// common appearance of views (blocks)
+// common appearance of views
 .view {
   & .view-content {
     display: flex;
@@ -59,7 +60,6 @@
       box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.21);
       transition: all 0.2s;
       position: relative;
-
       & img {
         object-fit: cover;
         object-position: center;
@@ -71,7 +71,7 @@
       & .views-field-title {
         line-height: normal;
         padding: 0.5em 0em;
-        font-weight: bold;
+        // font-weight: bold;
         flex-grow: 1;
         & a {
           text-decoration: none;
@@ -85,60 +85,10 @@
       }
     }
   }
-  // individual appearance of views (blocks)
-  &.view-related-by-topic, &.view-famous-belarusians, &.view-latest-from-politics, &.view-clone-of-latest-from-economy, &.view-latest-from-sport, &.view-latest-from-society, &.view-latest-from-accidents {
-    & .view-content {
-      display: flex;
-      flex-direction: column;
-      & .views-row {
-        display: flex;
-        align-items: flex-start;
-        flex-basis: initial;
-        background-color: transparent;
-        box-shadow: none;
-        margin: 0.2em 0.3em;
-        &-last {
-          margin-bottom: 0;
-        }
-        & .views-field-title {
-          flex-basis: 100%;
-          margin: 0;
-          line-height: normal;
-        }
-        & .views-field-field-image {
-          position: relative;
-          display: flex;
-          flex-basis: 0%;
-          margin-right: 0.5em;
-          margin: 0.3em 0em;
-          & img {
-            display: none;
-          }
-        }
-      }
-    }
 
-    & a {
-      text-decoration: none;
-      color: black;
-      font-size: 0.95em;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
   &.view-related-by-topic {
     & .view-content {
       flex-direction: row;
-    }
-  }
-  &.view-latest-from-tourism {
-    display: flex;
-    & .views-row:nth-child(2n) {
-      flex-basis: 150px;
-      display: flex;
-      flex-direction: column;
-      //flex-basis: 25%;
     }
   }
   &.fp-block {
@@ -149,7 +99,6 @@
   }
   &.smallImg {
     & .view-content {
-
       & .views-row {
         display: flex;
         flex-direction: row;
@@ -233,74 +182,6 @@
     font-size: 150%;
   }
 
-  // common appearance of views (blocks)
-  .view {
-    & .view-content {
-      display: flex;
-      flex-wrap: wrap;
-      & .views-row {
-        flex-basis: 20%;
-        flex-grow: 1;
-        margin: 0.3em;
-        flex-basis: 200px;
-        background-color: white;
-        box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.21);
-        & img {
-          object-fit: cover;
-          object-position: center;
-          display: block;
-        }
-        & .views-field-title {
-          line-height: normal;
-          padding: 0.3em;
-          font-weight: bold;
-          flex-grow: 1;
-          & a {
-            text-decoration: none;
-            transition: color 0.2s;
-            color: #333;
-            display: block;
-            // &:hover {
-            //   color: $ctvorange;
-            // }
-          }
-        }
-      }
-    }
-    // individual appearance of views (blocks)
-    &.view-related-by-topic, &.view-famous-belarusians, &.view-latest-from-politics, &.view-clone-of-latest-from-economy, &.view-latest-from-sport, &.view-latest-from-society, &.view-latest-from-accidents {
-      & .view-content {
-
-        & .views-row {
-
-          &-last {
-
-          }
-          & .views-field-title {
-            flex-basis: 65%;
-            margin: 0;
-            line-height: normal;
-            padding-top: 0;
-            padding-left: 0.5em;
-          }
-          & .views-field-field-image {
-            position: relative;
-            display: flex;
-            flex-basis: 35%;
-            margin-right: 0.5em;
-            margin: 0.3em 0em;
-            & img {
-              object-fit: cover;
-              object-position: center;
-              height: 70px;
-              display: block;
-            }
-          }
-        }
-      }
-    }
-  }
-
   .sidebar {
     & .views-row {
       margin-left: 0em!important;
@@ -311,6 +192,7 @@
     padding: 0.5em;
     // box-shadow: 1px 1px 1px transparentize(black, 0.8);
   }
+
   #block-views-editor-s-picks-block {
     background-color: $ctvblue;
     padding: 0.5em;
@@ -328,12 +210,13 @@
       }
     }
   }
+
   #block-views-famous-belarusians-block {
     background-color: transparentize($ctvorange, 0.85);
     padding: 0em 1em 0.5em;
   }
+
   #block-views-photo-and-video-block {
     @extend #block-views-editor-s-picks-block;
   }
-
 }
