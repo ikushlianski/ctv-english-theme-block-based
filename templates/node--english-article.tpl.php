@@ -109,8 +109,17 @@
           </div>
           <h1 class="title_largeScreens"><span><?php print $title ?></span></h1>
         </div>
-        <?php if (count($field_image_source_text) > 0) : ?>
-        <figcaption>Photo: <a target="_blank" href="<?php print render($field_image_source_link[0]['value']); ?>"><?php print render($field_image_source_text[0]['value']); ?></a> </figcaption>
+        <?php if (count($field_image_source_text) > 0 && count($field_image_source_link) > 0) : ?>
+        <figcaption>Photo:
+          <a target="_blank"
+            <?php if($node->field_image_source_link[$language][0]['value']) : ?>
+            href="http://<?php
+            $url = $node->field_image_source_link[$language][0]['value'];
+            print $url ?>"
+            <?php endif; ?>>
+            <?php if($node->field_image_source_text[$language][0]['value']) {print render($node->field_image_source_text[$language][0]['value']);} ?>
+          </a>
+        </figcaption>
        <?php endif; ?>
       </figure>
       <div class="nodeMeta">

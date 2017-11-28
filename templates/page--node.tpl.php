@@ -174,13 +174,14 @@
         <?php // take away the header if this is not the home page ?>
         <?php if ( !$is_front )
         {
-          if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?> <?php print $feed_icons; ?></h1><?php endif;
+          if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif;
         } ?>
         <?php print render($title_suffix); ?>
         <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
         <?php print render($page['help']); ?>
         <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
         <?php print render($page['content']); ?>
+        <?php print $feed_icons; ?>
         </div>
       </div> <!-- /.section, /#content -->
 
@@ -204,10 +205,10 @@
         </div> <!-- /.section, /#sidebar-first -->
       <?php endif; ?>
 
-      <?php if ($page['content_recommended']): ?>
       <h1 class="title title_recommended title_orange">Latest from Belarus</h1>
       <div id="recommended-content-wrapper">
         <div id="content-recommended" class="clearfix">
+          <?php if ($page['content_recommended']): ?>
             <div class="section">
             <?php print render($page['content_recommended']); ?>
             </div>

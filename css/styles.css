@@ -10,6 +10,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   min-height: 100%;
+  background-color: inherit;
 }
 
 @media print {
@@ -24,6 +25,8 @@ body {
   color: #000;
   background-color: rgba(245, 245, 245, 0.5);
   font-family: 'Roboto', sans-serif;
+  opacity: 1;
+  overflow-x: initial;
 }
 
 article,
@@ -1955,7 +1958,6 @@ a.logo_largeScreens {
     background-color: white;
     /* left: 1em; */
     margin: 0 auto;
-    pointer-events: none;
   }
   a.logo_largeScreens:active:not(.button) {
     background-color: white;
@@ -1965,7 +1967,6 @@ a.logo_largeScreens {
     background-color: white;
     padding: 0.5em;
     margin: 0 auto;
-    pointer-events: auto;
     /* box-shadow: 0px 3px 15px 3px rgba(0, 0, 0, 0.3);*/
   }
   div#navigation {
@@ -2160,10 +2161,6 @@ blockquote p {
   margin: 0.5em;
 }
 
-#content {
-  flex-basis: 65%;
-}
-
 figure {
   margin: 0 0;
 }
@@ -2190,6 +2187,10 @@ figcaption a:visited {
   margin-right: calc(-1em);
   background-size: cover;
   background-position: center;
+}
+
+.mainImageContainer img {
+  width: 100%;
 }
 
 .metaAndImage {
@@ -2262,10 +2263,6 @@ figcaption a:visited {
   color: grey;
 }
 
-#sidebar-first {
-  display: none;
-}
-
 .summary {
   font-weight: bold;
   font-size: large;
@@ -2304,7 +2301,7 @@ figcaption a:visited {
     position: absolute;
     top: 2.5em;
     right: 0;
-    box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: -1px 2px 1px 1px rgba(0, 0, 0, 0.3);
     background-color: #ef5223;
   }
   .nodeCategory_largeScreens a {
@@ -2313,17 +2310,17 @@ figcaption a:visited {
     text-decoration: none;
   }
   #page-title.title {
+    display: inherit;
+  }
+  .page-node #page-title.title {
     display: none;
   }
   #main {
     display: -webkit-box;
     display: flex;
   }
-  #sidebar-first, #sidebar-second {
-    display: initial;
-    padding: 0 1em;
-    flex-basis: 35%;
-    margin-left: 2em;
+  .page-node #main {
+    border-bottom: 1px solid lightgrey;
   }
   .title_largeScreens {
     display: initial;
@@ -2339,7 +2336,7 @@ figcaption a:visited {
     padding: 1rem;
   }
   .title_largeScreens span {
-    padding: 0 0.1em;
+    padding: 0em;
     background-color: rgba(239, 82, 35, 0.85);
   }
 }
@@ -2350,8 +2347,66 @@ figcaption a:visited {
     display: flex;
   }
   #main-wrapper {
-    width: 1024px;
+    max-width: 1024px;
   }
+}
+
+.block.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.block.at-bottom {
+  position: absolute;
+}
+
+.block.noMarginBottom {
+  margin-bottom: 0;
+}
+
+.block.fp-highlighted, .block.fp-highlighted_blue {
+  background-color: #fde8e1;
+  margin-top: 1.5em !important;
+  padding: 0.5em;
+}
+
+.block.fp-highlighted .block__title, .block.fp-highlighted_blue .block__title {
+  background-color: #ef5223;
+}
+
+.block.fp-highlighted_blue {
+  background-color: #acbfd5;
+}
+
+.block.fp-highlighted_blue .block__title {
+  background-color: #4e729a;
+}
+
+.block.fp-featured {
+  background-color: #4e729a;
+  padding: 0.5em;
+  margin-top: 1.5em !important;
+}
+
+.block.fp-featured a {
+  color: white !important;
+}
+
+.block-views {
+  margin: 1.5em 0;
+}
+
+.sidebar .block-views {
+  margin: 1em 0;
+}
+
+.sidebar .block-views:first-child {
+  margin-top: 0.5em;
+}
+
+.relatedLinks {
+  margin: 0.5em 0em;
+  display: inline-block;
 }
 
 .view-content ul {
@@ -2359,11 +2414,268 @@ figcaption a:visited {
   padding: 0em;
 }
 
+.fp-media-wrapper {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.node-type-home-page .block {
+  margin-top: 0em;
+}
+
+.view-front-page-two-main .view-content, .view-front-page-media-first .view-content {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.view-front-page-two-main .view-content .views-row, .view-front-page-media-first .view-content .views-row {
+  flex-basis: 300px;
+}
+
+.view-front-page-two-main .view-content .views-row:first-child, .view-front-page-media-first .view-content .views-row:first-child {
+  flex-basis: 350px;
+}
+
+.view-front-page-two-main .view-content .views-row .itemLink, .view-front-page-media-first .view-content .views-row .itemLink {
+  color: white;
+}
+
+.view-front-page-two-main .view-content .views-row .itemWrapper, .view-front-page-media-first .view-content .views-row .itemWrapper {
+  position: relative;
+  height: 22em;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.2s;
+}
+
+.view-front-page-two-main .view-content .views-row .itemTitle, .view-front-page-media-first .view-content .views-row .itemTitle {
+  position: absolute;
+  bottom: 0.5em;
+  left: 0.5em;
+  margin: 0.5em;
+  line-height: normal;
+  pointer-events: none;
+}
+
+.view-front-page-two-main .view-content .views-row .itemTitle .itemTitleText, .view-front-page-media-first .view-content .views-row .itemTitle .itemTitleText {
+  background-color: rgba(34, 34, 34, 0.9);
+  color: white;
+}
+
+.view-front-page-two-main .view-content .views-row .fp_categoryLink, .view-front-page-media-first .view-content .views-row .fp_categoryLink {
+  display: table;
+  text-decoration: none;
+  background-color: #ef5223;
+  color: white;
+  font-size: 0.7em;
+  margin: 1em 0;
+  padding: 0 0.5em;
+  pointer-events: initial;
+}
+
+.view-front-page-two-main .view-content .views-row .fp_categoryLink:hover, .view-front-page-media-first .view-content .views-row .fp_categoryLink:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.view-front-page-three-main .views-row {
+  position: relative;
+}
+
+.view-front-page-three-main .views-row .views-field-field-category {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  background-color: #ef5223;
+}
+
+.view-front-page-three-main .views-row .views-field-field-category a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0 0.5em;
+}
+
+.view-front-page-three-main .views-row .views-field-field-category a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .view-front-page-two-main .view-content {
+    display: -webkit-box;
+    display: flex;
+  }
+  .view-front-page-two-main .view-content .views-row:first-child {
+    flex-basis: 60%;
+  }
+  .view-front-page-two-main .view-content .views-row:last-child {
+    flex-basis: 37%;
+  }
+}
+
+#fp-other-content-wrapper {
+  display: -webkit-box;
+  display: flex;
+}
+
+#front-page-content-promoted {
+  width: 100%;
+}
+
+.node-type-home-page #main {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.not-logged-in .tabs {
+  display: none;
+}
+
+#sidebar-first, #sidebar-recommended, #fp-sidebar {
+  display: none;
+}
+
 #sidebar-second {
   display: none;
 }
 
+.region-fp-category {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.region-fp-category > * {
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+}
+
+.region-fp-category .block .views-row:first-child, .region-fp-category .block .views-row:nth-child(2) {
+  flex-basis: 45%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+}
+
+@media (max-width: 500px) {
+  .region-fp-category .block .views-row:first-child, .region-fp-category .block .views-row:nth-child(2) {
+    flex-basis: initial;
+  }
+}
+
+.region-fp-category .block .views-row:first-child .views-field-title, .region-fp-category .block .views-row:nth-child(2) .views-field-title {
+  background-color: #ef5223;
+  padding-left: 0.3em;
+}
+
+.region-fp-category .block .views-row:first-child .views-field-title a, .region-fp-category .block .views-row:nth-child(2) .views-field-title a {
+  color: white;
+}
+
+.region-fp-three-submain-sections {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #e5eaf0;
+  padding: 0 1em;
+}
+
+.region-fp-three-submain-sections > * {
+  flex-basis: 200px;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  padding-top: 1em;
+}
+
+.region-fp-three-submain-sections:first-child {
+  padding-right: 1em;
+}
+
+.region-fp-three-submain-sections:nth-child(2) {
+  padding-right: 1em;
+}
+
+.region-fp-media {
+  background-color: #222;
+  padding: 2em;
+}
+
+.region-fp-media .fp-media-header {
+  margin: 0 0 1em 0;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.region-fp-media .block {
+  margin: 0;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+}
+
+.region-fp-media .block:first-child {
+  flex-basis: 300px;
+}
+
+.region-fp-media .block:last-child {
+  flex-basis: 40%;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+}
+
 @media (min-width: 768px) {
+  .region-fp-media .block:last-child {
+    -webkit-box-flex: 0;
+            flex-grow: 0;
+  }
+}
+
+.region-related-content {
+  padding: 0.5em;
+}
+
+.region-content-recommended {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.region-content-recommended > * {
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  flex-basis: 250px;
+  margin-bottom: 0em;
+}
+
+#recommended-content-wrapper {
+  display: -webkit-box;
+  display: flex;
+}
+
+#sidebar-recommended .block:first-of-type {
+  margin-top: 1.5em;
+}
+
+@media (min-width: 768px) {
+  #content, #content-recommended, #fp-content-by-category {
+    flex-basis: 65%;
+  }
+  #sidebar-first, #sidebar-recommended, #fp-sidebar {
+    display: initial;
+    margin: 0 1em 0 1em;
+    padding: 0 0 0 1em;
+    flex-basis: 35%;
+  }
   #sidebar-second {
     display: initial;
   }
@@ -2386,6 +2698,7 @@ figcaption a:visited {
     align-self: stretch;
     background-color: rgba(0, 0, 0, 0.95);
     overflow: scroll;
+    padding: 1em;
     width: 100%;
     height: 100vh;
     z-index: 10;
@@ -2433,7 +2746,7 @@ figcaption a:visited {
     position: absolute;
     top: 0.5em;
     color: white;
-    right: 0.5em;
+    right: 1em;
     cursor: pointer;
     transition: color 0.2s;
   }
@@ -2470,55 +2783,356 @@ figcaption a:visited {
   }
 }
 
+.title_recommended {
+  color: lightgrey;
+  font-weight: bold;
+  margin: 0.5em auto 0em;
+  display: table;
+}
+
+.title_orange {
+  color: white;
+  font-weight: bold;
+  margin: 0em auto;
+  display: block;
+  background-color: #ef5223;
+  text-align: center;
+}
+
+.block__title {
+  margin: 0.5em 0;
+  margin-left: 0.2em;
+  padding: 0 0.2em;
+  background-color: #4e729a;
+  color: white;
+  text-align: center;
+  font-size: 120%;
+  display: inline-block;
+  line-height: normal;
+}
+
+.sidebar .block__title {
+  margin-left: 0;
+  background-color: #ef5223;
+  margin-bottom: 0.5em;
+}
+
+.block-views .block__title a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.block-views .block__title a:hover {
+  color: #dfe6ef;
+}
+
+.view .view-content {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.view .view-content .views-row {
+  flex-basis: 20%;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  margin: 0.3em;
+  flex-basis: 200px;
+  background-color: white;
+  box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.21);
+  transition: all 0.2s;
+  position: relative;
+}
+
+.view .view-content .views-row img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  display: block;
+}
+
+.view .view-content .views-row img:hover {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+.view .view-content .views-row .views-field-title {
+  line-height: normal;
+  padding: 0.5em 0em;
+  font-weight: bold;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+}
+
+.view .view-content .views-row .views-field-title a {
+  text-decoration: none;
+  transition: color 0.2s;
+  color: #333;
+  display: block;
+}
+
+.view.view-related-by-topic .view-content, .view.view-famous-belarusians .view-content, .view.view-latest-from-politics .view-content, .view.view-clone-of-latest-from-economy .view-content, .view.view-latest-from-sport .view-content, .view.view-latest-from-society .view-content, .view.view-latest-from-accidents .view-content {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.view.view-related-by-topic .view-content .views-row, .view.view-famous-belarusians .view-content .views-row, .view.view-latest-from-politics .view-content .views-row, .view.view-clone-of-latest-from-economy .view-content .views-row, .view.view-latest-from-sport .view-content .views-row, .view.view-latest-from-society .view-content .views-row, .view.view-latest-from-accidents .view-content .views-row {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  flex-basis: initial;
+  background-color: transparent;
+  box-shadow: none;
+  margin: 0.2em 0.3em;
+}
+
+.view.view-related-by-topic .view-content .views-row-last, .view.view-famous-belarusians .view-content .views-row-last, .view.view-latest-from-politics .view-content .views-row-last, .view.view-clone-of-latest-from-economy .view-content .views-row-last, .view.view-latest-from-sport .view-content .views-row-last, .view.view-latest-from-society .view-content .views-row-last, .view.view-latest-from-accidents .view-content .views-row-last {
+  margin-bottom: 0;
+}
+
+.view.view-related-by-topic .view-content .views-row .views-field-title, .view.view-famous-belarusians .view-content .views-row .views-field-title, .view.view-latest-from-politics .view-content .views-row .views-field-title, .view.view-clone-of-latest-from-economy .view-content .views-row .views-field-title, .view.view-latest-from-sport .view-content .views-row .views-field-title, .view.view-latest-from-society .view-content .views-row .views-field-title, .view.view-latest-from-accidents .view-content .views-row .views-field-title {
+  flex-basis: 100%;
+  margin: 0;
+  line-height: normal;
+}
+
+.view.view-related-by-topic .view-content .views-row .views-field-field-image, .view.view-famous-belarusians .view-content .views-row .views-field-field-image, .view.view-latest-from-politics .view-content .views-row .views-field-field-image, .view.view-clone-of-latest-from-economy .view-content .views-row .views-field-field-image, .view.view-latest-from-sport .view-content .views-row .views-field-field-image, .view.view-latest-from-society .view-content .views-row .views-field-field-image, .view.view-latest-from-accidents .view-content .views-row .views-field-field-image {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  flex-basis: 0%;
+  margin-right: 0.5em;
+  margin: 0.3em 0em;
+}
+
+.view.view-related-by-topic .view-content .views-row .views-field-field-image img, .view.view-famous-belarusians .view-content .views-row .views-field-field-image img, .view.view-latest-from-politics .view-content .views-row .views-field-field-image img, .view.view-clone-of-latest-from-economy .view-content .views-row .views-field-field-image img, .view.view-latest-from-sport .view-content .views-row .views-field-field-image img, .view.view-latest-from-society .view-content .views-row .views-field-field-image img, .view.view-latest-from-accidents .view-content .views-row .views-field-field-image img {
+  display: none;
+}
+
+.view.view-related-by-topic a, .view.view-famous-belarusians a, .view.view-latest-from-politics a, .view.view-clone-of-latest-from-economy a, .view.view-latest-from-sport a, .view.view-latest-from-society a, .view.view-latest-from-accidents a {
+  text-decoration: none;
+  color: black;
+  font-size: 0.95em;
+}
+
+.view.view-related-by-topic a:hover, .view.view-famous-belarusians a:hover, .view.view-latest-from-politics a:hover, .view.view-clone-of-latest-from-economy a:hover, .view.view-latest-from-sport a:hover, .view.view-latest-from-society a:hover, .view.view-latest-from-accidents a:hover {
+  text-decoration: underline;
+}
+
+.view.view-related-by-topic .view-content {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+}
+
+.view.view-latest-from-tourism {
+  display: -webkit-box;
+  display: flex;
+}
+
+.view.view-latest-from-tourism .views-row:nth-child(2n) {
+  flex-basis: 150px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.view.fp-block .views-row {
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.view.smallImg .view-content .views-row {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  background-color: transparent;
+  box-shadow: none;
+  margin-bottom: 1em;
+}
+
+.view.smallImg .view-content .views-row .views-field-field-image {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  flex-basis: 35%;
+}
+
+.view.smallImg .view-content .views-row .views-field-title {
+  flex-basis: 65%;
+  padding: 0;
+  padding-left: 0.5em;
+}
+
+.view.titleOnly .view-content .views-row {
+  display: -webkit-box;
+  display: flex;
+  background-color: transparent;
+  box-shadow: none;
+  margin: 0.5em 0.3em;
+}
+
+.view.titleOnly .view-content .views-row .views-field-title {
+  flex-basis: 100%;
+  padding: 0;
+}
+
+.view.fp-featured .view-content .views-row {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.view.fp-featured .view-content .views-row .views-field-title {
+  flex-basis: 100%;
+  padding: 0.5em 0em;
+}
+
+.view.noBackgroundColors .view-content .views-row .views-field {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.view.noBackgroundColors .view-content .views-row .views-field a {
+  color: inherit;
+}
+
+.view.noBackgroundColors .view-content .views-row .views-field a:hover {
+  text-decoration: underline;
+}
+
+.view.view-front-page-media .view-content .views-row, .view.view-front-page-media-first .view-content .views-row {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.view.view-front-page-media .view-content .views-row .views-field-title a, .view.view-front-page-media-first .view-content .views-row .views-field-title a {
+  color: grey;
+}
+
 @media (min-width: 768px) {
-  .view-related-by-topic .views-row {
+  .block__title {
+    font-size: 150%;
+  }
+  .view .view-content {
     display: -webkit-box;
     display: flex;
-    -webkit-box-align: start;
-            align-items: flex-start;
-    margin-bottom: 0.5em;
+    flex-wrap: wrap;
   }
-  .view-related-by-topic .views-row-last {
-    margin-bottom: 0;
+  .view .view-content .views-row {
+    flex-basis: 20%;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+    margin: 0.3em;
+    flex-basis: 200px;
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.21);
   }
-  .view-related-by-topic .views-row .views-field-title {
+  .view .view-content .views-row img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    display: block;
+  }
+  .view .view-content .views-row .views-field-title {
+    line-height: normal;
+    padding: 0.3em;
+    font-weight: bold;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+  }
+  .view .view-content .views-row .views-field-title a {
+    text-decoration: none;
+    transition: color 0.2s;
+    color: #333;
+    display: block;
+  }
+  .view.view-related-by-topic .view-content .views-row .views-field-title, .view.view-famous-belarusians .view-content .views-row .views-field-title, .view.view-latest-from-politics .view-content .views-row .views-field-title, .view.view-clone-of-latest-from-economy .view-content .views-row .views-field-title, .view.view-latest-from-sport .view-content .views-row .views-field-title, .view.view-latest-from-society .view-content .views-row .views-field-title, .view.view-latest-from-accidents .view-content .views-row .views-field-title {
     flex-basis: 65%;
     margin: 0;
     line-height: normal;
+    padding-top: 0;
+    padding-left: 0.5em;
   }
-  .view-related-by-topic .views-row .views-field-field-image {
+  .view.view-related-by-topic .view-content .views-row .views-field-field-image, .view.view-famous-belarusians .view-content .views-row .views-field-field-image, .view.view-latest-from-politics .view-content .views-row .views-field-field-image, .view.view-clone-of-latest-from-economy .view-content .views-row .views-field-field-image, .view.view-latest-from-sport .view-content .views-row .views-field-field-image, .view.view-latest-from-society .view-content .views-row .views-field-field-image, .view.view-latest-from-accidents .view-content .views-row .views-field-field-image {
     position: relative;
     display: -webkit-box;
     display: flex;
     flex-basis: 35%;
     margin-right: 0.5em;
-    margin: 0.3em 0.5em 0.3em 0em;
+    margin: 0.3em 0em;
   }
-  .view-related-by-topic .views-row .views-field-field-image img {
+  .view.view-related-by-topic .view-content .views-row .views-field-field-image img, .view.view-famous-belarusians .view-content .views-row .views-field-field-image img, .view.view-latest-from-politics .view-content .views-row .views-field-field-image img, .view.view-clone-of-latest-from-economy .view-content .views-row .views-field-field-image img, .view.view-latest-from-sport .view-content .views-row .views-field-field-image img, .view.view-latest-from-society .view-content .views-row .views-field-field-image img, .view.view-latest-from-accidents .view-content .views-row .views-field-field-image img {
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
        object-position: center;
     height: 70px;
+    display: block;
   }
-  .view-related-by-topic a {
-    text-decoration: none;
-    color: black;
-    font-size: 0.95em;
-  }
-  .view-related-by-topic a:hover {
-    text-decoration: underline;
-  }
-  .block__title {
-    margin: 0.5em 0;
-    padding: 0 0.2em;
-    background-color: #ef5223;
-    color: white;
-    text-align: center;
+  .sidebar .views-row {
+    margin-left: 0em !important;
   }
   #block-views-same-theme-block-block {
     padding: 0.5em;
   }
+  #block-views-editor-s-picks-block, #block-views-photo-and-video-block {
+    background-color: #4e729a;
+    padding: 0.5em;
+  }
+  #block-views-editor-s-picks-block .block__title, #block-views-photo-and-video-block .block__title {
+    background-color: #4e729a;
+  }
+  #block-views-editor-s-picks-block .views-row, #block-views-photo-and-video-block .views-row {
+    margin: 0.3em;
+  }
+  #block-views-editor-s-picks-block .views-field-title, #block-views-photo-and-video-block .views-field-title {
+    background-color: #4e729a;
+    padding: 0.3em 0;
+  }
+  #block-views-editor-s-picks-block .views-field-title a, #block-views-photo-and-video-block .views-field-title a {
+    color: whitesmoke;
+  }
+  #block-views-famous-belarusians-block {
+    background-color: rgba(239, 82, 35, 0.15);
+    padding: 0em 1em 0.5em;
+  }
+}
+
+.page-taxonomy-term #content {
+  flex-basis: 100%;
+}
+
+.view.view-taxonomy-term .view-content, .view.view-recommended-from-taxonomy .view-content {
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.view.view-taxonomy-term .view-content .views-row, .view.view-recommended-from-taxonomy .view-content .views-row {
+  flex-basis: 300px;
+  -webkit-box-flex: 0;
+          flex-grow: 0;
+}
+
+.view.view-taxonomy-term .view-content .views-row .views-field-title, .view.view-recommended-from-taxonomy .view-content .views-row .views-field-title {
+  padding: 1em;
+  padding-left: 0.2em;
+}
+
+#taxonomy-recommended-items {
+  padding: 1em;
+  background: linear-gradient(to top, #2c4056, #3d5978);
+  margin: 0em -1em 2em -1em;
 }
 
 /*# sourceMappingURL=styles.css.map */

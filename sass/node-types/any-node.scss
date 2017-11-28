@@ -12,9 +12,7 @@ blockquote {
     margin: 0.5em;
   }
 }
-#content {
-  flex-basis: 65%;
-}
+
 
 figure {
   margin: 0 0;
@@ -40,6 +38,9 @@ figcaption {
   margin-right: calc(-1em);
   background-size: cover;
   background-position: center;
+  & img {
+    width: 100%;
+  }
 }
 
 #main-wrapper {
@@ -107,10 +108,6 @@ figcaption {
   color: $grey;
 }
 
-#sidebar-first {
-  display: none;
-}
-
 .summary {
   font-weight: bold;
   font-size: large;
@@ -151,7 +148,7 @@ figcaption {
       position: absolute;
       top: 2.5em;
       right: 0;
-      box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.3);
+      box-shadow: -1px 2px 1px 1px rgba(0, 0, 0, 0.3);
       background-color: $ctvorange;
       & a {
         color: white;
@@ -176,17 +173,18 @@ figcaption {
   //   }
   // }
   #page-title.title {
-    display: none;
+    display: inherit;
+    .page-node & {
+      display: none;
+    }
   }
   #main {
     display: flex;
+    .page-node & {
+      border-bottom: 1px solid lightgrey;
+    }
   }
-  #sidebar-first, #sidebar-second {
-    display: initial;
-    padding: 0 1em;
-    flex-basis: 35%;
-    margin-left: 2em;
-  }
+  
   .title_largeScreens {
     display: initial;
     font-size: 1.75em;
@@ -202,7 +200,7 @@ figcaption {
     // background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7) 30%);
     & span {
       // background-color: rgba(0, 0, 0, 0.7);
-      padding: 0 0.1em;
+      padding: 0em;
       // background-color: rgba(29, 100, 162, 0.7);
       background-color: rgba(239, 82, 35, 0.85);
     }
@@ -214,6 +212,6 @@ figcaption {
     display: flex;
   }
   #main-wrapper {
-    width: 1024px;
+    max-width: 1024px;
   }
 }

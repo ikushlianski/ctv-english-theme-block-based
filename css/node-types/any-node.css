@@ -10,10 +10,6 @@ blockquote p {
   margin: 0.5em;
 }
 
-#content {
-  flex-basis: 65%;
-}
-
 figure {
   margin: 0 0;
 }
@@ -40,6 +36,10 @@ figcaption a:visited {
   margin-right: calc(-1em);
   background-size: cover;
   background-position: center;
+}
+
+.mainImageContainer img {
+  width: 100%;
 }
 
 .metaAndImage {
@@ -112,10 +112,6 @@ figcaption a:visited {
   color: grey;
 }
 
-#sidebar-first {
-  display: none;
-}
-
 .summary {
   font-weight: bold;
   font-size: large;
@@ -154,7 +150,7 @@ figcaption a:visited {
     position: absolute;
     top: 2.5em;
     right: 0;
-    box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: -1px 2px 1px 1px rgba(0, 0, 0, 0.3);
     background-color: #ef5223;
   }
   .nodeCategory_largeScreens a {
@@ -163,17 +159,17 @@ figcaption a:visited {
     text-decoration: none;
   }
   #page-title.title {
+    display: inherit;
+  }
+  .page-node #page-title.title {
     display: none;
   }
   #main {
     display: -webkit-box;
     display: flex;
   }
-  #sidebar-first, #sidebar-second {
-    display: initial;
-    padding: 0 1em;
-    flex-basis: 35%;
-    margin-left: 2em;
+  .page-node #main {
+    border-bottom: 1px solid lightgrey;
   }
   .title_largeScreens {
     display: initial;
@@ -189,7 +185,7 @@ figcaption a:visited {
     padding: 1rem;
   }
   .title_largeScreens span {
-    padding: 0 0.1em;
+    padding: 0em;
     background-color: rgba(239, 82, 35, 0.85);
   }
 }
@@ -200,7 +196,7 @@ figcaption a:visited {
     display: flex;
   }
   #main-wrapper {
-    width: 1024px;
+    max-width: 1024px;
   }
 }
 

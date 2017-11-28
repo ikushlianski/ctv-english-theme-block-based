@@ -1,7 +1,62 @@
+@import 'init/customcolors';
+
+.block {
+  &.sticky {
+    position: fixed;
+    top: 0;
+  }
+  &.at-bottom {
+    position: absolute;
+  }
+  &.noMarginBottom {
+    margin-bottom: 0;
+  }
+  &.fp-highlighted {
+    background-color: lighten($ctvorange, 40%);
+    margin-top: 1.5em!important;
+    padding: 0.5em;
+    & .block__title {
+      background-color: lighten($ctvorange, 0%);
+    }
+    &_blue {
+      @extend .fp-highlighted;
+      background-color: lighten($ctvblue, 30%);
+      & .block__title {
+        background-color: lighten($ctvblue, 0%);
+      }
+    }
+  }
+
+  &.fp-featured {
+    background-color: $ctvblue;
+    padding: 0.5em;
+    margin-top: 1.5em!important;
+    & a {
+      color: white!important;
+    }
+  }
+
+}
+.block-views {
+  margin: 1.5em 0;
+  .sidebar & {
+    margin: 1em 0;
+    &:first-child {
+      margin-top: 0.5em;
+    }
+  }
+}
+
+
+.relatedLinks {
+  margin: 0.5em 0em;
+  display: inline-block;
+
+}
+
 .view-content {
   & ul {
     list-style-type: none;
     padding: 0em;
-    
   }
 }

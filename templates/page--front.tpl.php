@@ -166,63 +166,65 @@
     <div id="main-wrapper">
       <div id="main" class="clearfix">
 
-      <div id="content" class="column">
-        <div class="section">
-        <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
-        <a id="main-content"></a>
-        <?php print render($title_prefix); ?>
-        <?php // take away the header if this is not the home page ?>
-        <?php if ( !$is_front )
-        {
-          if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?> <?php print $feed_icons; ?></h1><?php endif;
-        } ?>
-        <?php print render($title_suffix); ?>
-        <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
-        <?php print render($page['help']); ?>
-        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-        <?php print render($page['content']); ?>
-        </div>
-      </div> <!-- /.section, /#content -->
-
-
-
-      <?php if ($page['sidebar_first']): ?>
-        <div id="sidebar-first" class="column sidebar">
+        <div id="front-page-content-promoted" class="column">
           <div class="section">
-          <?php print render($page['sidebar_first']); ?>
+          <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
+          <?php print render($title_prefix); ?>
+          <?php // take away the header if this is not the home page ?>
+          <?php if ( !$is_front )
+          {
+            if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif;
+          } ?>
+          <?php print render($title_suffix); ?>
+          <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+          <?php print render($page['help']); ?>
+          <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+          <?php print render($page['fp_five_main_items']); ?>
           </div>
-        </div> <!-- /.section, /#sidebar-first -->
-      <?php endif; ?>
 
-      </div>
-
-      <?php if ($page['related_content']): ?>
-        <div id="related-content-region" class="related-content">
+          <?php if ($page['fp_three_submain_sections']): ?>
           <div class="section">
-          <?php print render($page['related_content']); ?>
+            <?php print render($page['fp_three_submain_sections']); ?>
           </div>
-        </div> <!-- /.section, /#sidebar-first -->
-      <?php endif; ?>
+          <?php endif; ?>
 
-      <?php if ($page['content_recommended']): ?>
-      <h1 class="title title_recommended title_orange">Latest from Belarus</h1>
-      <div id="recommended-content-wrapper">
-        <div id="content-recommended" class="clearfix">
+          <?php if ($page['fp_media']): ?>
+          <div class="section">
+            <?php print render($page['fp_media']); ?>
+          </div>
+          <?php endif; ?>
+        </div> <!-- /.section, /#content -->
+
+        <div id="fp-other-content-wrapper">
+          <?php if ($page['fp_category']): ?>
+          <div id="fp-content-by-category" class="clearfix">
             <div class="section">
-            <?php print render($page['content_recommended']); ?>
+            <?php print render($page['fp_category']); ?>
             </div>
+          </div>
+          <?php endif; ?>
+
+          <?php if ($page['fp_tourism']): ?>
+          <div id="fp-content-by-category-tourism" class="clearfix">
+            <div class="section">
+            <?php print render($page['fp_tourism']); ?>
+            </div>
+          </div>
+          <?php endif; ?>
+
+          <?php if ($page['fp_sidebar']): ?>
+          <div id="fp-sidebar" class="clearfix">
+            <div class="section">
+            <?php print render($page['fp_sidebar']); ?>
+            </div>
+          </div>
           <?php endif; ?>
         </div>
 
-        <?php if ($page['sidebar_recommended']): ?>
-          <div id="sidebar-recommended" class="column sidebar">
-            <div class="section">
-            <?php print render($page['sidebar_recommended']); ?>
-            </div>
-          </div> <!-- /.section, /#sidebar-recommended -->
-        <?php endif; ?>
-      </div>
-    </div> <!-- /#main, /#main-wrapper -->
+      </div><!-- /#main -->
+
+
+    </div> <!-- /#main-wrapper -->
 
 
 
