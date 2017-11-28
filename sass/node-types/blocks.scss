@@ -1,3 +1,5 @@
+@import 'init/customcolors';
+
 .block {
   &.sticky {
     position: fixed;
@@ -9,6 +11,31 @@
   &.noMarginBottom {
     margin-bottom: 0;
   }
+  &.fp-highlighted {
+    background-color: lighten($ctvorange, 40%);
+    margin-top: 1.5em!important;
+    padding: 0.5em;
+    & .block__title {
+      background-color: lighten($ctvorange, 0%);
+    }
+    &_blue {
+      @extend .fp-highlighted;
+      background-color: lighten($ctvblue, 30%);
+      & .block__title {
+        background-color: lighten($ctvblue, 0%);
+      }
+    }
+  }
+
+  &.fp-featured {
+    background-color: $ctvblue;
+    padding: 0.5em;
+    margin-top: 1.5em!important;
+    & a {
+      color: white!important;
+    }
+  }
+
 }
 .block-views {
   margin: 1.5em 0;

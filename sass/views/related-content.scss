@@ -152,6 +152,7 @@
 
       & .views-row {
         display: flex;
+        flex-direction: row;
         background-color: transparent;
         box-shadow: none;
         margin-bottom: 1em;
@@ -195,6 +196,22 @@
       }
     }
   }
+  &.noBackgroundColors {
+    & .view-content {
+      & .views-row {
+        & .views-field {
+          background-color: transparent;
+          box-shadow: none;
+          & a {
+            color: inherit;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
   &.view-front-page-media, &.view-front-page-media-first {
     & .view-content {
       & .views-row {
@@ -209,12 +226,6 @@
     }
   }
 }
-#block-views-bc4d82ca41b3690bfc18d1f53c06d20c {
-  background-color: transparentize($ctvblue, 0.65);
-  padding: 0.5em;
-  margin-top: 1.5em;
-}
-
 
 @media (min-width: 768px) {
 

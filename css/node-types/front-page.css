@@ -1,39 +1,40 @@
-.node-type-home-page .block:first-child {
+.fp-media-wrapper {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.node-type-home-page .block {
   margin-top: 0em;
 }
 
-.view-front-page-two-main .view-content {
+.view-front-page-two-main .view-content, .view-front-page-media-first .view-content {
   display: -webkit-box;
   display: flex;
   flex-wrap: nowrap;
 }
 
-.view-front-page-two-main .view-content .views-row {
+.view-front-page-two-main .view-content .views-row, .view-front-page-media-first .view-content .views-row {
   flex-basis: 300px;
 }
 
-.view-front-page-two-main .view-content .views-row:first-child {
+.view-front-page-two-main .view-content .views-row:first-child, .view-front-page-media-first .view-content .views-row:first-child {
   flex-basis: 350px;
 }
 
-.view-front-page-two-main .view-content .views-row .itemLink {
+.view-front-page-two-main .view-content .views-row .itemLink, .view-front-page-media-first .view-content .views-row .itemLink {
   color: white;
 }
 
-.view-front-page-two-main .view-content .views-row .itemWrapper {
+.view-front-page-two-main .view-content .views-row .itemWrapper, .view-front-page-media-first .view-content .views-row .itemWrapper {
   position: relative;
-  height: 20em;
+  height: 22em;
   background-position: center;
   background-size: cover;
   transition: all 0.2s;
 }
 
-.view-front-page-two-main .view-content .views-row .itemWrapper:hover {
-  -webkit-filter: brightness(0.95);
-          filter: brightness(0.95);
-}
-
-.view-front-page-two-main .view-content .views-row .itemTitle {
+.view-front-page-two-main .view-content .views-row .itemTitle, .view-front-page-media-first .view-content .views-row .itemTitle {
   position: absolute;
   bottom: 0.5em;
   left: 0.5em;
@@ -42,12 +43,12 @@
   pointer-events: none;
 }
 
-.view-front-page-two-main .view-content .views-row .itemTitle .itemTitleText {
+.view-front-page-two-main .view-content .views-row .itemTitle .itemTitleText, .view-front-page-media-first .view-content .views-row .itemTitle .itemTitleText {
   background-color: rgba(34, 34, 34, 0.9);
   color: white;
 }
 
-.view-front-page-two-main .view-content .views-row .fp_categoryLink {
+.view-front-page-two-main .view-content .views-row .fp_categoryLink, .view-front-page-media-first .view-content .views-row .fp_categoryLink {
   display: table;
   text-decoration: none;
   background-color: #ef5223;
@@ -58,7 +59,7 @@
   pointer-events: initial;
 }
 
-.view-front-page-two-main .view-content .views-row .fp_categoryLink:hover {
+.view-front-page-two-main .view-content .views-row .fp_categoryLink:hover, .view-front-page-media-first .view-content .views-row .fp_categoryLink:hover {
   color: white;
   text-decoration: underline;
 }

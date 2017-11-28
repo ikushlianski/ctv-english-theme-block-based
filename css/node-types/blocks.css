@@ -7,6 +7,38 @@
   position: absolute;
 }
 
+.block.noMarginBottom {
+  margin-bottom: 0;
+}
+
+.block.fp-highlighted, .block.fp-highlighted_blue {
+  background-color: #fde8e1;
+  margin-top: 1.5em !important;
+  padding: 0.5em;
+}
+
+.block.fp-highlighted .block__title, .block.fp-highlighted_blue .block__title {
+  background-color: #ef5223;
+}
+
+.block.fp-highlighted_blue {
+  background-color: #acbfd5;
+}
+
+.block.fp-highlighted_blue .block__title {
+  background-color: #4e729a;
+}
+
+.block.fp-featured {
+  background-color: #4e729a;
+  padding: 0.5em;
+  margin-top: 1.5em !important;
+}
+
+.block.fp-featured a {
+  color: white !important;
+}
+
 .block-views {
   margin: 1.5em 0;
 }

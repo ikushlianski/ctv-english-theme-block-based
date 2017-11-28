@@ -46,8 +46,12 @@
   "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>>
 <head profile="<?php print $grddl_profile; ?>">
+  <style media="screen">
+    body {opacity: 0;overflow-x: hidden; transition: opacity 0.5s} html { background-color: white;}
+  </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name='robots' content='noindex,follow' />
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
 

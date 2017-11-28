@@ -204,6 +204,14 @@
           </div>
           <?php endif; ?>
 
+          <?php if ($page['fp_tourism']): ?>
+          <div id="fp-content-by-category-tourism" class="clearfix">
+            <div class="section">
+            <?php print render($page['fp_tourism']); ?>
+            </div>
+          </div>
+          <?php endif; ?>
+
           <?php if ($page['fp_sidebar']): ?>
           <div id="fp-sidebar" class="clearfix">
             <div class="section">

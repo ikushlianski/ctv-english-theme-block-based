@@ -60,11 +60,6 @@
   position: relative;
 }
 
-.view .view-content .views-row:hover {
-  -webkit-filter: brightness(0.9);
-          filter: brightness(0.9);
-}
-
 .view .view-content .views-row img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -73,20 +68,24 @@
   display: block;
 }
 
+.view .view-content .views-row img:hover {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
 .view .view-content .views-row .views-field-title {
   line-height: normal;
   padding: 0.5em 0em;
   font-weight: bold;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
 }
 
 .view .view-content .views-row .views-field-title a {
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.2s;
   color: #333;
-}
-
-.view .view-content .views-row .views-field-title a:hover {
-  color: #ef5223;
+  display: block;
 }
 
 .view.view-related-by-topic .view-content, .view.view-famous-belarusians .view-content, .view.view-latest-from-politics .view-content, .view.view-clone-of-latest-from-economy .view-content, .view.view-latest-from-sport .view-content, .view.view-latest-from-society .view-content, .view.view-latest-from-accidents .view-content {
@@ -152,14 +151,87 @@
   display: flex;
 }
 
-.view.view-latest-from-tourism .views-row:nth-child(3n-2) {
-  flex-basis: 200px;
+.view.view-latest-from-tourism .views-row:nth-child(2n) {
+  flex-basis: 150px;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  flex-basis: 63%;
+}
+
+.view.fp-block .views-row {
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.view.smallImg .view-content .views-row {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  background-color: transparent;
+  box-shadow: none;
+  margin-bottom: 1em;
+}
+
+.view.smallImg .view-content .views-row .views-field-field-image {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  flex-basis: 35%;
+}
+
+.view.smallImg .view-content .views-row .views-field-title {
+  flex-basis: 65%;
+  padding: 0;
+  padding-left: 0.5em;
+}
+
+.view.titleOnly .view-content .views-row {
+  display: -webkit-box;
+  display: flex;
+  background-color: transparent;
+  box-shadow: none;
+  margin: 0.5em 0.3em;
+}
+
+.view.titleOnly .view-content .views-row .views-field-title {
+  flex-basis: 100%;
+  padding: 0;
+}
+
+.view.fp-featured .view-content .views-row {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.view.fp-featured .view-content .views-row .views-field-title {
+  flex-basis: 100%;
+  padding: 0.5em 0em;
+}
+
+.view.noBackgroundColors .view-content .views-row .views-field {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.view.noBackgroundColors .view-content .views-row .views-field a {
+  color: inherit;
+}
+
+.view.noBackgroundColors .view-content .views-row .views-field a:hover {
+  text-decoration: underline;
+}
+
+.view.view-front-page-media .view-content .views-row, .view.view-front-page-media-first .view-content .views-row {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.view.view-front-page-media .view-content .views-row .views-field-title a, .view.view-front-page-media-first .view-content .views-row .views-field-title a {
+  color: grey;
 }
 
 @media (min-width: 768px) {
@@ -191,14 +263,14 @@
     line-height: normal;
     padding: 0.3em;
     font-weight: bold;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
   }
   .view .view-content .views-row .views-field-title a {
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.2s;
     color: #333;
-  }
-  .view .view-content .views-row .views-field-title a:hover {
-    color: #ef5223;
+    display: block;
   }
   .view.view-related-by-topic .view-content .views-row .views-field-title, .view.view-famous-belarusians .view-content .views-row .views-field-title, .view.view-latest-from-politics .view-content .views-row .views-field-title, .view.view-clone-of-latest-from-economy .view-content .views-row .views-field-title, .view.view-latest-from-sport .view-content .views-row .views-field-title, .view.view-latest-from-society .view-content .views-row .views-field-title, .view.view-latest-from-accidents .view-content .views-row .views-field-title {
     flex-basis: 65%;
@@ -222,9 +294,6 @@
        object-position: center;
     height: 70px;
     display: block;
-  }
-  .view.fp-block .views-row {
-    box-shadow: none;
   }
   .sidebar .views-row {
     margin-left: 0em !important;

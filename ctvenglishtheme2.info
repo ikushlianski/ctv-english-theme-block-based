@@ -101,6 +101,7 @@ regions[fp_five_main_items]    = Top five on front page
 regions[fp_three_submain_sections]    = Top three sections on front page
 regions[fp_media]    = Media section on front page
 regions[fp_category]    = Section for content by category on front page
+regions[fp_tourism]    = Section for tourism on front page
 regions[fp_sidebar]    = Section for sidebar on front page for various content
 
 
