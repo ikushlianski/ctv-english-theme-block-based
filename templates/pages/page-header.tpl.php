@@ -1,6 +1,27 @@
+<?php
+$pathToTheme = $base_path . $directory . '/images-source/';
+$brandedBackground = "branded_background2.jpg";
+$advertizerSite = "http://kinopoisk.ru";
+if ($brandedBackground) {
+  $pathToBackground = $pathToTheme . $brandedBackground;
+}
+ ?>
 <?php print render($page['sitemap_nav']); ?>
 
-<div id="page-wrapper"><div id="page">
+<div id="page-wrapper"><div id="page"
+  <?php if ($brandedBackground): ?>
+  style="
+    background-color: transparent;
+    background-image: url(<?php echo $pathToBackground ?>);
+    background-position: top center;
+    background-size: auto;
+    background-repeat: no-repeat;
+  "
+  <?php endif; ?>
+>
+  <?php if ($brandedBackground): ?>
+  <a class="advertizerSiteLink" target="_blank" href="<?php if ($advertizerSite) { echo $advertizerSite; } ?>" style="display: block; height: 12em; width: 100%"></a>
+  <?php endif; ?>
 
   <div id="header"><div class="section clearfix">
   <?php if ($site_name || $site_slogan): ?>
@@ -36,22 +57,27 @@
           <i class="fa fa-2x fa-bars toggle" aria-hidden="true"></i>
         </div>
         <div class="nav-menu-div">
-          <?php if ($logo): ?>
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"  id="logo_largeScreens" class="logo_largeScreens">
-              <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-            </a>
-          <?php endif; ?>
+
           <div class="mainAndSecondaryMenuWrapper">
-            <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('main-menu links', 'clearfix'))/*, 'heading' => t('Main menu')*/)); ?>
-            <div class="secondary_menu_wrapper">
-              <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('login-menu links', 'clearfix'))/*, 'heading' => t('Secondary menu')*/)); ?>
-              <a href="http://ctv.by" title="<?php print t('CTV.by Russian version'); ?>" rel="home" id="logo_ruslang" class="logo_lang">
-                <img src="<?php echo file_create_url(path_to_theme().'/images-source/rus_flag.png') ?>" alt="<?php print t('CTV.by Russian version'); ?>" />
+            <?php if ($logo): ?>
+              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"  id="logo_largeScreens" class="logo_largeScreens">
+                <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
               </a>
-              <a <?php if (user_is_anonymous()): ?> href="<?php $base_url ?>/user" <?php endif; ?>><i class="fa fa-2x fa-user login-menu-hider" aria-hidden="true"></i></a>
-              <i class="fa fa-2x fa-bars toggle_largeScreens" aria-hidden="true"></i>
-            </div>
+            <?php endif; ?>
+
+            <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('main-menu links', 'clearfix'))/*, 'heading' => t('Main menu')*/)); ?>
+
           </div>
+
+          <div class="secondary_menu_wrapper">
+            <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('login-menu links', 'clearfix'))/*, 'heading' => t('Secondary menu')*/)); ?>
+            <a href="http://ctv.by" title="<?php print t('CTV.by Russian version'); ?>" rel="home" id="logo_ruslang" class="logo_lang">
+              <img src="<?php echo file_create_url(path_to_theme().'/images-source/rus_flag.png') ?>" alt="<?php print t('CTV.by Russian version'); ?>" />
+            </a>
+            <a class="login-menu-hider-link" <?php if (user_is_anonymous()): ?> href="<?php $base_url ?>/user" <?php endif; ?>><i class="fa fa-2x fa-user login-menu-hider" aria-hidden="true"></i></a>
+            <i class="fa fa-2x fa-bars toggle_largeScreens" aria-hidden="true"></i>
+          </div>
+
         </div>
       </div>
 
