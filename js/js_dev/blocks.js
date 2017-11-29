@@ -62,6 +62,14 @@
 			while ( $("#content-recommended .section").height() < $("#sidebar-recommended .section").height());
     }
 
+    // trigger hover effect on entire item when hovering over img
+    $(".views-row").hover(function(){
+      $(this).children(".views-field-title").find("a").css({"color":"#ef5223"});
+    });
+    $(".views-row").mouseleave(function(){
+      $(this).children(".views-field-title").find("a").css({"color":""});
+    });
+
   });
 
 })(jQuery, Drupal);
