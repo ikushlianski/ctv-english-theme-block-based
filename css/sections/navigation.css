@@ -13,6 +13,14 @@
   color: color(link-hover);
 }
 
+.links.login-menu {
+  padding: 0;
+}
+
+.logged-in .login-menu-hider-link {
+  display: none;
+}
+
 .mainAndSecondaryMenuWrapper {
   display: -webkit-box;
   display: flex;
@@ -122,13 +130,13 @@ a.logo_largeScreens {
 .secondary_menu_wrapper {
   display: -webkit-box;
   display: flex;
-  -webkit-box-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
           align-items: center;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-          flex-direction: row-reverse;
+  -webkit-box-direction: normal;
+          flex-direction: row;
 }
 
 .secondary_menu_wrapper > * {
@@ -204,17 +212,17 @@ a.logo_largeScreens {
             align-items: stretch;
     background-color: #4e729a;
   }
-  .nav-group .nav-menu-div .main-menu, .nav-group .nav-menu-div .main-menu-2, .nav-group .nav-menu-div .login-menu {
+  .nav-group .nav-menu-div .main-menu, .nav-group .nav-menu-div .main-menu-2 {
     display: -webkit-box;
     display: flex;
     list-style-type: none;
   }
-  .nav-group .nav-menu-div .main-menu li a, .nav-group .nav-menu-div .main-menu-2 li a, .nav-group .nav-menu-div .login-menu li a {
+  .nav-group .nav-menu-div .main-menu li a, .nav-group .nav-menu-div .main-menu-2 li a {
     color: white;
     text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.5);
     transition: color 0.2s;
   }
-  .nav-group .nav-menu-div .main-menu li a:hover, .nav-group .nav-menu-div .main-menu-2 li a:hover, .nav-group .nav-menu-div .login-menu li a:hover {
+  .nav-group .nav-menu-div .main-menu li a:hover, .nav-group .nav-menu-div .main-menu-2 li a:hover {
     color: #f0f3f7;
   }
   .nav-group .nav-menu-div .login-menu-hider {
@@ -249,6 +257,20 @@ a.logo_largeScreens {
   }
   .nav-group .brandAndToggleDiv {
     display: none;
+  }
+  .login-menu {
+    display: none;
+  }
+  .login-menu.toggled-on {
+    display: initial;
+  }
+  .login-menu li a {
+    color: white;
+    text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.5);
+    transition: color 0.2s;
+  }
+  .login-menu li a:hover {
+    color: #f0f3f7;
   }
   .nav-group2 {
     background-color: transparent;
