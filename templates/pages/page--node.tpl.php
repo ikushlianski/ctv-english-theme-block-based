@@ -72,13 +72,7 @@
  * @ingroup themeable
  */
 ?>
-  <?php print render($page['sitemap_nav']); ?>
-  <?php if ($logo): ?>
-    <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"  id="logo_largeScreens" class="logo_largeScreens">
-      <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-    </a>
-  <?php endif; ?>
-  <div id="page-wrapper"><div id="page">
+  
 
     <?php include('page-header.tpl.php'); ?>
 
@@ -132,7 +126,7 @@
         </div> <!-- /.section, /#sidebar-first -->
       <?php endif; ?>
 
-      <h1 class="title title_recommended title_orange">Latest from Belarus</h1>
+      <h1 class="title title_recommended">Latest from Belarus</h1>
       <div id="recommended-content-wrapper">
         <div id="content-recommended" class="clearfix">
           <?php if ($page['content_recommended']): ?>

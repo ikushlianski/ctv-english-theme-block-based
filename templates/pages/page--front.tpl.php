@@ -72,13 +72,7 @@
  * @ingroup themeable
  */
 ?>
-  <?php print render($page['sitemap_nav']); ?>
-  <?php if ($logo): ?>
-    <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"  id="logo_largeScreens" class="logo_largeScreens">
-      <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-    </a>
-  <?php endif; ?>
-  <div id="page-wrapper"><div id="page">
+  
 
     <?php include('page-header.tpl.php'); ?>
 
