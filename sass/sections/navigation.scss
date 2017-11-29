@@ -16,6 +16,14 @@
 .login-menu-hider {
   // display: none;
 }
+.mainAndSecondaryMenuWrapper {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
 .nav-group2 {
   display: none;
 }
@@ -29,7 +37,6 @@
   &.toggled-on {
     & .logo_lang {
       position: relative;
-      margin: 0 auto;
       display: block;
       text-align: center;
       width: 3em;
@@ -59,7 +66,7 @@
   }
   & .toggle {
     display: block;
-    margin: 0.5em;
+    padding: 0.5em;
     color: grey;
     cursor: pointer;
     text-shadow: 1px 0.5px white;
@@ -68,6 +75,11 @@
 
     & li {
       list-style-type: none;
+    }
+  }
+  & .main-menu {
+    & li {
+      margin-top: 0.2em;
     }
   }
   & a {
@@ -92,6 +104,14 @@ a.logo_largeScreens {
 }
 
 .secondary_menu_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row-reverse;
+  > * {
+    margin: 0.5em;
+    //margin-left: 0;
+  }
   & .toggle_largeScreens {
     display: none;
   }
@@ -118,7 +138,9 @@ a.logo_largeScreens {
     /* top: 0; */
     background-color: white;
     /* left: 1em; */
-    margin: 0 auto;
+    margin: 0 0 0 2em;
+    height: 60px;
+    width: 56px;
     pointer-events: none;
     &:active:not(.button) {
       background-color: white;
@@ -143,8 +165,8 @@ a.logo_largeScreens {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    // background-color: transparent;
-    background-color: $ctvblue;
+    background-color: transparent;
+    // background-color: $ctvblue;
     & .logo-div {
 
     }
@@ -155,7 +177,8 @@ a.logo_largeScreens {
       display: flex;
       max-width: 1024px;
       justify-content: space-between;
-      align-items: center;
+      //align-items: center;
+      align-items: stretch;
       background-color: $ctvblue;
       //padding-left: 7em;
       & .main-menu {
@@ -211,7 +234,7 @@ a.logo_largeScreens {
   }
 
   .nav-group2 {
-    background-color: $ctvblue_darker;
+    background-color: transparent;
     font-size: 0.9em;
     display: flex;
     justify-content: center;
@@ -222,7 +245,7 @@ a.logo_largeScreens {
       //margin: 0 0.5em;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
       background-color: $ctvblue_darker;
       & .main-menu-2 {
         list-style-type: none;
@@ -264,6 +287,7 @@ a.logo_largeScreens {
     align-self: stretch;
     display: flex;
     align-items: center;
+    margin-right: 2em;
     background-color: $ctvblue_darker;
     & > * {
       margin: 0 0.3em;
