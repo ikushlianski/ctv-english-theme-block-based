@@ -4,7 +4,7 @@
   &_recommended {
     color: #666;
     font-weight: bold;
-    margin: 0.5em auto 0em;
+    margin: 0 auto 0em;
     display: table;
   }
   &_orange {
@@ -64,13 +64,15 @@
         object-fit: cover;
         object-position: center;
         display: block;
+        transition: transform 0.1s;
+        overflow: hidden;
         &:hover {
           filter: brightness(0.9);
         }
       }
       & .views-field-title {
         line-height: normal;
-        padding: 0.5em 0em;
+        padding: 0.5em;
         // font-weight: bold;
         flex-grow: 1;
         & a {
@@ -204,7 +206,6 @@
     }
     & .views-field-title {
       background-color: $ctvblue;
-      padding: 0.3em 0;
       & a {
         color: $ctvwhite;
       }

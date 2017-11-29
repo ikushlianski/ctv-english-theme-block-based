@@ -1,7 +1,7 @@
 .title_recommended {
   color: #666;
   font-weight: bold;
-  margin: 0.5em auto 0em;
+  margin: 0 auto 0em;
   display: table;
 }
 
@@ -66,6 +66,10 @@
   -o-object-position: center;
      object-position: center;
   display: block;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
+  overflow: hidden;
 }
 
 .view .view-content .views-row img:hover {
@@ -75,7 +79,7 @@
 
 .view .view-content .views-row .views-field-title {
   line-height: normal;
-  padding: 0.5em 0em;
+  padding: 0.5em;
   -webkit-box-flex: 1;
           flex-grow: 1;
 }
@@ -189,7 +193,6 @@
   }
   #block-views-editor-s-picks-block .views-field-title, #block-views-photo-and-video-block .views-field-title {
     background-color: #4e729a;
-    padding: 0.3em 0;
   }
   #block-views-editor-s-picks-block .views-field-title a, #block-views-photo-and-video-block .views-field-title a {
     color: whitesmoke;

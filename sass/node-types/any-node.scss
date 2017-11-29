@@ -154,6 +154,9 @@ figcaption {
         color: white;
         padding: 0.2em 1.5em;
         text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
