@@ -57,7 +57,8 @@
       margin: 0.3em;
       flex-basis: 200px;
       background-color: white;
-      box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.21);
+      // box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.21);
+      box-shadow: 0px 0px 1px 1px rgba(128, 128, 128, 0.51);
       transition: all 0.2s;
       position: relative;
       & img {
@@ -88,11 +89,7 @@
     }
   }
 
-  &.view-related-by-topic {
-    & .view-content {
-      flex-direction: row;
-    }
-  }
+  // view modifications
   &.fp-block {
     & .views-row {
       box-shadow: none;

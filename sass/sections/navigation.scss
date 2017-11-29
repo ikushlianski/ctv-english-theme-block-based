@@ -315,8 +315,8 @@ a.logo_largeScreens {
     align-self: stretch;
     display: flex;
     align-items: center;
-    margin-right: 2em;
-    background-color: $ctvblue_darker;
+    margin-right: 1.5em;
+    // background-color: $ctvblue_darker;
     & > * {
       margin: 0 0.3em;
     }

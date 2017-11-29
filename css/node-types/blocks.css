@@ -29,13 +29,13 @@
   background-color: #4e729a;
 }
 
-.block.fp-featured {
+.block.block_filled_blue {
   background-color: #4e729a;
   padding: 0.5em;
   margin-top: 1.5em !important;
 }
 
-.block.fp-featured a {
+.block.block_filled_blue a {
   color: white !important;
 }
 

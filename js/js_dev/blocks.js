@@ -62,7 +62,7 @@
 			while ( $("#content-recommended .section").height() < $("#sidebar-recommended .section").height());
     }
 
-    // trigger hover effect on entire item when hovering over img
+    // trigger hover effect on item's img and text when hovering over any of its parts
     $(".views-row").hover(function(){
       $(this).children(".views-field-title").find("a").css({"color":"#ef5223"});
     });

@@ -42,6 +42,11 @@ figcaption a:visited {
   width: 100%;
 }
 
+#main-wrapper {
+  background-color: white;
+  margin: 0;
+}
+
 .metaAndImage {
   margin-left: calc(-1em);
   margin-right: calc(-1em);
@@ -50,6 +55,12 @@ figcaption a:visited {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .metaAndImage {
+    margin: 0;
+  }
 }
 
 .nodeCategory_largeScreens {
@@ -137,7 +148,6 @@ figcaption a:visited {
   }
   #main-wrapper {
     margin: 0 auto;
-    background-color: white;
     padding: 1em;
     box-shadow: 0px 4px 10px 4px rgba(158, 158, 158, 0.2);
   }
