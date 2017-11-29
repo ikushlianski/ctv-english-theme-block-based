@@ -54,8 +54,9 @@
     if ( $(window).width() > 768 ) {
       // $('.login-menu').detach();
       $('.login-menu').appendTo('.login-menu-hider');
+      $('.login-menu').css({});
       if ($('.login-menu-hider').children().length > 0) {
-        $('.login-menu-hider').show();
+        $('.login-menu-hider-link').show();
       }
     }
 
@@ -97,7 +98,7 @@
         $(".nav-group").css({"top":toolbarHeight});
       }
       // $(".messages").css({"marginTop":toolbarHeight});
-    }   
+    }
 
 
   });
