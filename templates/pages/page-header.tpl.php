@@ -20,7 +20,7 @@ if ($brandedBackground) {
   <?php endif; ?>
 >
   <?php if ($brandedBackground): ?>
-  <a class="advertizerSiteLink" target="_blank" href="<?php if ($advertizerSite) { echo $advertizerSite; } ?>" style="display: block; height: 12em; width: 100%"></a>
+  <a class="advertizerSiteLink" target="_blank" href="<?php if ($advertizerSite) { echo $advertizerSite; } ?>" style="display: block; height: 15em; width: 100%"></a>
   <?php endif; ?>
 
   <div id="header"><div class="section clearfix">

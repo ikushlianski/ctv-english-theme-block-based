@@ -1,8 +1,9 @@
 @import 'init/customcolors';
+@import 'init/custom-mixins';
 
 .title {
   &_recommended {
-    color: #666;
+    color: $greyHeaders;
     font-weight: bold;
     margin: 0 auto 0em;
     display: table;
@@ -19,28 +20,21 @@
 
 .block__title {
   margin: 0.5em 0;
-  margin-left: 0.2em;
-  padding: 0 0.2em;
-  background-color: $ctvblue;
-  color: white;
+  // background-color: $ctvblue;
+  color: $greyHeaders;
   text-align: center;
   font-size: 120%;
   display: inline-block;
   line-height: normal;
-  .sidebar & {
-    margin-left: 0;
-    background-color: $ctvorange;
-    margin-bottom: 0.5em;
-  }
 
   .block-views & {
     // margin-left: 0em;
     & a {
-      color: white;
+      color: $greyHeaders;
       text-decoration: none;
       transition: color 0.3s;
       &:hover {
-        color: lighten($ctvblue, 45%);
+        color: $ctvblue_darker;
       }
     }
   }
@@ -54,11 +48,11 @@
     & .views-row {
       flex-basis: 20%;
       flex-grow: 1;
-      margin: 0.3em;
+      margin: 0em 0.5em 0.3em 0em;
       flex-basis: 200px;
       background-color: white;
       // box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.21);
-      box-shadow: 0px 0px 1px 1px rgba(128, 128, 128, 0.51);
+      // @include boxShadow;
       transition: all 0.2s;
       position: relative;
       & img {
@@ -73,7 +67,7 @@
       }
       & .views-field-title {
         line-height: normal;
-        padding: 0.5em;
+        padding: 0.3em 0;
         // font-weight: bold;
         flex-grow: 1;
         & a {
@@ -90,6 +84,11 @@
   }
 
   // view modifications
+  &.marginRightOnLast-off {
+    & .views-row:last-child {
+      margin-right: 0!important;
+    }
+  }
   &.fp-block {
     & .views-row {
       box-shadow: none;
@@ -129,6 +128,13 @@
           flex-basis: 100%;
           padding: 0;
         }
+      }
+    }
+  }
+  &.boxShadow_on {
+    & .view-content {
+      & .views-row {
+        @include boxShadow();
       }
     }
   }
@@ -209,12 +215,4 @@
     }
   }
 
-  #block-views-famous-belarusians-block {
-    background-color: transparentize($ctvorange, 0.85);
-    padding: 0em 1em 0.5em;
-  }
-
-  #block-views-photo-and-video-block {
-    @extend #block-views-editor-s-picks-block;
-  }
 }

@@ -181,9 +181,6 @@ figcaption a:visited {
     display: -webkit-box;
     display: flex;
   }
-  .page-node #main {
-    border-bottom: 1px solid lightgrey;
-  }
   .title_largeScreens {
     display: initial;
     font-size: 1.75em;

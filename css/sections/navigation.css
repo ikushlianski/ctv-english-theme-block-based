@@ -163,23 +163,25 @@ a.logo_largeScreens {
     display: flex;
     position: relative;
     /* top: 0; */
-    background-color: white;
+    /* background-color: white; */
     /* left: 1em; */
     margin: 0 0 0 2em;
-    height: 60px;
-    width: 56px;
+    width: 6em;
     pointer-events: none;
-  }
-  a.logo_largeScreens:active:not(.button) {
-    background-color: white;
   }
   a.logo_largeScreens img {
     /* width: 80px; */
     background-color: white;
     padding: 0.5em;
     margin: 0 auto;
+    position: absolute;
     pointer-events: auto;
-    /* box-shadow: 0px 3px 15px 3px rgba(0, 0, 0, 0.3);*/
+    display: -webkit-box;
+    display: flex;
+    /* box-shadow: 0px 3px 15px 3px rgba(0, 0, 0, 0.3); */
+    align-self: center;
+    height: 100px;
+    border-radius: 3px;
   }
   div#navigation {
     display: -webkit-box;

@@ -16,30 +16,21 @@
 
 .block__title {
   margin: 0.5em 0;
-  margin-left: 0.2em;
-  padding: 0 0.2em;
-  background-color: #4e729a;
-  color: white;
+  color: #666;
   text-align: center;
   font-size: 120%;
   display: inline-block;
   line-height: normal;
 }
 
-.sidebar .block__title {
-  margin-left: 0;
-  background-color: #ef5223;
-  margin-bottom: 0.5em;
-}
-
 .block-views .block__title a {
-  color: white;
+  color: #666;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .block-views .block__title a:hover {
-  color: #dfe6ef;
+  color: #3d5978;
 }
 
 .view .view-content {
@@ -52,10 +43,9 @@
   flex-basis: 20%;
   -webkit-box-flex: 1;
           flex-grow: 1;
-  margin: 0.3em;
+  margin: 0em 0.5em 0.3em 0em;
   flex-basis: 200px;
   background-color: white;
-  box-shadow: 0px 0px 1px 1px rgba(128, 128, 128, 0.51);
   transition: all 0.2s;
   position: relative;
 }
@@ -79,7 +69,7 @@
 
 .view .view-content .views-row .views-field-title {
   line-height: normal;
-  padding: 0.5em;
+  padding: 0.3em 0;
   -webkit-box-flex: 1;
           flex-grow: 1;
 }
@@ -89,6 +79,10 @@
   transition: color 0.2s;
   color: #333;
   display: block;
+}
+
+.view.marginRightOnLast-off .views-row:last-child {
+  margin-right: 0 !important;
 }
 
 .view.fp-block .views-row {
@@ -133,6 +127,10 @@
   padding: 0;
 }
 
+.view.boxShadow_on .view-content .views-row {
+  box-shadow: 0px 0px 1px 1px rgba(128, 128, 128, 0.21);
+}
+
 .view.fp-featured .view-content .views-row {
   background-color: transparent;
   box-shadow: none;
@@ -175,25 +173,21 @@
   #block-views-same-theme-block-block {
     padding: 0.5em;
   }
-  #block-views-editor-s-picks-block, #block-views-photo-and-video-block {
+  #block-views-editor-s-picks-block {
     background-color: #4e729a;
     padding: 0.5em;
   }
-  #block-views-editor-s-picks-block .block__title, #block-views-photo-and-video-block .block__title {
+  #block-views-editor-s-picks-block .block__title {
     background-color: #4e729a;
   }
-  #block-views-editor-s-picks-block .views-row, #block-views-photo-and-video-block .views-row {
+  #block-views-editor-s-picks-block .views-row {
     margin: 0.3em;
   }
-  #block-views-editor-s-picks-block .views-field-title, #block-views-photo-and-video-block .views-field-title {
+  #block-views-editor-s-picks-block .views-field-title {
     background-color: #4e729a;
   }
-  #block-views-editor-s-picks-block .views-field-title a, #block-views-photo-and-video-block .views-field-title a {
+  #block-views-editor-s-picks-block .views-field-title a {
     color: whitesmoke;
-  }
-  #block-views-famous-belarusians-block {
-    background-color: rgba(239, 82, 35, 0.15);
-    padding: 0em 1em 0.5em;
   }
 }
 

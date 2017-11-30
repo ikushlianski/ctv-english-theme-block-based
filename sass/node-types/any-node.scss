@@ -187,9 +187,6 @@ figcaption {
   }
   #main {
     display: flex;
-    .page-node & {
-      border-bottom: 1px solid lightgrey;
-    }
   }
 
   .title_largeScreens {
