@@ -1,45 +1,10 @@
-.title_recommended {
-  color: #666;
-  font-weight: bold;
-  margin: 0 auto 0em;
-  display: table;
-}
-
-.title_orange {
-  color: white;
-  font-weight: bold;
-  margin: 0em auto;
-  display: block;
-  background-color: #ef5223;
-  text-align: center;
-}
-
-.block__title {
-  margin: 0.5em 0;
-  color: #666;
-  text-align: center;
-  font-size: 120%;
-  display: inline-block;
-  line-height: normal;
-}
-
-.block-views .block__title a {
-  color: #666;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.block-views .block__title a:hover {
-  color: #3d5978;
-}
-
 .view .view-content {
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
 }
 
-.view .view-content .views-row {
+.view .views-row {
   flex-basis: 20%;
   -webkit-box-flex: 1;
           flex-grow: 1;
@@ -50,145 +15,36 @@
   position: relative;
 }
 
-.view .view-content .views-row img {
+.view img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
   display: block;
-  transition: -webkit-transform 0.1s;
-  transition: transform 0.1s;
-  transition: transform 0.1s, -webkit-transform 0.1s;
+  transition: -webkit-filter 0.2s;
+  transition: filter 0.2s;
+  transition: filter 0.2s, -webkit-filter 0.2s;
   overflow: hidden;
 }
 
-.view .view-content .views-row img:hover {
+.view img:hover {
   -webkit-filter: brightness(0.9);
           filter: brightness(0.9);
 }
 
-.view .view-content .views-row .views-field-title {
+.view .views-field-title {
   line-height: normal;
   padding: 0.3em 0;
+  font-size: 0.95em;
   -webkit-box-flex: 1;
           flex-grow: 1;
 }
 
-.view .view-content .views-row .views-field-title a {
+.view .views-field-title a {
   text-decoration: none;
   transition: color 0.2s;
   color: #333;
   display: block;
-}
-
-.view.marginRightOnLast-off .views-row:last-child {
-  margin-right: 0 !important;
-}
-
-.view.fp-block .views-row {
-  box-shadow: none;
-  background-color: transparent;
-}
-
-.view.smallImg .view-content .views-row {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
-  background-color: transparent;
-  box-shadow: none;
-  margin-bottom: 1em;
-}
-
-.view.smallImg .view-content .views-row .views-field-field-image {
-  position: relative;
-  display: -webkit-box;
-  display: flex;
-  flex-basis: 35%;
-}
-
-.view.smallImg .view-content .views-row .views-field-title {
-  flex-basis: 65%;
-  padding: 0;
-  padding-left: 0.5em;
-}
-
-.view.titleOnly .view-content .views-row {
-  display: -webkit-box;
-  display: flex;
-  background-color: transparent;
-  box-shadow: none;
-  margin: 0.5em 0.3em;
-}
-
-.view.titleOnly .view-content .views-row .views-field-title {
-  flex-basis: 100%;
-  padding: 0;
-}
-
-.view.boxShadow_on .view-content .views-row {
-  box-shadow: 0px 0px 1px 1px rgba(128, 128, 128, 0.21);
-}
-
-.view.fp-featured .view-content .views-row {
-  background-color: transparent;
-  box-shadow: none;
-}
-
-.view.fp-featured .view-content .views-row .views-field-title {
-  flex-basis: 100%;
-  padding: 0.5em 0em;
-}
-
-.view.noBackgroundColors .view-content .views-row .views-field {
-  background-color: transparent;
-  box-shadow: none;
-}
-
-.view.noBackgroundColors .view-content .views-row .views-field a {
-  color: inherit;
-}
-
-.view.noBackgroundColors .view-content .views-row .views-field a:hover {
-  text-decoration: underline;
-}
-
-.view.view-front-page-media .view-content .views-row, .view.view-front-page-media-first .view-content .views-row {
-  background-color: transparent;
-  box-shadow: none;
-}
-
-.view.view-front-page-media .view-content .views-row .views-field-title a, .view.view-front-page-media-first .view-content .views-row .views-field-title a {
-  color: grey;
-}
-
-@media (min-width: 768px) {
-  .block__title {
-    font-size: 150%;
-  }
-  .sidebar .views-row {
-    margin-left: 0em !important;
-  }
-  #block-views-same-theme-block-block {
-    padding: 0.5em;
-  }
-  #block-views-editor-s-picks-block {
-    background-color: #4e729a;
-    padding: 0.5em;
-  }
-  #block-views-editor-s-picks-block .block__title {
-    background-color: #4e729a;
-  }
-  #block-views-editor-s-picks-block .views-row {
-    margin: 0.3em;
-  }
-  #block-views-editor-s-picks-block .views-field-title {
-    background-color: #4e729a;
-  }
-  #block-views-editor-s-picks-block .views-field-title a {
-    color: whitesmoke;
-  }
 }
 
 /*# sourceMappingURL=related-content.css.map */

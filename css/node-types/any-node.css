@@ -68,7 +68,7 @@ figcaption a:visited {
 }
 
 .nodeMeta {
-  padding: 1em;
+  padding: 1em 0;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
@@ -141,6 +141,9 @@ figcaption a:visited {
   .mainImageContainer {
     margin: 0 auto;
     margin-left: 0em;
+  }
+  .mainImageContainer .nodeCategory_largeScreens .field-label {
+    display: none;
   }
   .mainImage {
     width: 100%;

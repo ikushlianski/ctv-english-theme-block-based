@@ -1,218 +1,42 @@
 @import 'init/customcolors';
 @import 'init/custom-mixins';
 
-.title {
-  &_recommended {
-    color: $greyHeaders;
-    font-weight: bold;
-    margin: 0 auto 0em;
-    display: table;
-  }
-  &_orange {
-    color: white;
-    font-weight: bold;
-    margin: 0em auto;
-    display: block;
-    background-color: #ef5223;
-    text-align: center;
-  }
-}
-
-.block__title {
-  margin: 0.5em 0;
-  // background-color: $ctvblue;
-  color: $greyHeaders;
-  text-align: center;
-  font-size: 120%;
-  display: inline-block;
-  line-height: normal;
-
-  .block-views & {
-    // margin-left: 0em;
-    & a {
-      color: $greyHeaders;
-      text-decoration: none;
-      transition: color 0.3s;
-      &:hover {
-        color: $ctvblue_darker;
-      }
-    }
-  }
-}
-
 // common appearance of views
 .view {
   & .view-content {
     display: flex;
     flex-wrap: wrap;
-    & .views-row {
-      flex-basis: 20%;
-      flex-grow: 1;
-      margin: 0em 0.5em 0.3em 0em;
-      flex-basis: 200px;
-      background-color: white;
-      // box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.21);
-      // @include boxShadow;
-      transition: all 0.2s;
-      position: relative;
-      & img {
-        object-fit: cover;
-        object-position: center;
-        display: block;
-        transition: transform 0.1s;
-        overflow: hidden;
-        &:hover {
-          filter: brightness(0.9);
-        }
-      }
-      & .views-field-title {
-        line-height: normal;
-        padding: 0.3em 0;
-        // font-weight: bold;
-        flex-grow: 1;
-        & a {
-          text-decoration: none;
-          transition: color 0.2s;
-          color: #333;
-          display: block;
-          // &:hover {
-          //   color: $ctvorange;
-          // }
-        }
-      }
-    }
+  }
+  & .views-row {
+    flex-basis: 20%;
+    flex-grow: 1;
+    margin: 0em 0.5em 0.3em 0em;
+    flex-basis: 200px;
+    background-color: white;
+    transition: all 0.2s;
+    position: relative;
   }
 
-  // view modifications
-  &.marginRightOnLast-off {
-    & .views-row:last-child {
-      margin-right: 0!important;
+  & img {
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: filter 0.2s;
+    overflow: hidden;
+    &:hover {
+      filter: brightness(0.9);
     }
   }
-  &.fp-block {
-    & .views-row {
-      box-shadow: none;
-      background-color: transparent;
+  & .views-field-title {
+    line-height: normal;
+    padding: 0.3em 0;
+    font-size: 0.95em;
+    flex-grow: 1;
+    & a {
+      text-decoration: none;
+      transition: color 0.2s;
+      color: $ctvtext;
+      display: block;
     }
   }
-  &.smallImg {
-    & .view-content {
-      & .views-row {
-        display: flex;
-        flex-direction: row;
-        background-color: transparent;
-        box-shadow: none;
-        margin-bottom: 1em;
-        & .views-field-field-image {
-          position: relative;
-          display: flex;
-          flex-basis: 35%;
-        }
-        & .views-field-title {
-          flex-basis: 65%;
-          padding: 0;
-          padding-left: 0.5em;
-        }
-      }
-    }
-  }
-  &.titleOnly {
-    & .view-content {
-      & .views-row {
-        display: flex;
-        background-color: transparent;
-        box-shadow: none;
-        //font-size: 120%;
-        margin: 0.5em 0.3em;
-        & .views-field-title {
-          flex-basis: 100%;
-          padding: 0;
-        }
-      }
-    }
-  }
-  &.boxShadow_on {
-    & .view-content {
-      & .views-row {
-        @include boxShadow();
-      }
-    }
-  }
-  &.fp-featured {
-    & .view-content {
-      & .views-row {
-        background-color: transparent;
-        box-shadow: none;
-        & .views-field-title {
-          flex-basis: 100%;
-          padding: 0.5em 0em;
-        }
-      }
-    }
-  }
-  &.noBackgroundColors {
-    & .view-content {
-      & .views-row {
-        & .views-field {
-          background-color: transparent;
-          box-shadow: none;
-          & a {
-            color: inherit;
-            &:hover {
-              text-decoration: underline;
-            }
-          }
-        }
-      }
-    }
-  }
-  &.view-front-page-media, &.view-front-page-media-first {
-    & .view-content {
-      & .views-row {
-        background-color: transparent;
-        box-shadow: none;
-        & .views-field-title {
-          a {
-           color: grey;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 768px) {
-
-  .block__title {
-    font-size: 150%;
-  }
-
-  .sidebar {
-    & .views-row {
-      margin-left: 0em!important;
-    }
-  }
-
-  #block-views-same-theme-block-block {
-    padding: 0.5em;
-    // box-shadow: 1px 1px 1px transparentize(black, 0.8);
-  }
-
-  #block-views-editor-s-picks-block {
-    background-color: $ctvblue;
-    padding: 0.5em;
-    & .block__title {
-      background-color: $ctvblue;
-    }
-    & .views-row {
-      margin: 0.3em;
-    }
-    & .views-field-title {
-      background-color: $ctvblue;
-      & a {
-        color: $ctvwhite;
-      }
-    }
-  }
-
 }

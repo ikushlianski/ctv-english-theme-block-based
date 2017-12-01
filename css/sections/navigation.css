@@ -212,7 +212,7 @@ a.logo_largeScreens {
             justify-content: space-between;
     -webkit-box-align: stretch;
             align-items: stretch;
-    background-color: #4e729a;
+    background-color: #3d5978;
   }
   .nav-group .nav-menu-div .main-menu, .nav-group .nav-menu-div .main-menu-2 {
     display: -webkit-box;
@@ -225,7 +225,7 @@ a.logo_largeScreens {
     transition: color 0.2s;
   }
   .nav-group .nav-menu-div .main-menu li a:hover, .nav-group .nav-menu-div .main-menu-2 li a:hover {
-    color: #f0f3f7;
+    color: #ced9e6;
   }
   .nav-group .nav-menu-div .login-menu-hider {
     cursor: pointer;
@@ -272,7 +272,7 @@ a.logo_largeScreens {
     transition: color 0.2s;
   }
   .login-menu li a:hover {
-    color: #f0f3f7;
+    color: #ced9e6;
   }
   .nav-group2 {
     background-color: transparent;
@@ -291,7 +291,7 @@ a.logo_largeScreens {
             align-items: center;
     -webkit-box-pack: center;
             justify-content: center;
-    background-color: #3d5978;
+    background-color: #4e729a;
   }
   .nav-group2 .nav-menu-div .main-menu-2 {
     list-style-type: none;
@@ -334,6 +334,7 @@ a.logo_largeScreens {
     color: white;
     cursor: pointer;
     display: initial;
+    margin-right: 0;
   }
   .secondary_menu_wrapper .logo_lang {
     background-color: transparent;

@@ -193,7 +193,7 @@ a.logo_largeScreens {
       justify-content: space-between;
       //align-items: center;
       align-items: stretch;
-      background-color: $ctvblue;
+      background-color: $ctvblue_darker;
       //padding-left: 7em;
       & .main-menu {
         // padding-left: 7em;
@@ -208,7 +208,7 @@ a.logo_largeScreens {
             text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.5);
             transition: color 0.2s;
             &:hover {
-              color: $ctvblue_lighter;
+              color: darken($ctvblue_lighter, 10%);
             }
           }
         }
@@ -259,7 +259,7 @@ a.logo_largeScreens {
         text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.5);
         transition: color 0.2s;
         &:hover {
-          color: $ctvblue_lighter;
+          color: darken($ctvblue_lighter, 10%);
         }
       }
     }
@@ -278,7 +278,7 @@ a.logo_largeScreens {
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: $ctvblue_darker;
+      background-color: $ctvblue;
       & .main-menu-2 {
         list-style-type: none;
         display: flex;
@@ -329,6 +329,7 @@ a.logo_largeScreens {
       // margin: 0.25em 0.5em;
       cursor: pointer;
       display: initial;
+      margin-right: 0;
     }
     & .logo_lang {
       background-color: transparent;

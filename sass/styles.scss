@@ -16,6 +16,7 @@
 
 @import 'init';
 
+
 // Defaults
 //
 // These are the default base styles applied to HTML elements.
@@ -101,13 +102,12 @@
 @import 'forms/resizable-textarea/resizable-textarea';
 @import 'forms/table-drag/table-drag';
 
-// Custom sections
-// @import "sections/customcolors";
+// Custom files
 @import "sections/navigation";
 @import "sections/breadcrumbs";
 @import "sections/main-wrapper";
+@import "sections/content";
 
-@import "node-types/node-type-english-article";
 @import "node-types/any-node";
 @import "node-types/blocks";
 @import "node-types/front-page";
@@ -117,3 +117,4 @@
 
 @import "views/related-content";
 @import "views/taxonomy-listing";
+@import "views/view-modifications";

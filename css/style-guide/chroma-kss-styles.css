@@ -1,3 +1,29 @@
+.flex-column .view-content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.flex-column .view-content .views-row {
+  margin: 0em;
+}
+
+.m0 {
+  margin: 0 !important;
+}
+
+.mt0 {
+  margin-top: 0em !important;
+}
+
+.p0 {
+  padding: 0 !important;
+}
+
+.title-bold .views-field-title {
+  font-weight: bold;
+}
+
 /*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 .kss-style .chroma-kss {
   line-height: 50px;

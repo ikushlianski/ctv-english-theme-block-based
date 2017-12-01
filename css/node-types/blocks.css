@@ -13,12 +13,7 @@
 
 .block.fp-highlighted, .block.fp-highlighted_blue {
   background-color: #f0f3f7;
-  margin-top: 1.5em !important;
   padding: 1em;
-}
-
-.block.fp-highlighted .block__title, .block.fp-highlighted_blue .block__title {
-  background-color: #ef5223;
 }
 
 .block.fp-highlighted_blue {
@@ -29,10 +24,13 @@
   background-color: #4e729a;
 }
 
+.block.block_filled {
+  padding: 1em;
+  box-shadow: none;
+}
+
 .block.block_filled_blue {
   background-color: #4e729a;
-  padding: 1em;
-  margin-top: 0 !important;
 }
 
 .block.block_filled_blue .block__title {
@@ -43,10 +41,12 @@
   color: white !important;
 }
 
+.block.block_filled_blue .views-field-title {
+  background-color: #4e729a;
+}
+
 .block.block_filled_lightblue {
   background-color: #f0f3f7;
-  padding: 1em;
-  margin-top: 0 !important;
 }
 
 .block.block_filled_lightblue .block__title {
@@ -57,29 +57,93 @@
   color: #666 !important;
 }
 
+.block.block_filled_lightblue .views-field-title {
+  background-color: #f0f3f7;
+}
+
+.block.block_filled_darkgrey {
+  background-color: #222;
+}
+
+.block.block_filled_darkgrey .block__title {
+  color: #666 !important;
+}
+
+.block.block_filled_darkgrey a {
+  color: grey !important;
+}
+
+.block.block_filled_darkgrey .views-field-title {
+  background-color: #222;
+}
+
+.block__title {
+  margin: 0.5em 0;
+  color: #666;
+  text-align: center;
+  font-size: 120%;
+  display: inline-block;
+  line-height: normal;
+}
+
+@media (min-width: 768px) {
+  .block__title {
+    font-size: 150%;
+  }
+}
+
+.block-views .block__title a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.block-views .block__title a:hover {
+  text-decoration: underline;
+}
+
 .block-views {
   margin: 1.5em 0.5em;
   box-shadow: 0px 0px 1px 1px rgba(128, 128, 128, 0.21);
   padding: 0.5em 1em;
 }
 
-.sidebar .block-views {
+#sidebar-first .block-views {
   margin: 1em 0;
 }
 
-.sidebar .block-views:first-child {
-  margin-top: 0.5em;
+#sidebar-first .block-views:first-child {
+  margin-top: 0em;
+  padding-top: 0em;
+}
+
+#sidebar-first .block-views:first-child .block__title {
+  margin-top: 0em;
 }
 
 .boxShadow--off {
   box-shadow: none;
-  padding-left: 0em;
-  padding: 0;
 }
 
 .relatedLinks {
   margin: 0.5em 0em;
   display: inline-block;
+}
+
+.title_recommended {
+  color: #666;
+  font-weight: bold;
+  margin: 0 auto 0em;
+  display: table;
+}
+
+.title_orange {
+  color: white;
+  font-weight: bold;
+  margin: 0em auto;
+  display: block;
+  background-color: #ef5223;
+  text-align: center;
 }
 
 .view-content ul {
