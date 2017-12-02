@@ -30,7 +30,7 @@
 ?>
 <?php if ($content): ?>
   <div class="<?php print $classes; ?>">
-    <h3 class="fp-media-header">Photo and video</h3>
+    <h2 class="fp-media-header">Photo and video</h2>
     <div class="fp-media-wrapper"><?php print $content; ?></div>
   </div>
 <?php endif; ?>

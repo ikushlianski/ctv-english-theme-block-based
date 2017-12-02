@@ -72,7 +72,7 @@
  * @ingroup themeable
  */
 ?>
-  
+
 
     <?php include('page-header.tpl.php'); ?>
 
@@ -94,7 +94,7 @@
           <?php // take away the header if this is not the home page ?>
           <?php if ( !$is_front )
           {
-            if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?> <?php print $feed_icons; ?></h1><?php endif;
+            if ($title): ?><h2 class="title" id="page-title"><?php print $title; ?> <?php print $feed_icons; ?></h2><?php endif;
             // $term = taxonomy_term_load(arg(2));
             // var_dump($term);
             // print $term->field_main_image['und'][0]['uri'];
@@ -120,7 +120,7 @@
       </div>
 
       <?php if ($page['content_recommended']): ?>
-      <h1 class="title title_recommended title_orange" style="margin-top: 1em">Latest from Belarus</h1>
+      <h2 class="title title_recommended " style="margin-top: 1em">Latest from Belarus</h2>
       <div id="recommended-content-wrapper">
         <div id="content-recommended" class="clearfix">
             <div class="section">
