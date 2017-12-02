@@ -29,6 +29,12 @@ figcaption a:visited {
   color: grey;
 }
 
+@media (min-width: 768px) {
+  figcaption {
+    padding: 0em;
+  }
+}
+
 .mainImageContainer {
   width: 100%;
   position: relative;
@@ -68,7 +74,7 @@ figcaption a:visited {
 }
 
 .nodeMeta {
-  padding: 1em 0;
+  padding: 1em;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
@@ -95,6 +101,12 @@ figcaption a:visited {
 
 .nodeMeta .socialButtons .socialButton:last-child {
   padding-right: 0;
+}
+
+@media (min-width: 768px) {
+  .nodeMeta {
+    padding: 1em 0;
+  }
 }
 
 .nodeVideo {
@@ -194,10 +206,10 @@ figcaption a:visited {
     padding: 0em 0.5em;
     color: white;
     text-shadow: 1px 0.5px black;
-    /* line-height: initial; */
     padding: 1rem;
   }
   .title_largeScreens span {
+    font-weight: bold;
     padding: 0em;
     background-color: rgba(34, 34, 34, 0.9);
   }

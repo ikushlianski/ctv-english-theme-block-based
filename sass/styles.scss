@@ -102,7 +102,11 @@
 @import 'forms/resizable-textarea/resizable-textarea';
 @import 'forms/table-drag/table-drag';
 
+
 // Custom files
+@import "features/carousel";
+@import "features/carousel-slide-bugfix";
+
 @import "sections/navigation";
 @import "sections/breadcrumbs";
 @import "sections/main-wrapper";

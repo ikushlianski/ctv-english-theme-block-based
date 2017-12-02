@@ -46,6 +46,7 @@
 .view-front-page-two-main .view-content .views-row .itemTitle .itemTitleText, .view-front-page-media-first .view-content .views-row .itemTitle .itemTitleText {
   background-color: rgba(34, 34, 34, 0.9);
   color: white;
+  font-weight: bold;
 }
 
 .view-front-page-two-main .view-content .views-row .fp_categoryLink, .view-front-page-media-first .view-content .views-row .fp_categoryLink {

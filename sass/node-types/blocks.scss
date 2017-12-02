@@ -15,15 +15,9 @@
   &.fp-highlighted {
     background-color: $ctvblue_lighter;
     padding: 1em;
-    // & .block__title {
-    //   background-color: $ctvorange;
-    // }
     &_blue {
       @extend .fp-highlighted;
       background-color: $ctvblue_lighter;
-      & .block__title {
-        background-color: $ctvblue;
-      }
     }
   }
 
@@ -80,6 +74,7 @@
   font-size: 120%;
   display: inline-block;
   line-height: normal;
+  //font-weight: bold;
 
   @media (min-width: 768px) {
     font-size: 150%;
