@@ -74,10 +74,10 @@
   font-size: 120%;
   display: inline-block;
   line-height: normal;
-  //font-weight: bold;
+  font-weight: bold;
 
   @media (min-width: 768px) {
-    font-size: 150%;
+    
   }
 
   .block-views & {
