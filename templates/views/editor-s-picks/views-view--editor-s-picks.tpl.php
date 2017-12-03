@@ -52,7 +52,7 @@
   <?php endif; ?>
 
   <?php if ($rows): ?>
-    <div id="myCarousel" class="view-content carousel slide" data-ride="carousel" role="listbox">
+    <div id="myCarousel" class="view-content carousel" data-ride="carousel" role="listbox">
       <div class="carousel-inner">
         <?php print $rows; ?>
       </div><!--.carousel-inner-->
