@@ -38,7 +38,7 @@
   display: none;
 }
 .nav-group {
-  background-color: $ctvwhite;
+  background-color: white;
   // overflow: hidden;
   position: fixed;
   top: 0;
@@ -55,7 +55,7 @@
   & .nav-menu-div {
     position: absolute;
     z-index: 1;
-    background: transparentize($ctvwhite, 0.05);
+    background: white;
     width: 100%;
     // overflow: auto;
     display: none;
@@ -72,7 +72,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(darken($ctvwhite, 10%), $ctvwhite);
+    background: linear-gradient($ctvwhite, transparentize(white, 0.05));
   }
   & .toggle {
     display: block;
@@ -115,7 +115,7 @@ a.logo_largeScreens {
 
 .secondary_menu_wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
   > * {
@@ -320,6 +320,7 @@ a.logo_largeScreens {
     display: flex;
     align-items: center;
     margin-right: 1.5em;
+    justify-content: space-between;
     // background-color: $ctvblue_darker;
     & > * {
       margin: 0 0.3em;
