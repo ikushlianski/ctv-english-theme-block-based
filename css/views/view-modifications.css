@@ -72,6 +72,19 @@
   text-decoration: underline;
 }
 
+.view.titleOnImg .views-field-title {
+  position: absolute;
+  bottom: 0;
+  padding: 0.5em;
+}
+
+.view.titleOnImg .views-field-title a {
+  color: white;
+  background-color: rgba(34, 34, 34, 0.8);
+  display: inherit;
+  font-size: larger;
+}
+
 .view.view-front-page-media .view-content .views-row, .view.view-front-page-media-first .view-content .views-row {
   background-color: transparent;
   box-shadow: none;

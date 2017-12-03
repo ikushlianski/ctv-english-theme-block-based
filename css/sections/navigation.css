@@ -42,7 +42,7 @@
 }
 
 .nav-group {
-  background-color: whitesmoke;
+  background-color: white;
   position: fixed;
   top: 0;
   width: 100%;
@@ -59,7 +59,7 @@
 .nav-group .nav-menu-div {
   position: absolute;
   z-index: 1;
-  background: rgba(245, 245, 245, 0.95);
+  background: white;
   width: 100%;
   display: none;
 }
@@ -83,7 +83,7 @@
           justify-content: space-between;
   -webkit-box-align: center;
           align-items: center;
-  background: linear-gradient(gainsboro, whitesmoke);
+  background: linear-gradient(whitesmoke, rgba(255, 255, 255, 0.95));
 }
 
 .nav-group .toggle {
@@ -130,8 +130,8 @@ a.logo_largeScreens {
 .secondary_menu_wrapper {
   display: -webkit-box;
   display: flex;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
           align-items: center;
   -webkit-box-orient: horizontal;
@@ -326,6 +326,8 @@ a.logo_largeScreens {
     -webkit-box-align: center;
             align-items: center;
     margin-right: 1.5em;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
   }
   .secondary_menu_wrapper > * {
     margin: 0 0.3em;

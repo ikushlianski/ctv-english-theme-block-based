@@ -85,6 +85,19 @@
       }
     }
   }
+  &.titleOnImg {
+    & .views-field-title {
+      position: absolute;
+      bottom: 0;
+      padding: 0.5em;
+      & a {
+        color: white;
+        background-color: rgba(34, 34, 34, 0.8);
+        display: inherit;
+        font-size: larger;
+      }
+    }
+  }
   &.view-front-page-media, &.view-front-page-media-first {
     & .view-content {
       & .views-row {

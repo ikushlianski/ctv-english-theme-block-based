@@ -80,12 +80,7 @@
   font-size: 120%;
   display: inline-block;
   line-height: normal;
-}
-
-@media (min-width: 768px) {
-  .block__title {
-    font-size: 150%;
-  }
+  font-weight: bold;
 }
 
 .block-views .block__title a {

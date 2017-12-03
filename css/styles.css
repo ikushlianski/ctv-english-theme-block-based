@@ -1864,11 +1864,17 @@ tr.drag-previous {
 .carouselView .views-field-title {
   position: absolute;
   bottom: 0;
+  width: 100%;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.3) !important;
-  color: white;
+  color: white !important;
+  font-weight: bold;
   text-shadow: 0 0 1px 1px black;
-  padding: 0.3em !important;
+  padding: 0.3em 2em !important;
+}
+
+.carouselView .views-field-title a {
+  color: white !important;
 }
 
 .carouselView img:hover {
@@ -1935,7 +1941,7 @@ tr.drag-previous {
 }
 
 .nav-group {
-  background-color: whitesmoke;
+  background-color: white;
   position: fixed;
   top: 0;
   width: 100%;
@@ -1952,7 +1958,7 @@ tr.drag-previous {
 .nav-group .nav-menu-div {
   position: absolute;
   z-index: 1;
-  background: rgba(245, 245, 245, 0.95);
+  background: white;
   width: 100%;
   display: none;
 }
@@ -1976,7 +1982,7 @@ tr.drag-previous {
           justify-content: space-between;
   -webkit-box-align: center;
           align-items: center;
-  background: linear-gradient(gainsboro, whitesmoke);
+  background: linear-gradient(whitesmoke, rgba(255, 255, 255, 0.95));
 }
 
 .nav-group .toggle {
@@ -2023,8 +2029,8 @@ a.logo_largeScreens {
 .secondary_menu_wrapper {
   display: -webkit-box;
   display: flex;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
           align-items: center;
   -webkit-box-orient: horizontal;
@@ -2219,6 +2225,8 @@ a.logo_largeScreens {
     -webkit-box-align: center;
             align-items: center;
     margin-right: 1.5em;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
   }
   .secondary_menu_wrapper > * {
     margin: 0 0.3em;
@@ -2580,12 +2588,7 @@ figcaption a:visited {
   font-size: 120%;
   display: inline-block;
   line-height: normal;
-}
-
-@media (min-width: 768px) {
-  .block__title {
-    font-size: 150%;
-  }
+  font-weight: bold;
 }
 
 .block-views .block__title a {
@@ -2826,6 +2829,7 @@ figcaption a:visited {
   margin: 0 0 1em 0;
   color: #666;
   text-align: center;
+  font-weight: bold;
 }
 
 .region-fp-media .block {
@@ -2876,6 +2880,12 @@ figcaption a:visited {
 @media (min-width: 768px) {
   #content, #content-recommended, #fp-content-by-category {
     flex-basis: 65%;
+  }
+  #fp-sidebar {
+    display: initial;
+    margin: 0 !important;
+    padding: 0 0 0 1em;
+    flex-basis: 35%;
   }
   #sidebar-first, #fp-sidebar {
     display: initial;
@@ -3143,6 +3153,19 @@ figcaption a:visited {
 
 .view.noBackgroundColors .view-content .views-row .views-field a:hover {
   text-decoration: underline;
+}
+
+.view.titleOnImg .views-field-title {
+  position: absolute;
+  bottom: 0;
+  padding: 0.5em;
+}
+
+.view.titleOnImg .views-field-title a {
+  color: white;
+  background-color: rgba(34, 34, 34, 0.8);
+  display: inherit;
+  font-size: larger;
 }
 
 .view.view-front-page-media .view-content .views-row, .view.view-front-page-media-first .view-content .views-row {
