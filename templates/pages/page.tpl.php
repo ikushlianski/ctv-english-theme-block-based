@@ -72,7 +72,7 @@
  * @ingroup themeable
  */
 ?>
-  
+
 
     <?php include('page-header.tpl.php'); ?>
 
@@ -126,7 +126,7 @@
       <?php endif; ?>
 
       <?php if ($page['content_recommended']): ?>
-      <h1 class="title title_recommended title_orange">Latest from Belarus</h1>
+      <h1 class="title title_recommended ">Latest from Belarus</h1>
       <div id="recommended-content-wrapper">
         <div id="content-recommended" class="clearfix">
             <div class="section">
