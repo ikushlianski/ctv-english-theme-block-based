@@ -6,12 +6,17 @@
   & .views-field-title {
     position: absolute;
     bottom: 0;
+    width: 100%;
     text-align: center;
     // background-color: rgba(78, 114, 154, 0.3)!important;
     background-color: rgba(0, 0, 0, 0.3)!important;
-    color: white;
+    color: white!important;
+    font-weight: bold;
     text-shadow: 0 0 1px 1px black;
-    padding: 0.3em!important;
+    padding: 0.3em 2em!important;
+    & a {
+      color: white!important;
+    }
   }
   & img {
     &:hover {
