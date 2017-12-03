@@ -126,7 +126,7 @@
       <?php endif; ?>
 
       <?php if ($page['content_recommended']): ?>
-      <h1 class="title title_recommended ">Latest from Belarus</h1>
+      <h2 class="title title_recommended ">Latest from Belarus</h2>
       <div id="recommended-content-wrapper">
         <div id="content-recommended" class="clearfix">
             <div class="section">
