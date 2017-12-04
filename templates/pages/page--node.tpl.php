@@ -144,10 +144,10 @@
           </div> <!-- /.section, /#sidebar-recommended -->
         <?php endif; ?>
       </div>
+      <?php include('page-footer.tpl.php'); ?>
     </div> <!-- /#main, /#main-wrapper -->
 
 
 
-    <?php include('page-footer.tpl.php'); ?>
 
   </div></div> <!-- /#page, /#page-wrapper -->

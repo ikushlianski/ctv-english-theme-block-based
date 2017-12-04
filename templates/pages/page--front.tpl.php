@@ -72,7 +72,7 @@
  * @ingroup themeable
  */
 ?>
-  
+
 
     <?php include('page-header.tpl.php'); ?>
 
@@ -145,9 +145,9 @@
       </div><!-- /#main -->
 
 
+      <?php include('page-footer.tpl.php'); ?>
     </div> <!-- /#main-wrapper -->
 
 
-  <?php include('page-footer.tpl.php'); ?>
 
   </div></div> <!-- /#page, /#page-wrapper -->
