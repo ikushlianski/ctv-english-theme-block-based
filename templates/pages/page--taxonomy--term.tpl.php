@@ -120,7 +120,7 @@
       </div>
 
       <?php if ($page['content_recommended']): ?>
-      <h2 class="title title_recommended " style="margin-top: 1em">Latest from Belarus</h2>
+      <h2 class="title " style="margin-top: 1em">Latest from Belarus</h2>
       <div id="recommended-content-wrapper">
         <div id="content-recommended" class="clearfix">
             <div class="section">

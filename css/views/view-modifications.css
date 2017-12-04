@@ -46,7 +46,7 @@
 }
 
 .view.boxShadow_on .view-content .views-row {
-  box-shadow: 0px 0px 1px 1px rgba(128, 128, 128, 0.21);
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .view.fp-featured .view-content .views-row {

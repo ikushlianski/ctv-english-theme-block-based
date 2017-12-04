@@ -77,7 +77,7 @@
   font-weight: bold;
 
   @media (min-width: 768px) {
-    
+
   }
 
   .block-views & {
@@ -107,6 +107,9 @@
       }
     }
   }
+  #taxonomy-recommended-items & {
+    box-shadow: none;
+  }
 }
 .boxShadow--off {
   box-shadow: none;
@@ -120,11 +123,12 @@
 }
 
 .title {
+  color: $ctvtext;
+  font-weight: bold;
+  margin: 0 auto 0em;
+  display: table;
   &_recommended {
-    color: $greyHeaders;
-    font-weight: bold;
-    margin: 0 auto 0em;
-    display: table;
+    color: $ctvwhite;
   }
   &_orange {
     color: white;
@@ -145,4 +149,6 @@
 
 #user-login {
   margin: 1em 0;
+  padding: 1em;
+  @include boxShadow;
 }

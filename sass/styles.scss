@@ -92,6 +92,8 @@
 //
 // Style guide: forms
 
+@import "blocks/blocks";
+
 @import 'forms/autocomplete/autocomplete';
 @import 'forms/button/button';
 @import 'forms/collapsible-fieldset/collapsible-fieldset';
@@ -113,7 +115,6 @@
 @import "sections/content";
 
 @import "node-types/any-node";
-@import "node-types/blocks";
 @import "node-types/front-page";
 
 @import "regions/regions";

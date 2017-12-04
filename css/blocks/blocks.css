@@ -95,7 +95,7 @@
 
 .block-views {
   margin: 1.5em 0.5em;
-  box-shadow: 0px 0px 1px 1px rgba(128, 128, 128, 0.21);
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
   padding: 0.5em 1em;
 }
 
@@ -112,6 +112,10 @@
   margin-top: 0em;
 }
 
+#taxonomy-recommended-items .block-views {
+  box-shadow: none;
+}
+
 .boxShadow--off {
   box-shadow: none;
 }
@@ -121,11 +125,15 @@
   display: inline-block;
 }
 
-.title_recommended {
-  color: #666;
+.title {
+  color: #333;
   font-weight: bold;
   margin: 0 auto 0em;
   display: table;
+}
+
+.title_recommended {
+  color: whitesmoke;
 }
 
 .title_orange {
@@ -144,6 +152,8 @@
 
 #user-login {
   margin: 1em 0;
+  padding: 1em;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 /*# sourceMappingURL=blocks.css.map */

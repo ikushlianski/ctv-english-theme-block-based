@@ -188,6 +188,7 @@ figcaption a:visited {
   }
   #page-title.title {
     display: inherit;
+    margin: 1em 0;
   }
   .page-node #page-title.title {
     display: none;
