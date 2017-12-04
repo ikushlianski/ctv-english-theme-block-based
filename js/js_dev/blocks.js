@@ -50,17 +50,20 @@
 
 
     // hide last elements in sidebar_recommended until it's shorter than content_recommended
-    if ( $("#content-recommended .section").height() < $("#sidebar-recommended .section").height() ) {
-			do {
-				$("#sidebar-recommended .section").children().each(function(){
-					$(this).find(".views-row").last().remove();
-					if ( $("#content-recommended .section").height() >= $("#sidebar-recommended .section").height() ) {
-						return;
-					}
-				});
-			}
-			while ( $("#content-recommended .section").height() < $("#sidebar-recommended .section").height());
-    }
+    // if ( $("#content-recommended .section").height() < $("#sidebar-recommended .section").height() ) {
+		// 	do {
+		// 		$("#sidebar-recommended .section").children().each(function(){
+		// 			$(this).find(".views-row").last().remove();
+    //       if ( $(this).find(".views-row").length < 1 ) {
+    //         $(this).remove();
+    //       }
+    //       if ( $("#content-recommended .section").height() >= $("#sidebar-recommended .section").height() ) {
+    //         return;
+    //       }
+		// 		});
+		// 	}
+		// 	while ( $("#content-recommended .section").height() < $("#sidebar-recommended .section").height());
+    // }
 
     // trigger hover effect on item's img and text when hovering over any of its parts
     $(".views-row").hover(function(){
