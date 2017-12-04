@@ -76,10 +76,6 @@
   line-height: normal;
   font-weight: bold;
 
-  @media (min-width: 768px) {
-
-  }
-
   .block-views & {
     // margin-left: 0em;
     & a {
@@ -123,7 +119,7 @@
 }
 
 .title {
-  color: $ctvtext;
+  color: $greyHeaders;
   font-weight: bold;
   margin: 0 auto 0em;
   display: table;
