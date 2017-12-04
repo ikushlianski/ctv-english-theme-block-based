@@ -1,0 +1,68 @@
+@import 'init/customcolors';
+@import 'init/custom-mixins';
+
+.block {
+  &.sticky {
+    position: fixed;
+    top: 0;
+  }
+  &.at-bottom {
+    position: absolute;
+  }
+  &.noMarginBottom {
+    margin-bottom: 0;
+  }
+  &.fp-highlighted {
+    background-color: $ctvblue_lighter;
+    padding: 1em;
+    &_blue {
+      @extend .fp-highlighted;
+      background-color: $ctvblue_lighter;
+    }
+  }
+
+  &.block_filled {
+    padding: 1em;
+    box-shadow: none;
+
+    &_blue {
+      background-color: $ctvblue;
+      & .block__title {
+        color: whitesmoke!important;
+      }
+      & a {
+        color: white!important;
+      }
+      & .views-field-title {
+        background-color: $ctvblue;
+      }
+    }
+
+    &_lightblue {
+      background-color: $ctvblue_lighter;
+      & .block__title {
+        color: $greyHeaders!important;
+      }
+      & a {
+        color: $greyHeaders!important;
+      }
+      & .views-field-title {
+        background-color: $ctvblue_lighter;
+      }
+    }
+
+    &_darkgrey {
+      background-color: $ctvdarkgrey;
+      & .block__title {
+        color: $greyHeaders!important;
+        margin: 1em 0;
+      }
+      & a {
+        color: $grey!important;
+      }
+      & .views-field-title {
+        background-color: $ctvdarkgrey;
+      }
+    }
+  }
+}
