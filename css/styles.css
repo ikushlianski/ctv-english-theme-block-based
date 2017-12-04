@@ -2855,19 +2855,6 @@ figcaption a:visited {
   }
 }
 
-.region-content-recommended {
-  display: -webkit-box;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.region-content-recommended > * {
-  -webkit-box-flex: 1;
-          flex-grow: 1;
-  flex-basis: 250px;
-  margin-bottom: 0em;
-}
-
 #recommended-content-wrapper {
   display: -webkit-box;
   display: flex;
