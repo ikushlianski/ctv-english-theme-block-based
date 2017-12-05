@@ -2028,7 +2028,6 @@ tr.drag-previous {
   background-color: rgba(0, 0, 0, 0.3) !important;
   color: white !important;
   font-weight: bold;
-  text-shadow: 0 0 1px 1px black;
   padding: 0.3em 2em !important;
 }
 
@@ -2901,6 +2900,90 @@ figcaption a:visited {
   #sidebar-second {
     display: initial;
   }
+}
+
+.footer-content {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  background-color: #333;
+  margin: -1em;
+  margin-top: 1em;
+  padding: 1em;
+}
+
+.footer-content .main-menu-footer {
+  list-style-type: none;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #444;
+}
+
+.footer-content .main-menu-footer a {
+  color: lightgrey;
+  font-size: 0.95em;
+}
+
+.footer-content .main-menu-footer a:hover {
+  color: grey;
+  text-decoration: none;
+}
+
+.other-footer-content-wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  justify-content: space-around;
+}
+
+.other-footer-content-wrapper .site-brand-footer {
+  line-height: normal;
+  padding: 1em 0em;
+  color: #666;
+  font-weight: bold;
+}
+
+.other-footer-content-wrapper .site-brand-footer .company-name {
+  font-size: 1.5em;
+}
+
+.other-footer-content-wrapper .other-footer-links {
+  list-style-type: none;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.other-footer-content-wrapper .other-footer-links a {
+  color: lightgrey;
+  font-size: 0.85em;
+}
+
+.other-footer-content-wrapper .other-footer-links a:hover {
+  color: grey;
+  text-decoration: none;
+}
+
+.site-author {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  color: #666;
+  font-size: .8em;
+}
+
+.site-author a {
+  color: #999;
 }
 
 .region-sitemap-nav {
