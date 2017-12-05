@@ -5,8 +5,9 @@
 
     let blocksToExcludeFrom16_9 = [
       "block-views-bc4d82ca41b3690bfc18d1f53c06d20c",
-      "block-views-editor-s-picks-block",
-      "recommended-content-tabs"
+      "recommended-content-tabs",
+      // "block-views-mega-menu-politics-block",
+      "block-views-editor-s-picks-block"
     ];
 
     let blocksToIncludeIn16_12 = [
@@ -58,7 +59,7 @@
           }
         });
       }
-    }
+    });
 
   });
 
