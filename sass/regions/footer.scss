@@ -15,6 +15,14 @@
     justify-content: center;
     padding-bottom: 1em;
     border-bottom: 1px solid #444;
+    flex-wrap: wrap;
+    @media (max-width: 500px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    & li {
+
+    }
     & a {
       color: lightgrey;
       font-size: 0.95em;
@@ -25,16 +33,33 @@
     }
   }
 }
+.logo_largeScreens_footer {
+  margin: 0.5em auto;
+  display: table;
+  & img {
+    width: 2.5em;
+  }
+}
+
+.site-logo-footer {
+  position: relative;
+}
 
 .other-footer-content-wrapper {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+  position: relative;
   & .site-brand-footer {
     line-height: normal;
-    padding: 1em 0em;
+    padding: 1em 0.5em;
     color: #666;
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
     & .subtext {
 
     }
@@ -49,6 +74,11 @@
     list-style-type: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    @media (max-width: 500px) {
+      flex-direction: column;
+      align-items: center;
+    }
     & a {
       color: lightgrey;
       font-size: 0.85em;
@@ -60,8 +90,7 @@
   }
 }
 .site-author {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   color: #666;
   font-size: .8em;
   a {

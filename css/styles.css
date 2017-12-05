@@ -2924,6 +2924,17 @@ figcaption a:visited {
           justify-content: center;
   padding-bottom: 1em;
   border-bottom: 1px solid #444;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 500px) {
+  .footer-content .main-menu-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
+  }
 }
 
 .footer-content .main-menu-footer a {
@@ -2936,19 +2947,42 @@ figcaption a:visited {
   text-decoration: none;
 }
 
+.logo_largeScreens_footer {
+  margin: 0.5em auto;
+  display: table;
+}
+
+.logo_largeScreens_footer img {
+  width: 2.5em;
+}
+
+.site-logo-footer {
+  position: relative;
+}
+
 .other-footer-content-wrapper {
   display: -webkit-box;
   display: flex;
+  flex-wrap: wrap;
   -webkit-box-align: center;
           align-items: center;
   justify-content: space-around;
+  position: relative;
 }
 
 .other-footer-content-wrapper .site-brand-footer {
   line-height: normal;
-  padding: 1em 0em;
+  padding: 1em 0.5em;
   color: #666;
   font-weight: bold;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 .other-footer-content-wrapper .site-brand-footer .company-name {
@@ -2961,6 +2995,17 @@ figcaption a:visited {
   display: flex;
   -webkit-box-pack: center;
           justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 500px) {
+  .other-footer-content-wrapper .other-footer-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
+  }
 }
 
 .other-footer-content-wrapper .other-footer-links a {
@@ -2974,10 +3019,7 @@ figcaption a:visited {
 }
 
 .site-author {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
+  text-align: center;
   color: #666;
   font-size: .8em;
 }

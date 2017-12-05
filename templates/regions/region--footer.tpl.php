@@ -14,6 +14,7 @@
       <?php $footer_menu = menu_navigation_links('main-menu'); ?>
       <?php print theme('links__menu_main_footer', array('links' => $footer_menu, 'attributes' => array('id' => 'main-menu-footer', 'class' => array('main-menu-footer links', 'clearfix')))); ?>
 
+
       <div class="other-footer-content-wrapper">
         <div class="site-brand-footer">
           <div class="subtext">Belarusian Television Channel CTV</div>
@@ -27,6 +28,13 @@
           </ul>
         </nav>
       </div>
+
+      <div class="site-logo-footer">
+        <a href="/" title="<?php print t('Home'); ?>" rel="home"  id="logo_largeScreens_footer" class="logo_largeScreens_footer">
+          <img src="<?php echo file_create_url(path_to_theme().'/images-source/logo_stv_footer.png'); ?>" alt="<?php print t('Home'); ?>" />
+        </a>
+      </div>
+
 
       <div class="site-author">
         Site created by&nbsp;<a href="ilya.online">Ilya Kushlianski</a>
