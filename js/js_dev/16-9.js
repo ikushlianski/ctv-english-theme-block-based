@@ -6,14 +6,18 @@
     let blocksToExcludeFrom16_9 = [
       "block-views-bc4d82ca41b3690bfc18d1f53c06d20c",
       "recommended-content-tabs",
-      // "block-views-mega-menu-politics-block",
-      "block-views-editor-s-picks-block"
+      "block-views-editor-s-picks-block",
+      "block-views-mega-menu-politics-block"
     ];
 
     let blocksToIncludeIn16_12 = [
       "block-views-bc4d82ca41b3690bfc18d1f53c06d20c",
       "block-views-editor-s-picks-block"
-    ]
+    ];
+
+    let initiallyHiddenBlocks = [
+      "block-views-mega-menu-politics-block"
+    ];
 
     // make related news' images 16:9
     $('.block').each(function(){
