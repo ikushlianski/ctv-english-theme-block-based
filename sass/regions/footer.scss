@@ -33,6 +33,10 @@
     }
   }
 }
+.logo-and-branding {
+    display: flex;
+    align-items: center;
+}
 .logo_largeScreens_footer {
   margin: 0.5em auto;
   display: table;
@@ -47,7 +51,7 @@
 
 .other-footer-content-wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   align-items: center;
   justify-content: space-around;
   position: relative;
@@ -58,8 +62,6 @@
     font-weight: bold;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    align-items: center;
     & .subtext {
 
     }
