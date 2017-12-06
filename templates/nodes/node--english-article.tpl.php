@@ -97,9 +97,11 @@
 
   <div class="content"<?php print $content_attributes; ?>>
     <div class="metaAndImage">
+
       <figure>
         <!-- style="background-image: url(<?php // echo file_create_url($node->field_image[$language][0]['uri']); ?>)" -->
         <div class="mainImageContainer" >
+          <?php if (isset($node->field_image[$language][0]['uri'])): ?>
           <img src="<?php echo file_create_url($node->field_image[$language][0]['uri']); ?>" alt="" class="mainImage">
           <div class="nodeCategory_largeScreens">
             <?php
@@ -108,6 +110,9 @@
             ?>
           </div>
           <h1 class="title_largeScreens"><span><?php print $title ?></span></h1>
+        <?php elseif (!isset($node->field_image[$language][0]['uri'])) : ?>
+          <h1><?php print $title ?></h1>
+          <?php endif; ?>
         </div>
         <?php if (count($field_image_source_text) > 0 && count($field_image_source_link) > 0) : ?>
         <figcaption>Photo:
