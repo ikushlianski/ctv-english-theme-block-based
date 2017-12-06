@@ -65,6 +65,27 @@
       }
     });
 
+    // make tabs images all 16:9
+    $(".tab-content > .tab-pane").each(function(){
+      if ( !$(this).hasClass('active') ) {
+        $(this).css("display", "block");
+        $(this).find(".block").each(function(){
+          let thisBlockImgWidth = $(this).find('img').first().width();
+          $(this).find('img').first().height(thisBlockImgWidth/16*9);
+          let thisBlockImgHeight = $(this).find('img').first().height();
+          $(this).find('img').each(function(item){
+            if ($(this).width() == thisBlockImgWidth) {
+              $(this).height(thisBlockImgWidth/16*9);
+            } else {
+              $(this).width(thisBlockImgWidth);
+              $(this).height($(this).width()/16*9);
+            }
+          });
+        });
+        $(this).css("display", "");
+      }
+    });
+
   });
 
 })(jQuery, Drupal);
