@@ -2070,6 +2070,15 @@ li.attached-block a {
   text-shadow: none !important;
 }
 
+.menu-attach-block-wrapper.orientation-horizontal .view-content {
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.menu-attach-block-wrapper.orientation-horizontal .view-content .views-row {
+  flex-basis: 0;
+}
+
 @media not all, (-webkit-transform-3d) {
   .carouselView .slide .carousel-inner > .item.active.left, .carouselView .slide .carousel-inner > .item.active.right, .carouselView .slide .carousel-inner > .item.prev {
     position: absolute;

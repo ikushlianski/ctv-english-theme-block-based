@@ -25,4 +25,10 @@ li.attached-block a {
       text-shadow: none!important;
     }
   }
+  & .view-content {
+    justify-content: center;
+    & .views-row {
+      flex-basis: 0;
+    }
+  }
 }
