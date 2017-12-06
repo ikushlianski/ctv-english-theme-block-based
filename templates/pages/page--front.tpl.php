@@ -133,13 +133,7 @@
           </div>
           <?php endif; ?>
 
-          <!-- <?php //if ($page['fp_sidebar']): ?>
-          <div id="fp-sidebar" class="clearfix">
-            <div class="section">
-            <?php// print render($page['fp_sidebar']); ?>
-            </div>
-          </div>
-          <?php //endif; ?> -->
+
         </div>
 
       </div><!-- /#main -->

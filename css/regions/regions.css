@@ -1,6 +1,9 @@
 #fp-other-content-wrapper {
   display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
 }
 
 #front-page-content-promoted {
@@ -96,6 +99,28 @@
   .region-fp-media .block:last-child {
     -webkit-box-flex: 0;
             flex-grow: 0;
+  }
+}
+
+.region-fp-other1, .region-fp-other2 {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.region-fp-other1 > *, .region-fp-other2 > * {
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+}
+
+@media (max-width: 950px) {
+  .region-fp-other1 .view-content, .region-fp-other2 .view-content {
+    -webkit-box-pack: center;
+            justify-content: center;
+  }
+  .region-fp-other1 .view-content .views-row, .region-fp-other2 .view-content .views-row {
+    -webkit-box-flex: 1;
+            flex-grow: 1;
   }
 }
 

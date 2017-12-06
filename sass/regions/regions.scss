@@ -2,6 +2,7 @@
 
 #fp-other-content-wrapper {
   display: flex;
+  flex-direction: column;
 }
 
 #front-page-content-promoted {
@@ -75,6 +76,22 @@
       flex-grow: 1;
       @media (min-width: 768px) {
         flex-grow: 0;
+      }
+    }
+  }
+}
+
+.region-fp-other1, .region-fp-other2 {
+  display: flex;
+  flex-wrap: wrap;
+  & > * {
+    flex-grow: 1;
+  }
+  @media (max-width: 950px) {
+    & .view-content {
+      justify-content: center;
+      & .views-row {
+        flex-grow: 1;
       }
     }
   }
