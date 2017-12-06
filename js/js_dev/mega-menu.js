@@ -26,7 +26,10 @@
 
     $("a.attached-block").on("mouseenter", function() {
       clearTimeout(timer);
-      openSubmenu();
+      $(this).parent(".attached-block").siblings().each(function(){
+        $(this).find(".menu-attach-block-wrapper").removeClass("open");
+      });
+      openSubmenu($(this));
 
       // resize images inside megamenu
       let thisBlockImgWidth = $(this).siblings(".menu-attach-block-wrapper").children(".block").find('img').first().width();
@@ -39,8 +42,10 @@
     });
 
     $("a.attached-block").on("mouseleave", function() {
-        timer = setTimeout(
-          closeSubmenu
+        let self = $(this);
+        timer = setTimeout(function(){
+          closeSubmenu(self)
+        }
         , 1000);
     });
 
@@ -48,18 +53,24 @@
       clearTimeout(timer);
     });
     $(".menu-attach-block-wrapper > .block ").on("mouseleave", function() {
-      closeSubmenu();
+      closeSubmenuOnBlockLeave($(this));
     });
 
 
-    function openSubmenu() {
-      $(".menu-attach-block-wrapper").addClass("open");
+    function openSubmenu(thisObj) {
+      thisObj.siblings(".menu-attach-block-wrapper").addClass("open");
       if ($(window).width() > 767) {
         $("#main-wrapper").css("filter", "brightness(0.5)");
       }
     }
-    function closeSubmenu() {
-      $(".menu-attach-block-wrapper").removeClass("open");
+    function closeSubmenu(thisObj) {
+      thisObj.siblings(".menu-attach-block-wrapper").removeClass("open");
+      if ($(window).width() > 767) {
+        $("#main-wrapper").css("filter", "brightness(1)");
+      }
+    }
+    function closeSubmenuOnBlockLeave(thisObj) {
+      thisObj.parent(".menu-attach-block-wrapper").removeClass("open");
       if ($(window).width() > 767) {
         $("#main-wrapper").css("filter", "brightness(1)");
       }
