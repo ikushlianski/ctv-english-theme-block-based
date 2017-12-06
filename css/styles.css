@@ -2905,6 +2905,8 @@ figcaption a:visited {
   background-color: #222;
   padding: 2em;
   margin-bottom: 1em;
+  margin-left: -1em;
+  margin-right: -1em;
 }
 
 .region-fp-media .fp-media-header {
