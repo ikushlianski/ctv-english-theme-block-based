@@ -20,6 +20,9 @@
       background-color: $ctvblue_lighter;
     }
   }
+  &.flex-basis-30 {
+    flex-basis: 30%;
+  }
 
   &.block_filled {
     padding: 1em;
