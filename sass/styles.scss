@@ -93,6 +93,7 @@
 // Style guide: forms
 
 @import "blocks/blocks";
+@import "blocks/messages";
 @import "blocks/block-modifications";
 
 @import 'forms/autocomplete/autocomplete';
@@ -108,8 +109,10 @@
 
 // Custom files
 @import "features/carousel";
-@import "features/megamenu";
 @import "features/carousel-slide-bugfix";
+@import "features/megamenu";
+@import "features/embeds";
+
 
 @import "sections/navigation";
 @import "sections/breadcrumbs";

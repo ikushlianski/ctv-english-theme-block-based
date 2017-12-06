@@ -1,0 +1,9 @@
+.node iframe, .node blockquote {
+  max-width: 100%;
+}
+
+twitterwidget {
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=embeds.css.map */
