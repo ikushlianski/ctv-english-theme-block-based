@@ -117,29 +117,29 @@
         </div> <!-- /.section, /#content -->
 
         <div id="fp-other-content-wrapper">
-          <?php if ($page['fp_category']): ?>
-          <div id="fp-content-by-category" class="clearfix">
+          <?php if ($page['fp_other1']): ?>
+          <div id="fp-other-content-1" class="clearfix">
             <div class="section">
-            <?php print render($page['fp_category']); ?>
+            <?php print render($page['fp_other1']); ?>
             </div>
           </div>
           <?php endif; ?>
 
-          <?php if ($page['fp_tourism']): ?>
-          <div id="fp-content-by-category-tourism" class="clearfix">
+          <?php if ($page['fp_other2']): ?>
+          <div id="fp-other-content-2" class="clearfix">
             <div class="section">
-            <?php print render($page['fp_tourism']); ?>
+            <?php print render($page['fp_other2']); ?>
             </div>
           </div>
           <?php endif; ?>
 
-          <?php if ($page['fp_sidebar']): ?>
+          <!-- <?php //if ($page['fp_sidebar']): ?>
           <div id="fp-sidebar" class="clearfix">
             <div class="section">
-            <?php print render($page['fp_sidebar']); ?>
+            <?php// print render($page['fp_sidebar']); ?>
             </div>
           </div>
-          <?php endif; ?>
+          <?php //endif; ?> -->
         </div>
 
       </div><!-- /#main -->

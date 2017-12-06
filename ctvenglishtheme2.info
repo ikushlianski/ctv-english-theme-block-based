@@ -100,9 +100,9 @@ regions[taxonomy_recommended_items]    = Block for recommended items (if any) fr
 regions[fp_five_main_items]    = Top five on front page
 regions[fp_three_submain_sections]    = Top three sections on front page
 regions[fp_media]    = Media section on front page
-regions[fp_category]    = Section for content by category on front page
-regions[fp_tourism]    = Section for tourism on front page
-regions[fp_sidebar]    = Section for sidebar on front page for various content
+regions[fp_other1]    = Other FP content 1
+regions[fp_other2]    = Other FP content 2
+regions[fp_sidebar]    = Section for sidebar on FP for various content
 
 
 ; The page_top and page_bottom regions are hidden, which means they will not

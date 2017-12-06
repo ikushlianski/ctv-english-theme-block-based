@@ -24,6 +24,10 @@
   flex-basis: 30%;
 }
 
+.block.flex-basis-60 {
+  flex-basis: 60%;
+}
+
 .block.block_filled {
   padding: 1em;
   box-shadow: none;
