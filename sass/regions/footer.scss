@@ -36,6 +36,8 @@
 .logo-and-branding {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .logo_largeScreens_footer {
   margin: 0.5em auto;
@@ -62,6 +64,7 @@
     font-weight: bold;
     display: flex;
     flex-direction: column;
+    text-align: center;
     & .subtext {
 
     }

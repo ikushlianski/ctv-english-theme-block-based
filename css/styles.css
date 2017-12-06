@@ -2982,6 +2982,9 @@ figcaption a:visited {
   display: flex;
   -webkit-box-align: center;
           align-items: center;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .logo_largeScreens_footer {
@@ -3017,6 +3020,7 @@ figcaption a:visited {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
+  text-align: center;
 }
 
 .other-footer-content-wrapper .site-brand-footer .company-name {
