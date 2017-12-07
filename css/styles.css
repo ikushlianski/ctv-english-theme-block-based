@@ -2965,7 +2965,7 @@ figcaption a:visited {
 }
 
 .region-fp-media .block:last-child {
-  flex-basis: 40%;
+  flex-basis: 300px;
   -webkit-box-flex: 1;
           flex-grow: 1;
 }
