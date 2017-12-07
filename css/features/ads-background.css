@@ -1,3 +1,7 @@
+.advertizerSiteLink {
+  height: 12em !important;
+}
+
 @media (max-width: 767px) {
   .advertizerSiteLink {
     display: none !important;

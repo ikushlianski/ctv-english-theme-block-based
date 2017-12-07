@@ -82,4 +82,12 @@
   background-color: #222;
 }
 
+.block.block_featured {
+  background-color: #4e729a;
+}
+
+.block.block_featured .block__title {
+  color: whitesmoke;
+}
+
 /*# sourceMappingURL=block-modifications.css.map */

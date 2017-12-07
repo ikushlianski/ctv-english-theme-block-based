@@ -1,6 +1,6 @@
 .block__title {
   margin: 0.5em 0;
-  color: #666;
+  color: #4e729a;
   text-align: center;
   font-size: 120%;
   display: inline-block;
@@ -9,7 +9,7 @@
 }
 
 .block-views .block__title a {
-  color: #666;
+  color: #4e729a;
   text-decoration: none;
   transition: color 0.3s;
 }

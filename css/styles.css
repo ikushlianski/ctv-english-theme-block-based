@@ -1383,7 +1383,7 @@ span.field-label {
 
 .block__title {
   margin: 0.5em 0;
-  color: #666;
+  color: #4e729a;
   text-align: center;
   font-size: 120%;
   display: inline-block;
@@ -1392,7 +1392,7 @@ span.field-label {
 }
 
 .block-views .block__title a {
-  color: #666;
+  color: #4e729a;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -1564,6 +1564,14 @@ span.field-label {
 
 .block.block_filled_darkgrey .views-field-title {
   background-color: #222;
+}
+
+.block.block_featured {
+  background-color: #4e729a;
+}
+
+.block.block_featured .block__title {
+  color: whitesmoke;
 }
 
 .autocomplete,
@@ -2128,6 +2136,10 @@ li.attached-block a {
 
 twitterwidget {
   margin: 0 auto;
+}
+
+.advertizerSiteLink {
+  height: 12em !important;
 }
 
 @media (max-width: 767px) {

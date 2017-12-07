@@ -4,7 +4,7 @@
 .block__title {
   margin: 0.5em 0;
   // background-color: $ctvblue;
-  color: $greyHeaders;
+  color: $ctvblue;
   text-align: center;
   font-size: 120%;
   display: inline-block;
@@ -14,7 +14,7 @@
   .block-views & {
     // margin-left: 0em;
     & a {
-      color: $greyHeaders;
+      color: $ctvblue;
       text-decoration: none;
       transition: color 0.3s;
       &:hover {
