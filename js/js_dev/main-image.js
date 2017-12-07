@@ -24,8 +24,8 @@
   $(document).ready(function(){
 
     // make main image of its natural height inside the Main Image Container
-    var mainImgHeight = $(".mainImage").height();
-    $(".mainImageContainer").height(mainImgHeight);
+    // var mainImgHeight = $(".mainImage").height();
+    // $(".mainImageContainer").height(mainImgHeight);
 
   });
 

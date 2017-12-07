@@ -126,7 +126,7 @@
         </div> <!-- /.section, /#sidebar-first -->
       <?php endif; ?>
 
-      <h2 class="title ">Latest from Belarus</h2>
+      <h2 class="title title_moreFromBelarus">Latest from Belarus</h2>
       <div id="recommended-content-wrapper">
         <div id="content-recommended" class="clearfix">
           <?php if ($page['content_recommended']): ?>

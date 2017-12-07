@@ -68,8 +68,20 @@
   background-color: #222;
   padding: 2em;
   margin-bottom: 1em;
-  margin-left: -1em;
-  margin-right: -1em;
+}
+
+@media (max-width: 767px) {
+  .region-fp-media {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .region-fp-media {
+    margin-left: -1em;
+    margin-right: -1em;
+  }
 }
 
 .region-fp-media .fp-media-header {

@@ -62,7 +62,7 @@
 .title {
   color: #666;
   font-weight: bold;
-  margin: 1em auto 0em;
+  margin: 1em auto 1em;
   display: table;
 }
 
@@ -77,6 +77,10 @@
   display: block;
   background-color: #ef5223;
   text-align: center;
+}
+
+.title_moreFromBelarus {
+  margin: 1em auto 0em;
 }
 
 .view-content ul {

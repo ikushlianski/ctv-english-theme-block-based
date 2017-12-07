@@ -15,10 +15,6 @@
       "block-views-editor-s-picks-block"
     ];
 
-    let initiallyHiddenBlocks = [
-      "block-views-mega-menu-politics-block"
-    ];
-
     // make related news' images 16:9
     $('.block').each(function(){
 

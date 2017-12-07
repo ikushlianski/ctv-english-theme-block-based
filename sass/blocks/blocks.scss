@@ -63,7 +63,7 @@
 .title {
   color: $greyHeaders;
   font-weight: bold;
-  margin: 1em auto 0em;
+  margin: 1em auto 1em;
   display: table;
   &_recommended {
     color: $ctvwhite;
@@ -75,6 +75,9 @@
     display: block;
     background-color: #ef5223;
     text-align: center;
+  }
+  &_moreFromBelarus {
+    margin: 1em auto 0em;
   }
 }
 

@@ -1,3 +1,15 @@
+@media (max-width: 767px) {
+  #footer {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  #footer {
+    margin: 0 -1em;
+  }
+}
+
 .footer-content {
   display: -webkit-box;
   display: flex;
@@ -7,7 +19,6 @@
   -webkit-box-pack: center;
           justify-content: center;
   background-color: #333;
-  margin: -1em;
   margin-top: 1em;
   padding: 1em;
 }
@@ -86,7 +97,7 @@
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  text-align: center;
+  font-size: 0.9em;
 }
 
 .other-footer-content-wrapper .site-brand-footer .company-name {
