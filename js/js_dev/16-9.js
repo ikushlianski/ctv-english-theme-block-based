@@ -22,6 +22,7 @@
 
       if ( ! blocksToExcludeFrom16_9.includes(currentElemId) ) {
         let thisBlockImgWidth = $(this).find('img').first().width();
+        let thisBlockFirstItemWidth = $(this).find(".views-row").first().width();
         $(this).find('img').first().height(thisBlockImgWidth/16*9);
         let thisBlockImgHeight = $(this).find('img').first().height();
 
@@ -29,8 +30,10 @@
           if ($(this).width() == thisBlockImgWidth) {
             $(this).height(thisBlockImgWidth/16*9);
           } else {
-            $(this).width(thisBlockImgWidth);
+            // $(this).width(thisBlockImgWidth);
+            $(this).css({flexBasis: thisBlockImgWidth});
             $(this).height($(this).width()/16*9);
+            // $(this).parents(".views-row").css({flexBasis: thisBlockFirstItemWidth, flexGrow: "0"});
           }
         });
       }
