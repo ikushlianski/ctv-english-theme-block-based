@@ -1,9 +1,10 @@
 blockquote {
   padding: 0.5em;
-  border-left: 10px solid #4e729a;
-  box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.3);
+  border-left: none;
   margin: 0;
   font-size: 130%;
+  color: #ef5223;
+  line-height: normal;
 }
 
 blockquote p {

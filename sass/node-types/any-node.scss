@@ -4,10 +4,12 @@ blockquote {
   padding: 0.5em;
   //border-bottom: 1px dashed #ef5223;
   //border-top: 1px dashed #ef5223;
-  border-left: 10px solid #4e729a;
-  box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.3);
+  border-left: none;
+  // box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.3);
   margin: 0;
   font-size: 130%;
+  color: $ctvorange;
+  line-height: normal;
   & p {
     margin: 0.5em;
   }
