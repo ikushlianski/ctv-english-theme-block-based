@@ -179,6 +179,7 @@ figcaption a:visited {
     color: white;
     padding: 0.2em 1.5em;
     text-decoration: none;
+    font-weight: bold;
   }
   .nodeCategory_largeScreens a:hover {
     text-decoration: underline;

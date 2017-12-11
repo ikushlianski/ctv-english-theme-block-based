@@ -68,6 +68,17 @@
   text-decoration: underline;
 }
 
+.view-front-page-two-main a.fp_categoryLink {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0 0.5em;
+}
+
+.view-front-page-two-main a.fp_categoryLink:hover {
+  text-decoration: underline;
+}
+
 .view-front-page-three-main .views-row {
   position: relative;
 }
