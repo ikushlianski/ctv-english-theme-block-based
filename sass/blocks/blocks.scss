@@ -4,7 +4,7 @@
 .block__title {
   margin: 0.5em 0;
   // background-color: $ctvblue;
-  color: $ctvblue;
+  color: $ctvorange;
   text-align: center;
   font-size: 120%;
   display: inline-block;
@@ -14,7 +14,7 @@
   .block-views & {
     // margin-left: 0em;
     & a {
-      color: $ctvblue;
+      color: $ctvorange;
       text-decoration: none;
       transition: color 0.3s;
       &:hover {
@@ -25,9 +25,10 @@
 }
 
 .block-views {
-  margin: 1.5em 0.5em;
+  margin: 0.5em;
   @include boxShadow;
   padding: 0.5em 1em;
+  background-color: white;
   #sidebar-first & {
     margin: 1em 0;
     &:first-child {
@@ -40,6 +41,7 @@
   }
   #taxonomy-recommended-items & {
     box-shadow: none;
+    background-color: transparent;
   }
 }
 .boxShadow--off {

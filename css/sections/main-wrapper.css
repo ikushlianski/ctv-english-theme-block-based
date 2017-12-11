@@ -4,6 +4,7 @@
 
 #main-wrapper {
   margin: 0 1em;
+  background-color: #fafafa;
 }
 
 @media (min-width: 768px) {

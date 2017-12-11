@@ -28,6 +28,7 @@
     -webkit-box-align: center;
             align-items: center;
     flex-wrap: wrap;
+    padding: 5em;
   }
   .region-sitemap-nav.toggled-on .menu-blocks .block-menu-block {
     flex-basis: 33.333333%;

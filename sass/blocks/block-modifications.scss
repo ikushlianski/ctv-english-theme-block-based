@@ -5,6 +5,7 @@
   &.sticky {
     position: fixed;
     top: 0;
+    padding-top: 0.5em!important;
   }
   &.at-bottom {
     position: absolute;
@@ -14,10 +15,16 @@
   }
   &.fp-highlighted {
     background-color: $ctvblue_lighter;
-    padding: 1em;
+    // padding: 1em;
     &_blue {
-      @extend .fp-highlighted;
+      // @extend .fp-highlighted;
       background-color: $ctvblue_lighter;
+      & .block__title {
+        color: $ctvblue!important;
+        & a {
+          color: $ctvblue!important;
+        }
+      }
     }
   }
   &.flex-basis-30 {
@@ -76,5 +83,8 @@
     & .block__title {
       color: $ctvwhite;
     }
+  }
+  &.noBackgroundColor {
+    background-color: transparent;
   }
 }

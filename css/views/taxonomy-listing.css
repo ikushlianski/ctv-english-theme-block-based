@@ -11,6 +11,7 @@
   flex-basis: 300px;
   -webkit-box-flex: 0;
           flex-grow: 0;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .view.view-taxonomy-term .view-content .views-row .views-field-title, .view.view-recommended-from-taxonomy .view-content .views-row .views-field-title {

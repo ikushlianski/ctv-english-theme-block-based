@@ -16,5 +16,7 @@ body {
 #page {
   @media (max-width: 767px) {
     background-image: none!important;
+    padding-top: 1em;
+    background-color: $ctvmainwrapper!important;
   }
 }

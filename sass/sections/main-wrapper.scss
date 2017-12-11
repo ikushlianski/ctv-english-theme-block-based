@@ -1,9 +1,13 @@
+@import 'init/customcolors';
+@import 'init/custom-mixins';
+
 #page-wrapper {
   margin: 5em 0em 0;
 
 }
 #main-wrapper {
   margin: 0 1em;
+  background-color: $ctvmainwrapper;
 }
 
 @media (min-width: 768px) {

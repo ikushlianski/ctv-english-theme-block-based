@@ -1,4 +1,5 @@
 @import 'init/customcolors';
+@import 'init/custom-mixins';
 
 .page-taxonomy-term {
   & #content {
@@ -13,6 +14,7 @@
       & .views-row {
         flex-basis: 300px;
         flex-grow: 0;
+        @include boxShadow;
         & .views-field-title {
           padding: 1em;
           padding-left: 0.2em;

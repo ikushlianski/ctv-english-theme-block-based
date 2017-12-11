@@ -8,10 +8,18 @@
 
 .node-type-home-page {
   & .block {
-    margin-top: 0em;
+    // margin-top: 0em;
   }
 }
 
+.view-front-page-two-main {
+  & .views-row {
+    @media (max-width: 767px) {
+      margin-left: 0!important;
+      margin-right: 0!important;
+    }
+  }
+}
 .view-front-page-two-main, .view-front-page-media-first {
   & .view-content {
     display: flex;
@@ -73,6 +81,9 @@
 .view-front-page-three-main {
   & .views-row {
     position: relative;
+    &:not(:first-child) {
+      margin: 0em 0em 0.3em 0.5em!important;
+    }
     & .views-field-field-category {
       position: absolute;
       top: 1em;
