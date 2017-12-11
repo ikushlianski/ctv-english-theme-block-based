@@ -57,7 +57,9 @@ figcaption {
     margin: 0;
   }
 }
-
+.nodeBody {
+  margin-bottom: 2em;
+}
 .nodeCategory {
   &_largeScreens {
     display: none;
@@ -155,6 +157,7 @@ figcaption {
   .metaAndImage {
     display: flex;
   }
+
   .nodeCategory {
     &_largeScreens {
       display: initial;

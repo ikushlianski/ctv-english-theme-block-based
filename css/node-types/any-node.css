@@ -65,6 +65,10 @@ figcaption a:visited {
   }
 }
 
+.nodeBody {
+  margin-bottom: 2em;
+}
+
 .nodeCategory_largeScreens {
   display: none;
 }
