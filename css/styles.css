@@ -3339,6 +3339,17 @@ figcaption a:visited {
   }
 }
 
+.socialButton {
+  width: 2em;
+  text-align: center;
+}
+
+.socialButton .fa.fa-2x {
+  font-size: 1.5em;
+  color: #666;
+  color: #4e729a;
+}
+
 .view .view-content {
   display: -webkit-box;
   display: flex;

@@ -132,9 +132,9 @@
           <?php print date( "F j, Y", $node->created); ?>
         </div>
         <div class="socialButtons">
-          <div class="socialButton">Social</div>
-          <div class="socialButton">buttons</div>
-          <div class="socialButton">here</div>
+          <div class="socialButton"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></div>
+          <div class="socialButton"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></div>
+          <div class="socialButton"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></div>
         </div>
       </div>
     </div>
