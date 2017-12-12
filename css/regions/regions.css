@@ -48,6 +48,8 @@
   display: flex;
   flex-wrap: wrap;
   margin: 1em 0;
+  margin-left: -0.5em;
+  margin-right: -0.5em;
 }
 
 .region-fp-three-submain-sections > * {
@@ -64,8 +66,10 @@
 
 @media (max-width: 767px) {
   .region-fp-media {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: -1em;
+    margin-right: -1em;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

@@ -26,6 +26,16 @@
         }
       }
     }
+    &_orange {
+      // @extend .fp-highlighted;
+      background-color: $ctvorange;
+      & .block__title {
+        color: $ctvwhite!important;
+      }
+      & a {
+        color: $ctvwhite!important;
+      }
+    }
   }
   &.flex-basis-30 {
     flex-basis: 300px;

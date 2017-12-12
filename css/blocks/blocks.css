@@ -43,6 +43,10 @@
   background-color: transparent;
 }
 
+#block-views-front-page-two-main-block {
+  padding-bottom: 0em;
+}
+
 .boxShadow--off {
   box-shadow: none;
 }

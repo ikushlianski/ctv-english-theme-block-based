@@ -78,6 +78,11 @@
   }
 }
 .view-front-page-two-main {
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+  & .views-row {
+    margin: 0.5em!important;
+  }
   & a.fp_categoryLink {
     text-decoration: none;
     color: white;
@@ -125,10 +130,10 @@
       & .views-row {
 
         &:first-child  {
-          flex-basis: 60%;
+          flex-basis: 55%;
         }
         &:last-child {
-          flex-basis: 37%;
+          flex-basis: 35%;
         }
       }
     }

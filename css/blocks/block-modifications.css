@@ -28,6 +28,18 @@
   color: #4e729a !important;
 }
 
+.block.fp-highlighted_orange {
+  background-color: #ef5223;
+}
+
+.block.fp-highlighted_orange .block__title {
+  color: whitesmoke !important;
+}
+
+.block.fp-highlighted_orange a {
+  color: whitesmoke !important;
+}
+
 .block.flex-basis-30 {
   flex-basis: 300px;
 }
