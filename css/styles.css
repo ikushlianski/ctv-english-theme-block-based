@@ -2878,12 +2878,13 @@ figcaption a:visited {
   text-decoration: underline;
 }
 
-.view-front-page-three-main .views-row {
-  position: relative;
+.view-front-page-three-main {
+  margin: -0.5em;
 }
 
-.view-front-page-three-main .views-row:not(:first-child) {
-  margin: 0em 0em 0.3em 0.5em !important;
+.view-front-page-three-main .views-row {
+  position: relative;
+  margin: 0.5em !important;
 }
 
 .view-front-page-three-main .views-row .views-field-field-category {

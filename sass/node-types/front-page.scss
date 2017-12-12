@@ -90,11 +90,13 @@
 }
 
 .view-front-page-three-main {
+  margin: -0.5em;
   & .views-row {
     position: relative;
-    &:not(:first-child) {
-      margin: 0em 0em 0.3em 0.5em!important;
-    }
+    margin: 0.5em!important;
+    // &:not(:first-child) {
+    //   margin: 0em 0em 0.3em 0.5em!important;
+    // }
     & .views-field-field-category {
       position: absolute;
       top: 1em;
