@@ -23,7 +23,7 @@
               <img src="<?php echo file_create_url(path_to_theme().'/images-source/logo_stv_footer.png'); ?>" alt="<?php print t('Home'); ?>" />
             </a>
           </div>
-        
+
           <div class="site-brand-footer">
             <div class="subtext">Belarusian Television Channel CTV</div>
             <div class="company-name">Stolichnoe Televidenie</div>
@@ -39,7 +39,7 @@
       </div>
 
       <div class="site-author">
-        Site created by&nbsp;<a href="ilya.online">Ilya Kushlianski</a>
+        Site created by&nbsp;<a href="http://ilya.online">Ilya Kushlianski</a>
       </div>
     </div>
   </footer>
