@@ -33,6 +33,10 @@
   .region-sitemap-nav.toggled-on .menu-blocks .block-menu-block {
     flex-basis: 33.333333%;
     flex-shrink: 0;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
   }
   .region-sitemap-nav.toggled-on .menu-blocks ul, .region-sitemap-nav.toggled-on .menu-blocks li {
     list-style-type: none;
