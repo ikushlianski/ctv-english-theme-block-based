@@ -2949,6 +2949,8 @@ figcaption a:visited {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
+  margin-right: -0.5em;
+  margin-left: -0.5em;
 }
 
 #front-page-content-promoted {
@@ -3156,9 +3158,16 @@ figcaption a:visited {
   display: flex;
   -webkit-box-pack: center;
           justify-content: center;
+  padding-bottom: 1em;
   padding-top: 0;
   border-bottom: 1px solid #444;
   flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .footer-content .main-menu-footer li {
+    padding: 0.5em 0;
+  }
 }
 
 .footer-content .main-menu-footer a {
@@ -3405,6 +3414,7 @@ figcaption a:visited {
   transition: filter 0.2s;
   transition: filter 0.2s, -webkit-filter 0.2s;
   overflow: hidden;
+  width: 100%;
 }
 
 .view img:hover {

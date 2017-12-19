@@ -22,7 +22,7 @@
     list-style-type: none;
     display: flex;
     justify-content: center;
-    //padding-bottom: 1em;
+    padding-bottom: 1em;
     padding-top: 0;
     border-bottom: 1px solid #444;
     flex-wrap: wrap;
@@ -31,7 +31,9 @@
     //   align-items: center;
     // }
     & li {
-
+      @media (max-width: 767px) {
+        padding: 0.5em 0;
+      }
     }
     & a {
       color: lightgrey;
