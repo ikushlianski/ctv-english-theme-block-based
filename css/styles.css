@@ -3418,6 +3418,7 @@ figcaption a:visited {
   transition: filter 0.2s;
   transition: filter 0.2s, -webkit-filter 0.2s;
   overflow: hidden;
+  width: 100%;
 }
 
 .view img:hover {

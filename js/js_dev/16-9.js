@@ -1,7 +1,7 @@
 (function ($, Drupal) {
 
 
-  $(document).ready(function(){
+  $(window).load(function(){
 
     let blocksToExcludeFrom16_9 = [
       "block-views-bc4d82ca41b3690bfc18d1f53c06d20c",
@@ -20,7 +20,7 @@
 
       let currentElemId = $(this).attr("id");
 
-      if ( ! blocksToExcludeFrom16_9.includes(currentElemId) ) {
+      if ( ! blocksToExcludeFrom16_9.indexOf(currentElemId) >= 0 ) {
         let thisBlockImgWidth = $(this).find('img').first().width();
         let thisBlockFirstItemWidth = $(this).find(".views-row").first().width();
         $(this).find('img').first().height(thisBlockImgWidth/16*9);
@@ -50,7 +50,7 @@
     // make carousel images 16:12
     $('.block').each(function(){
       let currentElemId = $(this).attr("id");
-      if ( blocksToExcludeFrom16_9.includes(currentElemId) && blocksToIncludeIn16_12.includes(currentElemId) ) {
+      if ( blocksToExcludeFrom16_9.indexOf(currentElemId) >= 0 && blocksToIncludeIn16_12.indexOf(currentElemId) >= 0 ) {
         let thisBlockImgWidth = $(this).find('img').first().width();
         let thisBlockImgHeight = $(this).find('img').first().height();
         $(this).find('img').each(function(item){
