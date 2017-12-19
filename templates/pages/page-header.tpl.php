@@ -1,7 +1,7 @@
 <?php
 $pathToTheme = $base_path . $directory . '/images-source/';
-$brandedBackground = "branded_background2.jpg";
-$advertizerSite = "http://kinopoisk.ru";
+$brandedBackground = "";
+$advertizerSite = "";
 if ($brandedBackground) {
   $pathToBackground = $pathToTheme . $brandedBackground;
 }
