@@ -325,7 +325,7 @@ a.logo_largeScreens {
     display: flex;
     -webkit-box-align: center;
             align-items: center;
-    margin-right: 1.5em;
+    margin-right: 2em;
     -webkit-box-pack: justify;
             justify-content: space-between;
   }

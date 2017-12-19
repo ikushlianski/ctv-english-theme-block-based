@@ -49,9 +49,9 @@
       }
       & .itemTitle {
         position: absolute;
-        bottom: 0.5em;
-        left: 0.5em;
-        margin: 0.5em;
+        bottom: 0rem;
+        left: 1rem;
+        /* margin: 0.5em; */
         line-height: normal;
         pointer-events: none;
         & .itemTitleText {

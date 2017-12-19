@@ -39,9 +39,9 @@
 
 .view-front-page-two-main .view-content .views-row .itemTitle, .view-front-page-media-first .view-content .views-row .itemTitle {
   position: absolute;
-  bottom: 0.5em;
-  left: 0.5em;
-  margin: 0.5em;
+  bottom: 0rem;
+  left: 1rem;
+  /* margin: 0.5em; */
   line-height: normal;
   pointer-events: none;
 }
