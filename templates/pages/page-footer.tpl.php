@@ -1,5 +1,5 @@
 <div id="footer">
-  <div class="section">
+  <div class="">
   <?php print render($page['footer']); ?>
   </div>
 </div> <!-- /.section, /#footer -->

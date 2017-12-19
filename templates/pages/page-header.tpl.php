@@ -23,7 +23,7 @@ if ($brandedBackground) {
   <a class="advertizerSiteLink" target="_blank" href="<?php if ($advertizerSite) { echo $advertizerSite; } ?>" style="display: block; height: 15em; width: 100%"></a>
   <?php endif; ?>
 
-  <div id="header"><div class="section clearfix">
+  <div id="header"><div class=" clearfix">
   <?php if ($site_name || $site_slogan): ?>
     <div id="name-and-slogan">
       <?php if ($site_name): ?>
@@ -46,7 +46,7 @@ if ($brandedBackground) {
 
   <?php if ($main_menu || $secondary_menu): ?>
     <div id="navigation">
-      <div class="section nav-group">
+      <div class=" nav-group">
         <div class="brandAndToggleDiv">
           <?php if ($logo): ?>
             <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo" class="logo">
@@ -81,7 +81,7 @@ if ($brandedBackground) {
         </div>
       </div>
 
-      <div class="section nav-group2">
+      <div class=" nav-group2">
         <div class="nav-menu-div">
           <?php print theme(
           'links__system_main_menu_2',
