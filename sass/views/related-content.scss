@@ -1,6 +1,9 @@
 @import 'init/customcolors';
 @import 'init/custom-mixins';
 
+
+
+
 // common appearance of views
 .view {
   & .view-content {
@@ -23,7 +26,6 @@
     display: block;
     transition: filter 0.2s;
     overflow: hidden;
-    width: 100%;
     &:hover {
       filter: brightness(0.9);
     }
