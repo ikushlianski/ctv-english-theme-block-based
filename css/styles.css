@@ -2558,6 +2558,10 @@ a.logo_largeScreens {
   display: none;
 }
 
+.section {
+  margin-bottom: -0.5em !important;
+}
+
 #page-wrapper {
   margin: 5em 0em 0;
 }

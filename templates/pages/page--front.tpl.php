@@ -116,10 +116,10 @@
           <?php endif; ?>
         </div> <!-- /.section, /#content -->
 
-        <div id="fp-other-content-wrapper">
+        <div id="fp-other-content-wrapper" class="section">
           <?php if ($page['fp_other1']): ?>
           <div id="fp-other-content-1" class="clearfix">
-            <div class="section">
+            <div class="">
             <?php print render($page['fp_other1']); ?>
             </div>
           </div>
@@ -127,7 +127,7 @@
 
           <?php if ($page['fp_other2']): ?>
           <div id="fp-other-content-2" class="clearfix">
-            <div class="section">
+            <div class="">
             <?php print render($page['fp_other2']); ?>
             </div>
           </div>

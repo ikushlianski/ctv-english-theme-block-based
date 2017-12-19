@@ -1,6 +1,10 @@
 @import 'init/customcolors';
 @import 'init/custom-mixins';
 
+.section {
+    margin-bottom: -0.5em!important;
+}
+
 #page-wrapper {
   margin: 5em 0em 0;
 
