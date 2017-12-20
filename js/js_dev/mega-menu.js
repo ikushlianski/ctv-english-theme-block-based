@@ -19,6 +19,9 @@
     $(window).resize(function(){
       let targetSize = $(".nav-menu-div").first().width();
       $(".menu-attach-block-wrapper").width(targetSize);
+      let pdleft = $(".menu-attach-block-wrapper").find(".block").css("paddingLeft");
+      let pdright = $(".menu-attach-block-wrapper").find(".block").css("paddingRight");
+      $(".menu-attach-block-wrapper").find(".block").width(targetSize - pdleft - pdright);
 
     });
 
@@ -32,13 +35,15 @@
       openSubmenu($(this));
 
       // resize images inside megamenu
-      let thisBlockImgWidth = $(this).siblings(".menu-attach-block-wrapper").children(".block").find('img').first().width();
-      $(this).siblings(".menu-attach-block-wrapper").children(".block").find('img').first().height(thisBlockImgWidth/16*9);
-      let thisBlockImgHeight = $(this).siblings(".menu-attach-block-wrapper").children(".block").find('img').first().height();
+      if ( Modernizr.objectfit ) {
+        let thisBlockImgWidth = $(this).siblings(".menu-attach-block-wrapper").children(".block").find('img').first().width();
+        $(this).siblings(".menu-attach-block-wrapper").children(".block").find('img').first().height(thisBlockImgWidth/16*9);
+        let thisBlockImgHeight = $(this).siblings(".menu-attach-block-wrapper").children(".block").find('img').first().height();
 
-      $(this).siblings(".menu-attach-block-wrapper").children(".block").find('img').each(function(item){
-        $(this).height(thisBlockImgWidth/16*9);
-      });
+        $(this).siblings(".menu-attach-block-wrapper").children(".block").find('img').each(function(item){
+          $(this).height(thisBlockImgWidth/16*9);
+        });
+      }
     });
 
     $("a.attached-block").on("mouseleave", function() {

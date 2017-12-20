@@ -1,13 +1,19 @@
+/**
+* This file resizes images all over website, except for megamenu, which has separate resizing function
+*/
 (function ($, Drupal) {
 
 
   $(window).load(function(){
 
+
+
     let blocksToExcludeFrom16_9 = [
       "block-views-bc4d82ca41b3690bfc18d1f53c06d20c",
       "recommended-content-tabs",
-      "block-views-editor-s-picks-block",
-      "block-views-mega-menu-politics-block"
+      "block-views-editor-s-picks-block"
+      //,
+      // "block-views-mega-menu-politics-block"
     ];
 
     let blocksToIncludeIn16_12 = [
@@ -20,7 +26,7 @@
 
       let currentElemId = $(this).attr("id");
 
-      if ( ! blocksToExcludeFrom16_9.indexOf(currentElemId) >= 0 && Modernizr.objectfit ) {
+      if ( Modernizr.objectfit && !blocksToExcludeFrom16_9.indexOf(currentElemId) >= 0 ) {
         let thisBlockImgWidth = $(this).find('img').first().width();
         let thisBlockFirstItemWidth = $(this).find(".views-row").first().width();
         $(this).find('img').first().height(thisBlockImgWidth/16*9);
@@ -87,13 +93,13 @@
       }
     });
 
-  });
+    // fixing ie 11 lack of object-fit support
+    if ( ! Modernizr.objectfit ) {
+      $('.view img').each(function () {
+        $(this).css({ height: "auto", width: "100%"});
+      });
+    }
 
-  // fixing ie11 lack of object-fit support
-  if ( ! Modernizr.objectfit ) {
-    $('.view img').each(function () {
-      $(this).css({width: "100%"});
-    });
-  }
+  });
 
 })(jQuery, Drupal);

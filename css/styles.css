@@ -2129,7 +2129,7 @@ li.attached-block a {
 
 @media (min-width: 768px) {
   .menu-attach-block-wrapper.orientation-horizontal {
-    width: 1024px;
+    width: 100%;
   }
   .menu-attach-block-wrapper.orientation-horizontal.open {
     display: -webkit-box;
@@ -2141,6 +2141,7 @@ li.attached-block a {
     position: absolute;
     margin: 0;
     top: 2.7em;
+    width: 100%;
   }
 }
 
