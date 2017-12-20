@@ -20,7 +20,7 @@
 
       let currentElemId = $(this).attr("id");
 
-      if ( ! blocksToExcludeFrom16_9.indexOf(currentElemId) >= 0 ) {
+      if ( ! blocksToExcludeFrom16_9.indexOf(currentElemId) >= 0 && Modernizr.objectfit ) {
         let thisBlockImgWidth = $(this).find('img').first().width();
         let thisBlockFirstItemWidth = $(this).find(".views-row").first().width();
         $(this).find('img').first().height(thisBlockImgWidth/16*9);
@@ -41,16 +41,18 @@
 
     // make view items' images in taxonomy 16:9
     $('.page-taxonomy-term .view-taxonomy-term .views-field-field-image').each(function(){
-      let thisViewImgWidth = $(this).find('img').first().width();
-      $(this).find('img').each(function(item){
-        $(this).height(thisViewImgWidth /16 * 9);
-      });
+      if ( Modernizr.objectfit ) {
+        let thisViewImgWidth = $(this).find('img').first().width();
+        $(this).find('img').each(function(item){
+          $(this).height(thisViewImgWidth /16 * 9);
+        });
+      }
     });
 
     // make carousel images 16:12
     $('.block').each(function(){
       let currentElemId = $(this).attr("id");
-      if ( blocksToExcludeFrom16_9.indexOf(currentElemId) >= 0 && blocksToIncludeIn16_12.indexOf(currentElemId) >= 0 ) {
+      if ( blocksToExcludeFrom16_9.indexOf(currentElemId) >= 0 && blocksToIncludeIn16_12.indexOf(currentElemId) >= 0 && Modernizr.objectfit) {
         let thisBlockImgWidth = $(this).find('img').first().width();
         let thisBlockImgHeight = $(this).find('img').first().height();
         $(this).find('img').each(function(item){
@@ -66,7 +68,7 @@
 
     // make tabs images all 16:9
     $(".tab-content > .tab-pane").each(function(){
-      if ( !$(this).hasClass('active') ) {
+      if ( !$(this).hasClass('active') && Modernizr.objectfit ) {
         $(this).css("display", "block");
         $(this).find(".block").each(function(){
           let thisBlockImgWidth = $(this).find('img').first().width();
@@ -92,7 +94,6 @@
     $('.view img').each(function () {
       $(this).css({width: "100%"});
     });
-    //  console.log('obj fit not found!');
   }
 
 })(jQuery, Drupal);
