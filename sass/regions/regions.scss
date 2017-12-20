@@ -178,3 +178,14 @@
     display: initial;
   }
 }
+
+// fixes for ie 11
+#front-page-content-promoted {
+  height: 100%;
+}
+#fp-other-content-wrapper {
+  height: 100%;
+  & #fp-other-content-1 {
+    height: 100%;
+  }
+}

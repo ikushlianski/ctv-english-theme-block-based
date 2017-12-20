@@ -18,6 +18,8 @@ blockquote {
 
 figure {
   margin: 0 0;
+  // fix for ie11
+  height: 100%;
 }
 figcaption {
   color: grey;

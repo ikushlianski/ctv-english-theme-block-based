@@ -2607,6 +2607,7 @@ blockquote p {
 
 figure {
   margin: 0 0;
+  height: 100%;
 }
 
 figcaption {
@@ -3134,6 +3135,18 @@ figcaption a:visited {
   #sidebar-second {
     display: initial;
   }
+}
+
+#front-page-content-promoted {
+  height: 100%;
+}
+
+#fp-other-content-wrapper {
+  height: 100%;
+}
+
+#fp-other-content-wrapper #fp-other-content-1 {
+  height: 100%;
 }
 
 @media (max-width: 767px) {
