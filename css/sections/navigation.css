@@ -185,6 +185,9 @@ a.logo_largeScreens {
     height: 102px;
     border-radius: 3px;
   }
+  _:-ms-fullscreen, :root a.logo_largeScreens {
+    align-self: flex-start;
+  }
   div#navigation {
     display: -webkit-box;
     display: flex;

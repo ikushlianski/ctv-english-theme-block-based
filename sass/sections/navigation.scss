@@ -143,6 +143,7 @@ a.logo_largeScreens {
     }
   }
 
+
   a.logo_largeScreens {
     display: flex;
     position: relative;
@@ -169,6 +170,12 @@ a.logo_largeScreens {
       border-radius: 3px;
     }
   }
+
+  // ie 11
+  _:-ms-fullscreen, :root a.logo_largeScreens {
+    align-self: flex-start; 
+  }
+
   div#navigation {
     display: flex;
     justify-content: center;

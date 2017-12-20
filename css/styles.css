@@ -2140,7 +2140,7 @@ li.attached-block a {
   .menu-attach-block-wrapper.orientation-horizontal.open .block {
     position: absolute;
     margin: 0;
-    top: 1.8em;
+    top: 1.7em;
     width: 100%;
   }
 }
@@ -2387,6 +2387,9 @@ a.logo_largeScreens {
     align-self: center;
     height: 102px;
     border-radius: 3px;
+  }
+  _:-ms-fullscreen, :root a.logo_largeScreens {
+    align-self: flex-start;
   }
   div#navigation {
     display: -webkit-box;
