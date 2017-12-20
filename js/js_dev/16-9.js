@@ -87,4 +87,12 @@
 
   });
 
+  // fixing ie11 lack of object-fit support
+  if ( ! Modernizr.objectfit ) {
+    $('.view img').each(function () {
+      $(this).css({width: "100%"});
+    });
+    //  console.log('obj fit not found!');
+  }
+
 })(jQuery, Drupal);
