@@ -186,7 +186,9 @@ a.logo_largeScreens {
     }
     & .nav-menu-div {
       // max-width: 1024px;
-      margin: 0 auto;
+      @supports (margin: auto) {
+        margin: 0 auto;
+      }
       position: relative;
       display: flex;
       max-width: 1024px;

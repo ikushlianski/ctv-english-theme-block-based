@@ -203,7 +203,6 @@ a.logo_largeScreens {
     background-color: transparent;
   }
   .nav-group .nav-menu-div {
-    margin: 0 auto;
     position: relative;
     display: -webkit-box;
     display: flex;
@@ -213,6 +212,11 @@ a.logo_largeScreens {
     -webkit-box-align: stretch;
             align-items: stretch;
     background-color: #3d5978;
+  }
+  @supports (margin: auto) {
+    .nav-group .nav-menu-div {
+      margin: 0 auto;
+    }
   }
   .nav-group .nav-menu-div .main-menu, .nav-group .nav-menu-div .main-menu-2 {
     display: -webkit-box;
