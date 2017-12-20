@@ -2237,6 +2237,8 @@ twitterwidget {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
             flex-direction: row;
+    -webkit-box-align: center;
+            align-items: center;
   }
 }
 
@@ -2410,6 +2412,7 @@ a.logo_largeScreens {
     display: -webkit-box;
     display: flex;
     max-width: 1024px;
+    height: 6em;
     -webkit-box-pack: justify;
             justify-content: space-between;
     -webkit-box-align: stretch;
@@ -3121,7 +3124,7 @@ figcaption a:visited {
     flex-basis: 35%;
   }
   #sidebar-first, #fp-sidebar {
-    display: block;
+    display: initial;
     margin: 0 1em 0 1em;
     padding: 0 0 0 1em;
     flex-basis: 35%;

@@ -31,6 +31,7 @@
   flex-direction: column;
   @media (min-width: 768px) {
     flex-direction: row;
+    align-items: center;
   }
 }
 
@@ -192,6 +193,7 @@ a.logo_largeScreens {
       position: relative;
       display: flex;
       max-width: 1024px;
+      height: 6em;
       justify-content: space-between;
       //align-items: center;
       align-items: stretch;

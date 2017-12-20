@@ -34,6 +34,8 @@
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
             flex-direction: row;
+    -webkit-box-align: center;
+            align-items: center;
   }
 }
 
@@ -207,6 +209,7 @@ a.logo_largeScreens {
     display: -webkit-box;
     display: flex;
     max-width: 1024px;
+    height: 6em;
     -webkit-box-pack: justify;
             justify-content: space-between;
     -webkit-box-align: stretch;
