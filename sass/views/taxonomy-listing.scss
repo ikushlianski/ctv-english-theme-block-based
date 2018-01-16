@@ -12,7 +12,7 @@
     & .view-content {
       justify-content: center;
       & .views-row {
-        flex-basis: 300px;
+        flex-basis: 280px;
         flex-grow: 0;
         @include boxShadow;
         & .views-field-title {
